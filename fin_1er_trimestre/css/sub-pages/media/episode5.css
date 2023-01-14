@@ -1,0 +1,359 @@
+/*
+  @author: Christian Millán Soria
+  description: sub-pages style
+*/
+
+/* star wars font */
+@font-face{
+  /* custom font name */
+    font-family: star_wars;
+
+  /* source */
+    src: url(../../../font/star_wars_font/Starjedi.ttf);
+}
+
+/*******************************************************************************************************/
+
+/* caps font */
+@font-face{
+  font-family: caps_font;
+  src: url(../../../font/caps/ITC\ Serif\ Gothic\ Std\ Heavy.otf);
+}
+
+/*******************************************************************************************************/
+
+/* news font */
+@font-face{
+  font-family: news_font;
+  src: url(../../../font/baddest_batch/SF\ Distant\ Galaxy.ttf);
+}
+
+/*******************************************************************************************************/
+
+/* jedi survivor font */
+@font-face{
+  font-family: jedi-survivor_font;
+  src: url(../../../font/jedi_survivor/itc-serif-gothic-black-588d43e1e915d.otf);
+}
+
+/*******************************************************************************************************/
+
+/* ubisoft star wars font */
+@font-face{
+  font-family: ubisoft-sw_font;
+  src: url(../../../font/ubi/Gilroy-BlackItalic.ttf);
+}
+
+/*******************************************************************************************************/
+
+/* mandalorian font */
+@font-face{
+  font-family: mandalorian_font;
+  src: url(../../../font/mandalorian/mandalore.ttf);
+}
+
+/*******************************************************************************************************/
+
+/* tbobf font */
+@font-face{
+  font-family: tbobf_font;
+  src: url(../../../font/tbobf/Hunterra.ttf);
+}
+
+/*******************************************************************************************************/
+
+/* rotj font */
+@font-face{
+  font-family: rotj_font;
+  src: url(../../../font/articles/riccione-serial-medium-regular.ttf);
+}
+
+/*******************************************************************************************************/
+
+/* aurebesh font */
+@font-face{
+  font-family: aurebesh_font;
+  src: url(../../../font/aurebesh/Aurebesh.otf);
+}
+
+/*******************************************************************************************************/
+
+/* the whole page */
+*{
+  box-sizing: border-box;
+}
+
+html{
+  background-image: url("../../../img/bg/background.png");
+}
+
+/*******************************************************************************************************/
+
+/* general font family */
+body{
+  font-family: Verdana, sans-serif; margin:0
+}
+
+/*******************************************************************************************************/
+
+/* page title */
+/* title animation */
+  @keyframes title_color{
+    0%{
+      color: white;
+    }50%{
+      color: rgb(255, 225, 0);
+    }100%{
+      color: white;
+    }
+  }
+
+  /* applied to "#title" */
+    #title{
+      text-align:center;
+      color: white;
+      font-family: star_wars;
+      letter-spacing: 3px;
+      word-spacing: 12px;
+      font-size: 450%;
+      margin: 13px;
+      cursor: default;
+      position: relative;
+      transition: ease 1.3s;
+      animation-name: title_color;
+      animation-duration: 13s;
+      animation-iteration-count: infinite;
+    }
+
+/*******************************************************************************************************/
+
+/* navbar */
+/* default navbar */
+  .nav{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    height: 50px;
+    width: 100%;
+    background-image: url("../../../img/bg/default_nav_bg.png");
+    border: 2px solid black;
+    word-spacing: 430px;
+    font-weight: bold;
+    cursor: default;
+    /* previous font family */
+      /* font-family: 'Bebas Neue', cursive; */
+    font-family: caps_font;
+    letter-spacing: 1px;
+    transition: ease 0.45s;
+  }
+
+  /* hover on ".nav" */
+    .nav:hover{
+      transition: ease 0.45s;
+      background-image: url("../../../img/bg/hover_nav_bg.png");
+    }
+
+
+/* list elements */
+  /* default */
+    .nav ul li{
+      display: inline;
+      text-align: center;
+      opacity: 100%;
+      font-size: 23px;
+      transition: ease 1s;
+    }
+
+
+/* all elements except "#home" */
+  /* default links */
+    .nav ul li a{
+      transition: ease 1.7s;
+      cursor: pointer;
+      color: black;
+      text-decoration: underline 5px rgba(255, 255, 255, 0);
+      transition: text-decoration-color 300ms;
+    }
+
+    /* hover on links */
+      .nav ul li a:hover{
+        transition: ease .7s;
+        text-decoration: underline overline solid 5px;
+        text-decoration-skip: ink;
+        text-decoration-color: rgb(0, 0, 0);
+        color: white;
+      }
+
+/*******************************************************************************************************/
+
+/* screen */
+  @media only screen and (max-width: 300px){
+    .prev, .next, .text{
+      font-size: 11px
+    }
+  }
+
+/*******************************************************************************************************/
+
+/* article */
+  .article{
+    background-color: #09507d;
+    width: 1300;
+    height: 2000;
+    position: absolute;
+    top: 18%;
+    left: 22%;
+    border: 8px solid #0b3149;
+    border-radius: 5px;
+    padding: 20px;
+  }
+
+  /* title */
+    .article h1{
+      font-family: aurebesh_font;
+      text-align: center;
+      font-size: 30px;
+      font-weight: 900;
+    }
+
+    /* sub-title */
+      .article h5{
+        text-align: center;
+        color: white;
+        font-size: 101%;
+        font-weight: 550;
+        letter-spacing: 1.5px;
+        word-spacing: 3px;
+      }
+
+  /* right column */
+    .column{
+      right: 0%;
+      top: 0;
+      position: absolute;
+      height: 100%;
+      width: 450px;
+    }
+
+    /* poster */
+      #poster{
+        scale: .4;
+        right: 4;
+        position: absolute;
+      }
+
+    /* info */
+      #info{
+        position: absolute;
+        width: 200px;
+        right: 154;
+        top: 505;
+      }
+
+      /* paragraphs */
+        #director{
+          text-align: center;
+          background-color: #6b6b39;
+          font-weight: bold;
+          height: 18px;
+          margin: 0;
+          color: white;
+        }
+
+        #producer{
+          text-align: center;
+          background-color: #ddddbb;
+          font-weight: bold;
+          height: 35px;
+          margin: 0;
+        }
+
+        #writer{
+          text-align: center;
+          background-color: #6b6b39;
+          font-weight: bold;
+          height: 50px;
+          margin: 0;
+          color: white;
+        }
+
+        #starring{
+          text-align: center;
+          background-color: #ddddbb;
+          font-weight: bold;
+          height: 95px;
+          margin: 0;
+        }
+
+        #music{
+          text-align: center;
+          background-color: #6b6b39;
+          font-weight: bold;
+          height: 18px;
+          margin: 0;
+          color: white;
+        }
+
+  /***********************************/
+
+  /* main info */
+    #main-info{
+      font-size: 15px;
+      color: white;
+      position: absolute;
+      top: 210;
+      left: 90;
+      width: 800px;
+      text-align: justify;
+      word-spacing: 5px;
+      font-family: 'Inconsolata', monospace;
+    }
+
+    /* paragraphs */
+      #main-info p{
+        margin-bottom: 35px;
+      }
+
+      /* bold words */
+        #main-info p b{
+          color: #02b5bb;
+        }
+
+    /* line */
+      #first-line{
+        position: absolute;
+        width: 400px;
+        top: 550;
+        left: 300;
+        background: repeating-linear-gradient(90deg, #4689b3, #4689b3 6px, transparent 6px, transparent 12px);
+        border: none;
+        height: 2.5px;
+      }
+
+/*******************************************************************************************************/
+
+/* margin bottom */
+  .bottom{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    top: 2200;
+  }
+
+/*******************************************************************************************************/
+
+.loader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url('../../../img/loader/loader.png') 50% 50% no-repeat rgb(0, 0, 0);
+  opacity: .8;
+}

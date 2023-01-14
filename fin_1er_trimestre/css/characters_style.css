@@ -1,0 +1,458 @@
+/*
+  @author: Christian Millán Soria
+  description: characters style
+*/
+
+/* star wars font */
+@font-face{
+  /* custom font name */
+    font-family: star_wars;
+
+  /* source */
+    src: url(../font/star_wars_font/Starjedi.ttf);
+}
+
+/*******************************************************************************************************/
+
+/* caps font */
+  @font-face {
+    font-family: caps_font;
+    src: url(../font/caps/ITC\ Serif\ Gothic\ Std\ Heavy.otf);
+  }
+
+/*******************************************************************************************************/
+
+/* the whole page */
+*{
+  box-sizing: border-box;
+}
+
+html{
+  background-image: url("../img/bg/background.png");
+}
+
+/*******************************************************************************************************/
+
+/* general font family */
+  body{
+    font-family: Verdana, sans-serif; margin:0
+  }
+
+/*******************************************************************************************************/
+
+/* page title */
+  /* title animation */
+    @keyframes title_color{
+      0%{
+        color: white;
+      }50%{
+        color: rgb(255, 225, 0);
+      }100%{
+        color: white;
+      }
+    }
+
+    /* applied to "#title" */
+      #title{
+        text-align:center;
+        color: white;
+        font-family: star_wars;
+        letter-spacing: 3px;
+        word-spacing: 12px;
+        font-size: 450%;
+        margin: 13px;
+        cursor: default;
+        position: relative;
+        transition: ease 1.3s;
+        animation-name: title_color;
+        animation-duration: 13s;
+        animation-iteration-count: infinite;
+      }
+
+/*******************************************************************************************************/
+
+/* navbar */
+  /* default navbar */
+    .nav{
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      position: absolute;
+      left: 0px;
+      right: 0px;
+      height: 50px;
+      width: 100%;
+      background-image: url("../img/bg/default_nav_bg.png");
+      border: 2px solid black;
+      word-spacing: 430px;
+      font-weight: bold;
+      cursor: default;
+      /* previous font family */
+        /* font-family: 'Bebas Neue', cursive; */
+        font-family: caps_font;
+        letter-spacing: 1px;
+      transition: ease 0.45s;
+    }
+
+    /* hover on ".nav" */
+      .nav:hover{
+        transition: ease 0.45s;
+        background-image: url("../img/bg/hover_nav_bg.png");
+      }
+
+
+  /* list elements */
+    /* default */
+      .nav ul li{
+        display: inline;
+        text-align: center;
+        opacity: 100%;
+        font-size: 23px;
+        transition: ease 1s;
+      }
+
+
+  /* current page element */
+    /* default element */
+      #characters{
+        transition: ease .6s;
+        text-decoration: underline 4px;
+      }
+
+      /* hover on navbar -> applied to "#characters" */
+        .nav:hover #characters{
+          transition: ease .6s;
+          background: -webkit-linear-gradient(0deg, rgba(34,96,195,1) 0%, rgba(131,90,0,1) 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          text-decoration: none;
+        }
+
+
+  /* all elements except "#home" */
+    /* default links */
+      .nav ul li a{
+        transition: ease 1.7s;
+        cursor: pointer;
+        color: black;
+        text-decoration: underline 5px rgba(255, 255, 255, 0);
+        transition: text-decoration-color 300ms;
+      }
+
+      /* hover on links */
+        .nav ul li a:hover{
+          transition: ease .7s;
+          text-decoration: underline overline solid 5px;
+          text-decoration-skip: ink;
+          text-decoration-color: rgb(0, 0, 0);
+          color: white;
+        }
+
+/*******************************************************************************************************/
+
+/* screen */
+  @media only screen and (max-width: 300px){
+    .prev, .next, .text{
+      font-size: 11px
+    }
+  }
+
+/*******************************************************************************************************/
+
+/* grid container */
+  .grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 90%;
+    margin: 3% auto;
+    position: relative;
+    left: 3.5%;
+    font-family: caps_font;
+  }
+
+    /* hover on ".overlay" */
+      .overlay:hover{
+        transition: 1.58s ease;
+        font-size: 34.5px;
+      }
+
+    /* links */
+      .overlay-link1{
+        top: 20;
+        left: 20;
+        position: absolute;
+      }
+
+      .overlay-link2{
+        top: 20;
+        left: 720;
+        position: absolute;
+      }
+
+      .overlay-link3{
+        top: 20;
+        left: 1420;
+        position: absolute;
+      }
+
+      .overlay-link4{
+        top: 440;
+        left: 20;
+        position: absolute;
+      }
+
+      .overlay-link5{
+        top: 440;
+        left: 720;
+        position: absolute;
+      }
+
+      .overlay-link6{
+        top: 440;
+        left: 1420;
+        position: absolute;
+      }
+
+      .overlay-link7{
+        top: 860;
+        left: 20;
+        position: absolute;
+      }
+
+      .overlay-link8{
+        top: 860;
+        left: 720;
+        position: absolute;
+      }
+
+      .overlay-link9{
+        top: 860;
+        left: 1420;
+        position: absolute;
+      }
+
+  /* images */
+    .grid_images{
+      width: 20%;
+      margin: 20px;
+    }
+
+    .images{
+      width: 500px;
+      height: 380px;
+      transition: 1s ease;
+      border-radius: 7px;
+      border: 1.5px solid black;
+    }
+
+    /* hover on images */
+      #anakin{
+        background-image: url("../img/character/overlay/anakin-ol.png");
+        position: absolute;
+        width: 500px;
+        height: 380px;
+        transition: 1.58s ease;
+        opacity: 0;
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        border-radius: 7px;
+      }
+
+        /* hover on "#anakin" */
+          #anakin:hover{
+            opacity: 1;
+            transition: .56s;
+            color: white;
+          }
+
+      #luke{
+        background-image: url("../img/character/overlay/luke-ol.png");
+        position: absolute;
+        width: 500px;
+        height: 380px;
+        transition: 1.58s ease;
+        opacity: 0;
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        border-radius: 7px;
+      }
+
+        /* hover on "#luke" */
+          #luke:hover{
+            opacity: 1;
+            transition: .56s;
+            border-radius: 8px;
+            color: white;
+          }
+
+      #rey{
+        background-image: url("../img/character/overlay/rey-ol.png");
+        position: absolute;
+        width: 500px;
+        height: 380px;
+        transition: 1.58s ease;
+        opacity: 0;
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        border-radius: 7px;
+      }
+
+        /* hover on "#rey" */
+          #rey:hover{
+            opacity: 1;
+            transition: .56s;
+            border-radius: 8px;
+            color: white;
+          }
+
+      #obi{
+        background-image: url("../img/character/overlay/obi-ol.png");
+        position: absolute;
+        width: 500px;
+        height: 380px;
+        transition: 1.58s ease;
+        opacity: 0;
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        border-radius: 7px;
+      }
+
+        /* hover on "#obi" */
+          #obi:hover{
+            opacity: 1;
+            transition: .56s;
+            border-radius: 8px;
+            color: white;
+          }
+
+      #leia{
+        background-image: url("../img/character/overlay/leia-ol.png");
+        position: absolute;
+        width: 500px;
+        height: 380px;
+        transition: 1.58s ease;
+        opacity: 0;
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        border-radius: 7px;
+      }
+
+        /* hover on "#leia" */
+          #leia:hover{
+            opacity: 1;
+            transition: .56s;
+            border-radius: 8px;
+            color: white;
+          }
+
+      #finn{
+        background-image: url("../img/character/overlay/finn-ol.png");
+        position: absolute;
+        width: 500px;
+        height: 380px;
+        transition: 1.58s ease;
+        opacity: 0;
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        border-radius: 7px;
+      }
+
+        /* hover on "#finn" */
+          #finn:hover{
+            opacity: 1;
+            transition: .56s;
+            border-radius: 8px;
+            color: white;
+          }
+
+      #padme{
+        background-image: url("../img/character/overlay/padme-ol.png");
+        position: absolute;
+        width: 500px;
+        height: 380px;
+        transition: 1.58s ease;
+        opacity: 0;
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        border-radius: 7px;
+      }
+
+        /* hover on "#padme" */
+          #padme:hover{
+            opacity: 1;
+            transition: .56s;
+            border-radius: 8px;
+            color: white;
+          }
+
+      #han{
+        background-image: url("../img/character/overlay/han-ol.png");
+        position: absolute;
+        width: 500px;
+        height: 380px;
+        transition: 1.58s ease;
+        opacity: 0;
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        border-radius: 7px;
+      }
+
+        /* hover on "#han" */
+          #han:hover{
+            opacity: 1;
+            transition: .56s;
+            border-radius: 8px;
+            color: white;
+          }
+
+      #poe{
+        background-image: url("../img/character/overlay/poe-ol.png");
+        position: absolute;
+        width: 500px;
+        height: 380px;
+        transition: 1.58s ease;
+        opacity: 0;
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        border-radius: 7px;
+      }
+
+        /* hover on "#poe" */
+          #poe:hover{
+            opacity: 1;
+            transition: .56s;
+            border-radius: 8px;
+            color: white;
+          }
+
+/*******************************************************************************************************/
+
+.loader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url('../img/loader/loader.png') 50% 50% no-repeat rgb(0, 0, 0);
+  opacity: .8;
+}

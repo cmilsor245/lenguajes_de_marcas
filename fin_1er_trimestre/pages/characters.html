@@ -1,0 +1,77 @@
+<!--
+  @author: Christian Millán Soria
+  description: characters page
+-->
+
+<html>
+  <head>
+    <title>CHARACTERS</title>
+    <meta charset="utf-8">
+
+    <!-- links -->
+      <!-- css -->
+      <link rel="stylesheet" href="../css/characters_style.css">
+
+      <!-- favicon -->
+        <link rel="icon" type="image/x-icon" href="https://icons.iconarchive.com/icons/sensibleworld/starwars/1024/Death-Star-icon.png">
+      
+      <!-- fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+
+      <!-- script -->
+        <script type="text/javascript" defer src="../js/characters.js"></script>
+
+        <!-- imported -->
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <!-- title -->
+    <h1 id="title">STAR WARS</h1>
+
+    <!-------------------------------------------------------------------------------------------------------------------->
+
+    <!-- navbar -->
+      <div class="nav">
+          <ul>
+            <li id="home"><a href="../index.html">HOME</a></li>
+            <li id="media"><a href="media.html">MEDIA</a></li>
+            <li id="characters">CHARACTERS</li>
+            <li id="planets"><a href="planets.html">PLANETS</a></li>
+          </ul>
+      </div>
+
+    <!-------------------------------------------------------------------------------------------------------------------->
+
+    <!-- grid container -->
+      <div class="grid-container">
+        <div class="grid_images"><img class="images" src="../img/character/anakin_skywalker.png"></div>
+          <a class="overlay-link1" href="sub-pages/characters/anakin.html"><div class="overlay" id="anakin">ANAKIN SKYWALKER</div></a>
+        <div class="grid_images"><img class="images" src="../img/character/luke_skywalker.png"></div>
+          <a class="overlay-link2" href="sub-pages/characters/luke.html"><div class="overlay" id="luke">LUKE SKYWALKER</div></a>
+        <div class="grid_images"><img class="images" src="../img/character/rey_skywalker.png"></div>
+          <a class="overlay-link3" href="sub-pages/characters/rey.html"><div class="overlay" id="rey">REY SKYWALKER</div></a>
+        <div class="grid_images"><img class="images" src="../img/character/obi-wan_kenobi.png"></div>
+          <a class="overlay-link4" href="sub-pages/characters/obi.html"><div class="overlay" id="obi">OBI-WAN KENOBI</div></a>
+        <div class="grid_images"><img class="images" src="../img/character/leia_organa.png"></div>
+          <a class="overlay-link5" href="sub-pages/characters/leia.html"><div class="overlay" id="leia">LEIA ORGANA</div></a>
+        <div class="grid_images"><img class="images" src="../img/character/finn.png"></div>
+          <a class="overlay-link6" href="sub-pages/characters/finn.html"><div class="overlay" id="finn">FINN</div></a>
+        <div class="grid_images"><img class="images" src="../img/character/padme_amidala.png"></div>
+          <a class="overlay-link7" href="sub-pages/characters/padme.html"><div class="overlay" id="padme">PADMÉ AMIDALA</div></a>
+        <div class="grid_images"><img class="images" src="../img/character/han_solo.png"></div>
+          <a class="overlay-link8" href="sub-pages/characters/han.html"><div class="overlay" id="han">HAN SOLO</div></a>
+        <div class="grid_images"><img class="images" src="../img/character/poe_dameron.png"></div>
+          <a class="overlay-link9" href="sub-pages/characters/poe.html"><div class="overlay" id="poe">POE DAMERON</div></a>
+      </div>
+
+      <!-------------------------------------------------------------------------------------------------------------------->
+  
+      <div class="loader"></div>
+  </body>
+</html>

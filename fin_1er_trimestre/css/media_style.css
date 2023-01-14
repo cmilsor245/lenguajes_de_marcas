@@ -1,0 +1,531 @@
+/*
+  @author: Christian Millán Soria
+  description: media style
+*/
+
+/* star wars font */
+@font-face{
+  /* custom font name */
+    font-family: star_wars;
+
+  /* source */
+    src: url(../font/star_wars_font/Starjedi.ttf);
+}
+
+/*******************************************************************************************************/
+
+/* caps font */
+  @font-face {
+    font-family: caps_font;
+    src: url(../font/caps/ITC\ Serif\ Gothic\ Std\ Heavy.otf);
+  }
+
+/*******************************************************************************************************/
+
+/* the whole page */
+*{
+  box-sizing: border-box;
+}
+
+html{
+  background-image: url("../img/bg/background.png");
+}
+
+/*******************************************************************************************************/
+
+/* general font family */
+  body{
+    font-family: Verdana, sans-serif; margin:0
+  }
+
+/*******************************************************************************************************/
+
+/* page title */
+  /* title animation */
+    @keyframes title_color{
+      0%{
+        color: white;
+      }50%{
+        color: rgb(255, 225, 0);
+      }100%{
+        color: white;
+      }
+    }
+
+    /* applied to "#title" */
+      #title{
+        text-align:center;
+        color: white;
+        font-family: star_wars;
+        letter-spacing: 3px;
+        word-spacing: 12px;
+        font-size: 450%;
+        margin: 13px;
+        cursor: default;
+        position: relative;
+        transition: ease 1.3s;
+        animation-name: title_color;
+        animation-duration: 13s;
+        animation-iteration-count: infinite;
+      }
+
+/*******************************************************************************************************/
+
+/* navbar */
+  /* default navbar */
+    .nav{
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      position: absolute;
+      left: 0px;
+      right: 0px;
+      height: 50px;
+      width: 100%;
+      background-image: url("../img/bg/default_nav_bg.png");
+      border: 2px solid black;
+      word-spacing: 430px;
+      font-weight: bold;
+      cursor: default;
+      /* previous font family */
+        /* font-family: 'Bebas Neue', cursive; */
+        font-family: caps_font;
+        letter-spacing: 1px;
+      transition: ease 0.45s;
+    }
+
+    /* hover on ".nav" */
+      .nav:hover{
+        transition: ease 0.45s;
+        background-image: url("../img/bg/hover_nav_bg.png");
+      }
+
+
+  /* list elements */
+    /* default */
+      .nav ul li{
+        display: inline;
+        text-align: center;
+        opacity: 100%;
+        font-size: 23px;
+        transition: ease 1s;
+      }
+
+
+  /* current page element */
+    /* default element */
+      #media{
+        transition: ease .6s;
+        text-decoration: underline 4px;
+      }
+
+      /* hover on navbar -> applied to "#media" */
+        .nav:hover #media{
+          transition: ease .6s;
+          background: -webkit-linear-gradient(0deg, rgba(34,96,195,1) 0%, rgba(131,90,0,1) 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          text-decoration: none;
+        }
+
+
+  /* all elements except "#home" */
+    /* default links */
+      .nav ul li a{
+        transition: ease 1.7s;
+        cursor: pointer;
+        color: black;
+        text-decoration: underline 5px rgba(255, 255, 255, 0);
+        transition: text-decoration-color 300ms;
+      }
+
+      /* hover on links */
+        .nav ul li a:hover{
+          transition: ease .7s;
+          text-decoration: underline overline solid 5px;
+          text-decoration-skip: ink;
+          text-decoration-color: rgb(0, 0, 0);
+          color: white;
+        }
+
+/*******************************************************************************************************/
+
+/* screen */
+  @media only screen and (max-width: 300px){
+    .prev, .next, .text{
+      font-size: 11px
+    }
+  }
+
+/*******************************************************************************************************/
+
+/* grid container */
+  .grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 90%;
+    margin: 3% auto;
+    position: relative;
+    left: 3.5%;
+    font-family: caps_font;
+  }
+
+    /* hover on ".overlay" */
+      .overlay:hover{
+        transition: 1.58s ease;
+        font-size: 34.5px;
+      }
+
+    /* links */
+      .overlay-link1{
+        top: 20;
+        left: 20;
+        position: absolute;
+      }
+
+      .overlay-link2{
+        top: 20;
+        left: 720;
+        position: absolute;
+      }
+
+      .overlay-link3{
+        top: 20;
+        left: 1420;
+        position: absolute;
+      }
+
+      .overlay-link4{
+        top: 440;
+        left: 20;
+        position: absolute;
+      }
+
+      .overlay-link5{
+        top: 440;
+        left: 720;
+        position: absolute;
+      }
+
+      .overlay-link6{
+        top: 440;
+        left: 1420;
+        position: absolute;
+      }
+
+      .overlay-link7{
+        top: 860;
+        left: 20;
+        position: absolute;
+      }
+
+      .overlay-link8{
+        top: 860;
+        left: 720;
+        position: absolute;
+      }
+
+      .overlay-link9{
+        top: 860;
+        left: 1420;
+        position: absolute;
+      }
+
+      .overlay-link10{
+        top: 1280;
+        left: 20;
+        position: absolute;
+      }
+
+      .overlay-link11{
+        top: 1280;
+        left: 720;
+        position: absolute;
+      }
+
+      .overlay-link12{
+        top: 1280;
+        left: 1420;
+        position: absolute;
+      }
+
+  /* images */
+    .grid_images{
+      width: 20%;
+      margin: 20px;
+    }
+
+    .images{
+      width: 500px;
+      height: 380px;
+      transition: 1s ease;
+      border-radius: 7px;
+      border: 1.5px solid black;
+    }
+
+    /* hover on images */
+      #episode1{
+        background-image: url("../img/media/overlay/episode1-ol.png");
+        position: absolute;
+        width: 500px;
+        height: 380px;
+        transition: 1.58s ease;
+        opacity: 0;
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        border-radius: 7px;
+      }
+
+        /* hover on "#episode1" */
+          #episode1:hover{
+            opacity: 1;
+            transition: .56s;
+            color: white;
+          }
+
+      #episode2{
+        background-image: url("../img/media/overlay/episode2-ol.png");
+        position: absolute;
+        width: 500px;
+        height: 380px;
+        transition: 1.58s ease;
+        opacity: 0;
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        border-radius: 7px;
+      }
+
+        /* hover on "#episode2" */
+          #episode2:hover{
+            opacity: 1;
+            transition: .56s;
+            color: white;
+          }
+
+      #the_clone_wars{
+        background-image: url("../img/media/overlay/cw-ol.png");
+        position: absolute;
+        width: 500px;
+        height: 380px;
+        transition: 1.58s ease;
+        opacity: 0;
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        border-radius: 7px;
+      }
+
+        /* hover on "#the_clone_wars" */
+          #the_clone_wars:hover{
+            opacity: 1;
+            transition: .56s;
+            color: white;
+          }
+
+      #episode3{
+        background-image: url("../img/media/overlay/episode3-ol.png");
+        position: absolute;
+        width: 500px;
+        height: 380px;
+        transition: 1.58s ease;
+        opacity: 0;
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        border-radius: 7px;
+      }
+
+        /* hover on "#episode3" */
+          #episode3:hover{
+            opacity: 1;
+            transition: .56s;
+            color: white;
+          }
+
+      #solo{
+        background-image: url("../img/media/overlay/solo-ol.png");
+        position: absolute;
+        width: 500px;
+        height: 380px;
+        transition: 1.58s ease;
+        opacity: 0;
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        border-radius: 7px;
+      }
+
+        /* hover on "#solo" */
+          #solo:hover{
+            opacity: 1;
+            transition: .56s;
+            color: white;
+          }
+
+      #rogue_one{
+        background-image: url("../img/media/overlay/rogue_one-ol.png");
+        position: absolute;
+        width: 500px;
+        height: 380px;
+        transition: 1.58s ease;
+        opacity: 0;
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        border-radius: 7px;
+      }
+
+        /* hover on "#rogue_one" */
+          #rogue_one:hover{
+            opacity: 1;
+            transition: .56s;
+            color: white;
+          }
+
+      #episode4{
+        background-image: url("../img/media/overlay/episode4-ol.png");
+        position: absolute;
+        width: 500px;
+        height: 380px;
+        transition: 1.58s ease;
+        opacity: 0;
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        border-radius: 7px;
+      }
+
+        /* hover on "#episode4" */
+          #episode4:hover{
+            opacity: 1;
+            transition: .56s;
+            color: white;
+          }
+
+      #episode5{
+        background-image: url("../img/media/overlay/episode5-ol.png");
+        position: absolute;
+        width: 500px;
+        height: 380px;
+        transition: 1.58s ease;
+        opacity: 0;
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        border-radius: 7px;
+      }
+
+        /* hover on "#episode5" */
+          #episode5:hover{
+            opacity: 1;
+            transition: .56s;
+            color: white;
+          }
+
+      #episode6{
+        background-image: url("../img/media/overlay/episode6-ol.png");
+        position: absolute;
+        width: 500px;
+        height: 380px;
+        transition: 1.58s ease;
+        opacity: 0;
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        border-radius: 7px;
+      }
+
+        /* hover on "#episode6" */
+          #episode6:hover{
+            opacity: 1;
+            transition: .56s;
+            color: white;
+          }
+
+      #episode7{
+        background-image: url("../img/media/overlay/episode7-ol.png");
+        position: absolute;
+        width: 500px;
+        height: 380px;
+        transition: 1.58s ease;
+        opacity: 0;
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        border-radius: 7px;
+      }
+
+        /* hover on "#episode7" */
+          #episode7:hover{
+            opacity: 1;
+            transition: .56s;
+            color: white;
+          }
+
+      #episode8{
+        background-image: url("../img/media/overlay/episode8-ol.png");
+        position: absolute;
+        width: 500px;
+        height: 380px;
+        transition: 1.58s ease;
+        opacity: 0;
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        border-radius: 7px;
+      }
+
+        /* hover on "#episode8" */
+          #episode8:hover{
+            opacity: 1;
+            transition: .56s;
+            color: white;
+          }
+
+      #episode9{
+        background-image: url("../img/media/overlay/episode9-ol.png");
+        position: absolute;
+        width: 500px;
+        height: 380px;
+        transition: 1.58s ease;
+        opacity: 0;
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        border-radius: 7px;
+      }
+
+        /* hover on "#episode9" */
+          #episode9:hover{
+            opacity: 1;
+            transition: .56s;
+            color: white;
+          }
+
+/*******************************************************************************************************/
+
+.loader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url('../img/loader/loader.png') 50% 50% no-repeat rgb(0, 0, 0);
+  opacity: .8;
+}
