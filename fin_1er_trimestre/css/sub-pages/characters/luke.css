@@ -327,7 +327,7 @@ body{
       #first-line{
         position: absolute;
         width: 400px;
-        top: 550;
+        top: 1270;
         left: 300;
         background: repeating-linear-gradient(90deg, #4689b3, #4689b3 6px, transparent 6px, transparent 12px);
         border: none;
