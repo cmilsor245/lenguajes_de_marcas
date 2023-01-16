@@ -456,3 +456,22 @@ html{
   background: url('../img/loader/loader.png') 50% 50% no-repeat rgb(0, 0, 0);
   opacity: .8;
 }
+
+/*******************************************************************************************************/
+
+/* scrollbar */
+  ::-webkit-scrollbar{
+    width: 12px;
+  }
+
+  ::-webkit-scrollbar-track{
+    background: #f1f1f1; 
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(255, 225, 0);
+  }
