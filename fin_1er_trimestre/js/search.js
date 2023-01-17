@@ -78,6 +78,8 @@
       window.location.href="pages/sub-pages/media/episode9.html";
     }else if(searchValue==="the rise of skywalker"||searchValue==="episode 9"||searchValue==="tros"){
       window.location.href="pages/sub-pages/media/episode9.html";
+    }else{
+      alert("Page not found. Please try again.");
     }
   });
 
