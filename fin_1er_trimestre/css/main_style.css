@@ -860,6 +860,7 @@
   #search-button:hover{
   background: #fff;
   color: #000;
+  z-index: 1;
   }
 
   #search-form:active:before{
