@@ -6,14 +6,12 @@
 "use strict"
 
 // searching
-  const searchForm = document.getElementById("search-form");
-  const searchInput = document.getElementById("search-input");
+  const searchForm=document.getElementById("search-form");
+  const searchInput=document.getElementById("search-input");
 
   searchForm.addEventListener("submit", e=>{
     e.preventDefault();
-
-    const searchValue=searchInput.value;
-
+    const searchValue=searchInput.value.toLowerCase();
     if (searchValue==="characters"){
       window.location.href="pages/characters.html";
     } else if (searchValue==="media"){
@@ -41,8 +39,3 @@
       });
     });
   });
-
-/**************************************************************/
-
-// placeholder
-  
