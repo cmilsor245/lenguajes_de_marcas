@@ -50,7 +50,7 @@
       window.location.href="pages/sub-pages/characters/anakin.html";
     }else if(searchValue==="luke skywalker"||searchValue==="luke"){
       window.location.href="pages/sub-pages/characters/luke.html";
-    }else if(searchValue==="rey"||searchValue==="rey"){
+    }else if(searchValue==="rey skywalker"||searchValue==="rey"){
       window.location.href="pages/sub-pages/characters/rey.html";
     }else if(searchValue==="obi-wan kenobi"||searchValue==="obi"||searchValue==="kenobi"||searchValue==="obi-wan"){
       window.location.href="pages/sub-pages/characters/obi.html";
