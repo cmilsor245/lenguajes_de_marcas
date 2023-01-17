@@ -908,6 +908,21 @@
     transition: .5s ease;
   }
 
+  #search-button img{
+    width: 5%;
+    height: 1.5%;
+    margin-left: 12px;
+    margin-bottom: 5px;
+    padding: 0px;
+    opacity: 0;
+    transition: .3s ease;
+  }
+
+  #search-button:hover img{
+    transition: .3s ease;
+    opacity: 1;
+  }
+
 /*******************************************************************************************************/
 
 /* news */
