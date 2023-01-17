@@ -50,7 +50,7 @@
 
 /***********************************************************/
 
-// deployables
+// deployable
   $("#li1st-media").hover(function(){
     $(".deployable-media").css("background-image", "url('https://eadn-wc01-5964675.nxedge.io/wp-content/uploads/2022/09/RandomSuccessatInnovation-SocialGraphic01-760x394.jpg')");
   }, function(){
@@ -58,5 +58,5 @@
   });
   
   $(".deployable-media").css({
-    'transition': 'background-image 0.45s ease',
+    'transition': 'background-image 1s ease',
   });
