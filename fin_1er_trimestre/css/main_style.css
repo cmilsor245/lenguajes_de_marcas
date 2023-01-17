@@ -845,12 +845,16 @@
     opacity: 0.7;
   }
 
+  #search-input::placeholder:hover{
+    color: black;
+  }
+
   #search-button{
     background: transparent;
     color: #fff;
     border: none;
     padding: 10px 15px;
-    border-radius: 50px;
+    border-radius: 25px;
     font-size: 18px;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
@@ -862,9 +866,11 @@
   }
 
   #search-button:hover{
-  background: #fff;
+  background: #dc8b00;
   color: #000;
   z-index: 1;
+  border-radius: 10px;
+  font-weight: bold;
   }
 
   #search-form:active:before{
