@@ -47,3 +47,16 @@
   $(window).load(function() {
     $(".loader").fadeOut("slow");
   });
+
+/***********************************************************/
+
+// deployables
+  $("#li1st-media").hover(function(){
+    $(".deployable-media").css("background-image", "url('https://eadn-wc01-5964675.nxedge.io/wp-content/uploads/2022/09/RandomSuccessatInnovation-SocialGraphic01-760x394.jpg')");
+  }, function(){
+    $(".deployable-media").css("background-image", "url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAADFCAMAAACM/tznAAAAA1BMVEVOTlDY765vAAAASElEQVR4nO3BMQEAAADCoPVPbQhfoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOA8XFAAFeol+kAAAAAElFTkSuQmCC')");
+  });
+  
+  $(".deployable-media").css({
+    'transition': 'background-image 0.45s ease',
+  });
