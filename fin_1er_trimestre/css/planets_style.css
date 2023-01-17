@@ -149,6 +149,133 @@ html{
           color: white;
         }
 
+    /***************************/
+
+    /* dropdown menu */
+      /* animations */
+        /* in */
+          @keyframes in-deployable{
+            from{
+              top: 7;
+              opacity: 0;
+            }to{
+              top: 39;
+              opacity: 1;
+            }
+          }
+
+      /* default */
+        .deployable-characters{
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          background-color: rgb(96, 96, 96);
+          width: 300;
+          top: 39;
+          left: 1280;
+          z-index: 1;
+          padding: 8px;
+          border-radius: 4px;
+        }
+
+        /********************************/
+
+        .deployable-media{
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          background-color: rgb(96, 96, 96);
+          width: 400;
+          top: 39;
+          left: 680;
+          z-index: 1;
+          padding: 8px;
+          border-radius: 4px;
+        }
+
+        /********************************/
+
+        .deployable-planets{
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          background-color: rgb(96, 96, 96);
+          width: 300;
+          top: 39;
+          left: 1835;
+          z-index: 1;
+          padding: 8px;
+          border-radius: 4px;
+        }
+
+
+
+        /* hover on "#characters" */
+          #characters:hover .deployable-characters{
+            animation-name: in-deployable;
+            animation-duration: 1.5s;
+            display: flex;
+          }
+
+        /*******************************************/
+
+        /* hover on "#media" */
+          #media:hover .deployable-media{
+            animation-name: in-deployable;
+            animation-duration: 1.5s;
+            display: flex;
+          }
+
+        /*******************************************/
+
+        /* hover on "#planets" */
+          #planets:hover .deployable-planets{
+            animation-name: in-deployable;
+            animation-duration: 1.5s;
+            display: flex;
+          }
+
+
+
+      /* menu elements */
+        .deployable-characters li b{
+          color: rgb(96, 96, 96);
+        }
+
+        .deployable-characters li{
+          left: -20;
+          position: relative;
+          margin: 20px;
+        }
+
+        #li1st-characters{
+          left: -30;
+        }
+
+        /*************************/
+
+        .deployable-media li b{
+          color: rgb(96, 96, 96);
+        }
+
+        .deployable-media li{
+          left: -20;
+          position: relative;
+          margin: 20px;
+        }
+
+        /*************************/
+
+        .deployable-planets li b{
+          color: rgb(96, 96, 96);
+        }
+
+        .deployable-planets li{
+          left: -20;
+          position: relative;
+          margin: 20px;
+        }
+
 /*******************************************************************************************************/
 
 /* screen */
