@@ -193,9 +193,46 @@
     /***************************/
 
     /* dropdown menu */
-      .deployable-characters{
-        display: none;
-      }
+      /* animations */
+        /* in */
+          @keyframes in-deployable-characters{
+            from{
+              top: 30;
+            }to{
+              top: 39;
+            }
+          }
+
+      /* default */
+        .deployable-characters{
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          background-color: rgb(96, 96, 96);
+          width: 300;
+          top: 39;
+          left: 1280;
+          z-index: 1;
+          padding: 8px;
+          border-radius: 4px;
+        }
+
+        /* hover on "#characters" */
+          #characters:hover .deployable-characters{
+            animation-name: in-deployable-characters;
+            animation-duration: 1s;
+            display: flex;
+          }
+
+      /* menu elements */
+        .deployable-characters li b{
+          color: rgb(96, 96, 96);
+        }
+
+        .deployable-characters li{
+          left: -20;
+          position: relative;
+        }
 
 /*******************************************************************************************************/
 
