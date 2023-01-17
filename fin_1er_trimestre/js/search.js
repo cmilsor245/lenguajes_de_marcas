@@ -99,3 +99,15 @@
       });
     });
   });
+
+/**************************************************************/
+
+// hover on input
+  $("#search-form").hover(
+    function(){
+        $("#search-input").addClass("hover");
+    },
+    function(){
+        $("#search-input").removeClass("hover");
+    }
+  );
