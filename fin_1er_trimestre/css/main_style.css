@@ -857,6 +857,10 @@
     margin-left: 10px;
     }
 
+  #search-form:hover #search-button{
+    z-index: 1;
+  }
+
   #search-button:hover{
   background: #fff;
   color: #000;

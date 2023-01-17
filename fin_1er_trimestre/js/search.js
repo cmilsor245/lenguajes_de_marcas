@@ -46,38 +46,38 @@
       window.location.href="pages/sub-pages/media/episode9.html";
 
     // characters
-    }else if(searchValue==="the rise of skywalker"||searchValue==="episode 9"||searchValue==="tros"){
-      window.location.href="pages/sub-pages/media/episode9.html";
-    }else if(searchValue==="the rise of skywalker"||searchValue==="episode 9"||searchValue==="tros"){
-      window.location.href="pages/sub-pages/media/episode9.html";
-    }else if(searchValue==="the rise of skywalker"||searchValue==="episode 9"||searchValue==="tros"){
-      window.location.href="pages/sub-pages/media/episode9.html";
-    }else if(searchValue==="the rise of skywalker"||searchValue==="episode 9"||searchValue==="tros"){
-      window.location.href="pages/sub-pages/media/episode9.html";
-    }else if(searchValue==="the rise of skywalker"||searchValue==="episode 9"||searchValue==="tros"){
-      window.location.href="pages/sub-pages/media/episode9.html";
-    }else if(searchValue==="the rise of skywalker"||searchValue==="episode 9"||searchValue==="tros"){
-      window.location.href="pages/sub-pages/media/episode9.html";
-    }else if(searchValue==="the rise of skywalker"||searchValue==="episode 9"||searchValue==="tros"){
-      window.location.href="pages/sub-pages/media/episode9.html";
-    }else if(searchValue==="the rise of skywalker"||searchValue==="episode 9"||searchValue==="tros"){
-      window.location.href="pages/sub-pages/media/episode9.html";
-    }else if(searchValue==="the rise of skywalker"||searchValue==="episode 9"||searchValue==="tros"){
-      window.location.href="pages/sub-pages/media/episode9.html";
+    }else if(searchValue==="anakin skywalker"||searchValue==="anakin"){
+      window.location.href="pages/sub-pages/characters/anakin.html";
+    }else if(searchValue==="luke skywalker"||searchValue==="luke"){
+      window.location.href="pages/sub-pages/characters/luke.html";
+    }else if(searchValue==="rey"||searchValue==="rey"){
+      window.location.href="pages/sub-pages/characters/rey.html";
+    }else if(searchValue==="obi-wan kenobi"||searchValue==="obi"||searchValue==="kenobi"||searchValue==="obi-wan"){
+      window.location.href="pages/sub-pages/characters/obi.html";
+    }else if(searchValue==="leia organa"||searchValue==="leia"){
+      window.location.href="pages/sub-pages/characters/leia.html";
+    }else if(searchValue==="finn"||searchValue==="finn"){
+      window.location.href="pages/sub-pages/characters/finn.html";
+    }else if(searchValue==="padme amidala"||searchValue==="padme"||searchValue==="padmé"){
+      window.location.href="pages/sub-pages/characters/padme.html";
+    }else if(searchValue==="han solo"||searchValue==="han"||searchValue==="solo"){
+      window.location.href="pages/sub-pages/characters/han.html";
+    }else if(searchValue==="poe dameron"||searchValue==="poe"){
+      window.location.href="pages/sub-pages/characters/poe.html";
 
     // planets
-    }else if(searchValue==="the rise of skywalker"||searchValue==="episode 9"||searchValue==="tros"){
-      window.location.href="pages/sub-pages/media/episode9.html";
-    }else if(searchValue==="the rise of skywalker"||searchValue==="episode 9"||searchValue==="tros"){
-      window.location.href="pages/sub-pages/media/episode9.html";
-    }else if(searchValue==="the rise of skywalker"||searchValue==="episode 9"||searchValue==="tros"){
-      window.location.href="pages/sub-pages/media/episode9.html";
-    }else if(searchValue==="the rise of skywalker"||searchValue==="episode 9"||searchValue==="tros"){
-      window.location.href="pages/sub-pages/media/episode9.html";
-    }else if(searchValue==="the rise of skywalker"||searchValue==="episode 9"||searchValue==="tros"){
-      window.location.href="pages/sub-pages/media/episode9.html";
-    }else if(searchValue==="the rise of skywalker"||searchValue==="episode 9"||searchValue==="tros"){
-      window.location.href="pages/sub-pages/media/episode9.html";
+    }else if(searchValue==="tatooine"){
+      window.location.href="pages/sub-pages/planets/tatooine.html";
+    }else if(searchValue==="jakku"){
+      window.location.href="pages/sub-pages/planets/jakku.html";
+    }else if(searchValue==="coruscant"){
+      window.location.href="pages/sub-pages/planets/coruscant.html";
+    }else if(searchValue==="geonosis"){
+      window.location.href="pages/sub-pages/planets/geonosis.html";
+    }else if(searchValue==="dagobah"){
+      window.location.href="pages/sub-pages/planets/dagobah.html";
+    }else if(searchValue==="kamino"){
+      window.location.href="pages/sub-pages/planets/kamino.html";
     }else{
       alert("Page not found. Please try again.");
     }
