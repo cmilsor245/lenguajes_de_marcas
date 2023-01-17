@@ -278,7 +278,7 @@ body{
 
       /* menu elements */
         .deployable-characters li b{
-          color: rgb(96, 96, 96);
+          color: #4e4e50;
         }
 
         .deployable-characters li{
@@ -294,7 +294,7 @@ body{
         /*************************/
 
         .deployable-media li b{
-          color: rgb(96, 96, 96);
+          color: #4e4e50;
         }
 
         .deployable-media li{
@@ -306,13 +306,20 @@ body{
         /*************************/
 
         .deployable-planets li b{
-          color: rgb(96, 96, 96);
+          color: #4e4e50;
         }
 
         .deployable-planets li{
           left: -20;
           position: relative;
           margin: 20px;
+        }
+
+        /*************************/
+
+        .change-bg{
+          background-image: url("../../../img/bg/gray-bg.png");
+          transition: background-image 0.3s ease-in-out;
         }
 
 /*******************************************************************************************************/
