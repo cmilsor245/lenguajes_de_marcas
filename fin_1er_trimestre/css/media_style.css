@@ -279,7 +279,7 @@ html{
         /*************************/
 
         .change-bg{
-          background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAADFCAMAAACM/tznAAAAA1BMVEVOTlDY765vAAAASElEQVR4nO3BMQEAAADCoPVPbQhfoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOA8XFAAFeol+kAAAAAElFTkSuQmCC");
+          background-image: url("../img/bg/gray-bg.png");
           transition: background-image 0.3s ease-in-out;
         }
 

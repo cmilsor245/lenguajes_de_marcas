@@ -51,12 +51,15 @@
 /***********************************************************/
 
 // deployable
-  $("#li1st-media").hover(function(){
-    $(".deployable-media").css("background-image", "url('https://eadn-wc01-5964675.nxedge.io/wp-content/uploads/2022/09/RandomSuccessatInnovation-SocialGraphic01-760x394.jpg')");
-  }, function(){
-    $(".deployable-media").css("background-image", "url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAADFCAMAAACM/tznAAAAA1BMVEVOTlDY765vAAAASElEQVR4nO3BMQEAAADCoPVPbQhfoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOA8XFAAFeol+kAAAAAElFTkSuQmCC')");
-  });
-  
-  $(".deployable-media").css({
-    'transition': 'background-image 1s ease',
-  });
+  // media
+    $("#li1st-media").hover(function(){
+      $(".deployable-media").css("background-image", "url('https://m.media-amazon.com/images/M/MV5BOTg3NzY0MDgxMF5BMl5BanBnXkFtZTgwNzkyMjc4MjI@._V1_.jpg')");
+      $(".deployable-media").css("background-size", "200%");
+      $(".deployable-media li b").css("color", "rgba(0, 0, 0, 0)");
+    }, function(){
+      $(".deployable-media").css("background-image", "url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAADFCAMAAACM/tznAAAAA1BMVEVOTlDY765vAAAASElEQVR4nO3BMQEAAADCoPVPbQhfoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOA8XFAAFeol+kAAAAAElFTkSuQmCC')");
+    });
+    
+    $(".deployable-media").css({
+      'transition': 'background-image 1s ease',
+    });
