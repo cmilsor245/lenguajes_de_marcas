@@ -224,6 +224,7 @@
         'transition': 'background-image 1s ease',
       });
 
+    // luke
       $("#li2nd-characters").hover(function(){
         $(".deployable-characters").css("background-image", "url('https://www.tonica.la/__export/1608330310946/sites/debate/img/2020/12/18/luke_skywalker-the_mandalorian-baby_yoda.jpg_1902800913.jpg')");
         $(".deployable-characters").css("background-size", "160%");
@@ -236,6 +237,7 @@
         'transition': 'background-image 1s ease',
       });
 
+    // rey
       $("#li3rd-characters").hover(function(){
         $(".deployable-characters").css("background-image", "url('https://i.pinimg.com/474x/a2/9a/12/a29a12ec3994a7e77a765310e5773a22.jpg')");
         $(".deployable-characters").css("background-size", "160%");
@@ -248,6 +250,7 @@
         'transition': 'background-image 1s ease',
       });
 
+    // obi
       $("#li4th-characters").hover(function(){
         $(".deployable-characters").css("background-image", "url('https://lumiere-a.akamaihd.net/v1/images/62bf0e03e8459d0001f4881b-image_71900d89.jpeg?region=192%2C0%2C1152%2C864')");
         $(".deployable-characters").css("background-size", "160%");
@@ -260,6 +263,7 @@
         'transition': 'background-image 1s ease',
       });
 
+    // leia
       $("#li5th-characters").hover(function(){
         $(".deployable-characters").css("background-image", "url('https://sm.ign.com/ign_nordic/gallery/s/star-wars-/star-wars-leia-organa-force-fx-elite-lightsaber-gallery_5h7p.png')");
         $(".deployable-characters").css("background-size", "160%");
@@ -272,9 +276,10 @@
         'transition': 'background-image 1s ease',
       });
 
+    // finn
       $("#li6th-characters").hover(function(){
-        $(".deployable-characters").css("background-image", "url('https://lumiere-a.akamaihd.net/v1/images/finn-main_ad2b705b.jpeg?region=111%2C227%2C1169%2C585')");
-        $(".deployable-characters").css("background-size", "160%");
+        $(".deployable-characters").css("background-image", "url('https://sm.ign.com/t/ign_es/news/s/star-wars-/star-wars-the-last-jedi-is-finn-truly-part-of-the-resistance_a7m3.1200.png')");
+        $(".deployable-characters").css("background-size", "165%");
         $(".deployable-characters li b").css("color", "rgba(0, 0, 0, 0)");
       }, function(){
         $(".deployable-characters").css("background-image", "url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAADFCAMAAACM/tznAAAAA1BMVEVOTlDY765vAAAASElEQVR4nO3BMQEAAADCoPVPbQhfoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOA8XFAAFeol+kAAAAAElFTkSuQmCC')");
