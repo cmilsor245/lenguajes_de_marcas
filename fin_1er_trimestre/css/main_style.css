@@ -71,6 +71,11 @@
     background-image: url("../img/bg/background.png");
   }
 
+  ::selection {
+    color: black;
+    background: white;
+  }
+
 /*******************************************************************************************************/
 
 /* general font family */

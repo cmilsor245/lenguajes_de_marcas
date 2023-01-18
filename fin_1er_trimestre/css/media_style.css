@@ -23,13 +23,18 @@
 /*******************************************************************************************************/
 
 /* the whole page */
-*{
-  box-sizing: border-box;
-}
+  *{
+    box-sizing: border-box;
+  }
 
-html{
-  background-image: url("../img/bg/background.png");
-}
+  html{
+    background-image: url("../img/bg/background.png");
+  }
+
+  ::selection {
+    color: black;
+    background: white;
+  }
 
 /*******************************************************************************************************/
 
