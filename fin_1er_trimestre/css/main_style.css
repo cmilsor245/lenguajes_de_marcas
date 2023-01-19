@@ -456,12 +456,12 @@
       .mySlides img:hover{
         box-shadow: 0 0 20px #fff;
         transform: scale(1.05);
-        border-radius: 30px;
-        transition: 1s ease;
+        transition: .6s ease;
       }
 
       .mySlides img{
         transition: 1s ease;
+        border-radius: 30px;
       }
 
   /*********************************************/
