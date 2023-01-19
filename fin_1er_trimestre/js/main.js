@@ -400,3 +400,12 @@
       $(".deployable-planets").css({
         'transition': 'background-image 1s ease',
       });
+
+/***********************************************************/
+
+// slides shine
+  $(".mySlides").hover(function(){
+    $(this).css("box-shadow", "0px 0px 10px 10px rgba(255,255,255,0.5)");
+  }, function(){
+    $(this).css("box-shadow", "none");
+  });
