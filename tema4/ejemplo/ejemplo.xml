@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<datos_alumno>
-  <alumno id="1">
-    <nombre>Christian</nombre>
+  <datos_alumno>
+    <alumno id="1">
+      <nombre>Christian</nombre>
 
-    <apellidos>Millán Soria</apellidos>
+      <apellidos>Millán Soria</apellidos>
 
-    <fecha_nacimiento>18/09/01</fecha_nacimiento>
+      <fecha_nacimiento>18/09/01</fecha_nacimiento>
 
-    <sexo>Varón</sexo>
+      <sexo>Varón</sexo>
 
-    <telefono>611 11 11 11</telefono>
+      <telefono>611 11 11 11</telefono>
 
-    <direccion>Calle 1</direccion>
-  </alumno>
+      <direccion>Calle 1</direccion>
+    </alumno>
 
-  <!--**********************************************-->
+    <!--**********************************************-->
 
-  <alumno id="2">
-    <nombre>Rafael</nombre>
+    <alumno id="2">
+      <nombre>Rafael</nombre>
 
-    <apellidos>Silva Alcántara</apellidos>
+      <apellidos>Silva Alcántara</apellidos>
 
-    <fecha_nacimiento>03/04/99</fecha_nacimiento>
+      <fecha_nacimiento>03/04/99</fecha_nacimiento>
 
-    <sexo>Varón</sexo>
+      <sexo>Varón</sexo>
 
-    <telefono>622 22 22 22</telefono>
+      <telefono>622 22 22 22</telefono>
 
-    <direccion>Calle 2</direccion>
-  </alumno>
-</datos_alumno>
+      <direccion>Calle 2</direccion>
+    </alumno>
+  </datos_alumno>
