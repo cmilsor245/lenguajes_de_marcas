@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-  <datos_alumno>
+  <datos_alumnos>
     <alumno id="1">
       <nombre>Christian</nombre>
 
@@ -30,4 +30,4 @@
 
       <direccion>Calle 2</direccion>
     </alumno>
-  </datos_alumno>
+  </datos_alumnos>
