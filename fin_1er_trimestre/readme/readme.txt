@@ -27,13 +27,21 @@ CÓMO NAVEGAR POR EL proyecto
   PÁGINA HOME
     En la página "HOME" se encuentra un slideshow/carrusel de imágenes que cambia de imagen automáticamente y de forma aleatoria. Al colocar el cursor encima se cambia el tamaño de la imagen.
 
-    Debajo del slideshow hay una barra de búsqueda, donde se puede introducir el título de un artículo (sub-página) del proyecto, por ejemplo, se puede introducir las palabras "rey skywalker" o "rey" y darle a Enter o al botón "SEARCH" para acceder al artículo sobre este personaje.
+    Al fondo de la página, detrás de todos los objetos, hay varias naves que se mueven cada una con su propia animación de un lado de la pantalla a otro.
+
+    Debajo del slideshow hay una barra de búsqueda, donde se puede introducir el título de un artículo (sub-página) del proyecto, por ejemplo, se puede introducir las palabras "rey skywalker" o "rey" y darle a Enter o al botón "SEARCH" para acceder al artículo sobre este personaje. La barra de búsqueda tiene una animación de hover.
 
     Debajo de la barra de búsqueda se encuentra una sección de noticias relacionadas con la saga de Star Wars. El poster que aparece en la primera sección tiene una animación de hover, al igual que las imágenes sobre los personajes que aparecen en medio del cuadro.
     
     A la derecha de la sección de noticias se encuentran algunas noticias más mucho más cortas y comprimidas, entre las que se encuentra un vídeo que se reproduce automáticamente.
 
+    El vídeo se reproduce sin sonido, pero se puede activar, ya que cuenta con los controles básicos de YouTube.
+
+    La imagen en la sección de debajo del vídeo tiene un enlace que redirecciona a una página externa relacionada con lo que se comenta en esta sección de mi página.
+
   -------------------------------------------------------
 
   PÁGINAS MEDIA, CHARACTERS Y PLANETS
-    
+    La barra de navegación cambia según la página o sub-página en la que te encuentres. Si te encuentras, por ejemplo, en la página del artículo de la película "THE PHANTOM MENACE", su enlace en el desplegable de la barra de navegación no aparecerá. Si te encuentras en la página de "CHARACTERS", viendo el grid de imágenes con enlaces a todos los personajes que he introducido, el desplegable de la página de "CHARACTERS" no aparecerá en la barra de navegación al poner el cursor encima, ya que no es necesario porque los enlaces ya están en las propias imágenes de la página "CHARACTERS".
+
+    Cada una de estas páginas (MEDIA, CHARACTERS y PLANTES) cuenta con un grid de imágenes, cada una con una animación de hover, para poder poner el cursor encima de ellas y ver otra imagen diferente a la que aparece y poder hacer clic en ellas para acceder al artículo de cada elemento.
