@@ -208,7 +208,7 @@
           width: 300;
           top: 39;
           left: 1835;
-          z-1860: 1;
+          z-index: 1860;
           padding: 8px;
           border-radius: 4px;
         }
