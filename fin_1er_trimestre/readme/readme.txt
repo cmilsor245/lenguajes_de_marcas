@@ -9,7 +9,7 @@ ERRORES CONOCIDOS:
 
     El zoom de la página se debe cambiar desde el mismo navegador una vez la página web esté abierta.
 
-    Estos dos ajustes son fáciles de cambiar y fáciles de revertir a su valor original, no debería haber ningún problema, pero en caso de no querer cambiarlos, he adjuntado algunas capturas de pantalla donde se ve como cuadran los elementos perfectamente en mi entorno de trabajo. Estas capturas están en el directorio "readme/proof/" de mi proyecto. Las capturas han sido tomadas con un 100% de zoom en el ajuste de Windows y un 80% de zoom en la página web, en el navegador Opera GX.
+    Estos dos ajustes son fáciles de cambiar y fáciles de revertir a su valor original, no debería haber ningún problema, pero en caso de no querer cambiarlos, he adjuntado algunas capturas de pantalla donde se ve como cuadran los elementos perfectamente en mi entorno de trabajo. Estas capturas están en el directorio "readme/proof/" de mi proyecto. Las capturas han sido tomadas con un 100% de zoom en el ajuste de Windows y un 80% de zoom en la página web.
 
     Este problema se debe a que no he utilizado desde el principio valores de asignación de posición y tamaño relativos, que se adaptan al zoom de la página. Al haber utilizado valores absolutos (como "position: absolute" o "width: 500px", en lugar de "position: relative" y "width: 80%", por ejemplo), los tamaños y posiciones de los elementos se mantienen aun cambiando el zoom de la página, por lo que todo se descoloca o no cuadra correctamente con otros elementos con los que debe cuadrar.
 
