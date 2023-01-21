@@ -342,7 +342,7 @@
   .article{
     background-color: #09507d;
     width: 1300;
-    height: 900;
+    height: 1000;
     position: absolute;
     top: 18%;
     left: 22%;
@@ -398,7 +398,7 @@
           text-align: center;
           background-color: #6b6b39;
           font-weight: bold;
-          height: 18px;
+          height: 42px;
           margin: 0;
           color: white;
         }
@@ -407,7 +407,7 @@
           text-align: center;
           background-color: #ddddbb;
           font-weight: bold;
-          height: 50px;
+          height: 82px;
           margin: 0;
         }
 
@@ -415,7 +415,7 @@
           text-align: center;
           background-color: #6b6b39;
           font-weight: bold;
-          height: 35px;
+          height: 42px;
           margin: 0;
           color: white;
         }
@@ -424,7 +424,7 @@
           text-align: center;
           background-color: #ddddbb;
           font-weight: bold;
-          height: 125px;
+          height: 222px;
           margin: 0;
         }
 
@@ -432,7 +432,7 @@
           text-align: center;
           background-color: #6b6b39;
           font-weight: bold;
-          height: 18px;
+          height: 22px;
           margin: 0;
           color: white;
         }
