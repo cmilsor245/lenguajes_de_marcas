@@ -1,1 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
+  <persona>
+    <nombre>Elsa</nombre>
+
+    <!--********************-->
+
+    <fecha_nacimiento>
+      <dia>18</dia>
+
+      <mes>6</mes>
+    </fecha_nacimiento>
+
+    <!--********************-->
+
+    <ciudad>Pamplona</ciudad>
+
+    <!--********************-->
+
+    <color_favorito>Azul</color_favorito>
+
+    <!--********************-->
+
+    <aficiones>Cine, baile y nadar</aficiones>
+  </persona>
