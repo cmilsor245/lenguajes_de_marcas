@@ -1,4 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
   <cv>
-    
+    <nombre>Christian</nombre>
+
+    <!--******************-->
+
+    <apellidos>
+      <primero>Millán</primero>
+
+      <segundo>Soria</segundo>
+    </apellidos>
+
+    <!--******************-->
+
+    <año_nacimiento>2001</año_nacimiento>
+
+    <!--******************-->
+
+    <residencia>
+      <ciudad>Málaga</ciudad>
+
+      <pais>España</pais>
+    </residencia>
+
+    <!--******************-->
+
+    <contacto>
+      <telefono>611 11 11 11</telefono>
+
+      <correo>example@gmail.com</correo>
+
+      <linkedin>https://es.linkedin.com/in/manololama</linkedin>
+    </contacto>
+
+    <!--******************-->
+
+    <descripcion_general>*Inserte descripción aquí*</descripcion_general>
+
+    <!--******************-->
+
+    <competencias>
+      <primera>
+        <nombre>Competencia 1</nombre>
+
+        <nivel>Alto</nivel>
+      </primera>
+
+      <!--***********-->
+
+      <segunda>
+        <nombre>Competencia 2</nombre>
+
+        <nivel>Medio-Alto</nivel>
+      </segunda>
+
+      <!--***********-->
+
+      <tercera>
+        <nombre>Competencia 3</nombre>
+
+        <nivel>Alto</nivel>
+      </tercera>
+    </competencias>
+
+    <!--******************-->
+
+    <form_acad>
+      <titulacion></titulacion>
+    </form_acad>
   </cv>
