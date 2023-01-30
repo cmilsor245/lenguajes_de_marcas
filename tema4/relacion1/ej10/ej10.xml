@@ -2,7 +2,7 @@
   <cv>
     <nombre>Christian</nombre>
 
-    <!--******************-->
+    <!--***************************-->
 
     <apellidos>
       <primero>Millán</primero>
@@ -10,11 +10,11 @@
       <segundo>Soria</segundo>
     </apellidos>
 
-    <!--******************-->
+    <!--***************************-->
 
     <año_nacimiento>2001</año_nacimiento>
 
-    <!--******************-->
+    <!--***************************-->
 
     <residencia>
       <ciudad>Málaga</ciudad>
@@ -22,7 +22,7 @@
       <pais>España</pais>
     </residencia>
 
-    <!--******************-->
+    <!--***************************-->
 
     <contacto>
       <telefono>611 11 11 11</telefono>
@@ -32,11 +32,11 @@
       <linkedin>https://es.linkedin.com/in/manololama</linkedin>
     </contacto>
 
-    <!--******************-->
+    <!--***************************-->
 
     <descripcion_general>*Inserte descripción aquí*</descripcion_general>
 
-    <!--******************-->
+    <!--***************************-->
 
     <competencias>
       <primera>
@@ -45,7 +45,7 @@
         <nivel>Alto</nivel>
       </primera>
 
-      <!--***********-->
+      <!--****************-->
 
       <segunda>
         <nombre>Competencia 2</nombre>
@@ -53,7 +53,7 @@
         <nivel>Medio-Alto</nivel>
       </segunda>
 
-      <!--***********-->
+      <!--****************-->
 
       <tercera>
         <nombre>Competencia 3</nombre>
@@ -62,9 +62,33 @@
       </tercera>
     </competencias>
 
-    <!--******************-->
+    <!--***************************-->
 
     <form_acad>
-      <titulacion></titulacion>
+      <titulacion id="eso">
+        <centro>Martín de Aldehuela</centro>
+
+        <año>2018</año>
+      </titulacion>
+
+      <!--*************-->
+
+      <titulacion id="eso">
+        <centro>Ciudad Jardín</centro>
+
+        <año>2022</año>
+      </titulacion>
     </form_acad>
+
+    <!--***************************-->
+
+    <exp_prof>
+      <puesto>Becario (prácticas)</puesto>
+
+      <empresa>Avanzada 7</empresa>
+
+      <inicio>Marzo 2022</inicio>
+
+      <finalización>Junio 2022</finalización>
+    </exp_prof>
   </cv>
