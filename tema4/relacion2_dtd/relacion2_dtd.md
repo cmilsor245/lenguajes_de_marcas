@@ -25,9 +25,9 @@
 ]>
 
 <perifericos>
-  <periferico>Impresora</periferico>
-  <periferico>Monitor</periferico>
-  <periferico>Teclado</periferico>
+  <periferico>impresora</periferico>
+  <periferico>monitor</periferico>
+  <periferico>teclado</periferico>
 </perifericos>
 ```
 
@@ -41,7 +41,7 @@
 ]>
 
 <perifericos>
-  <periferico>Impresora, monitor, teclado</periferico>
+  <periferico>impresora, monitor, teclado</periferico>
 </perifericos>
 ```
 
@@ -95,5 +95,37 @@
 <p>Respuesta:</p>
 
 ```xml
+
+```
+
+<p><b>c. Colores</b></p>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE colores[
+  <!ELEMENT colores(color*)>
+  <!ELEMENT color(#PCDATA)>
+]>
+
+<colores>
+  <color>azul marino</color>
+
+  negro
+
+  <color>amarillo</color>
+</colores>
+```
+
+<p>Respuesta:</p>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE colores[
+  <!ELEMENT colores(color*)>
+  <!ELEMENT color(#PCDATA)>
+]>
+
 
 ```
