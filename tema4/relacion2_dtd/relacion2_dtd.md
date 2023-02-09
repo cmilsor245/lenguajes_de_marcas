@@ -34,13 +34,29 @@
 <p>Respuesta:</p>
 
 ```xml
-<?xml version="1.0" encoding="UTF-8"?> 
- 
+<?xml version="1.0" encoding="UTF-8"?>
+
 <!DOCTYPE perifericos[
-  <!ELEMENT periferico(#PCDATA)> 
-]> 
- 
-<perifericos> 
-  <periferico>Impresora, monitor, teclado</periferico> 
+  <!ELEMENT periferico(#PCDATA)>
+]>
+
+<perifericos>
+  <periferico>Impresora, monitor, teclado</periferico>
 </perifericos>
+```
+
+<p><b>2. Los siguientes documentos no son válidos porque contienen uno o dos errores (los errores no están en la DTD interna). Corrige los errores.</b></p>
+
+<p><b>a. Números</b></p>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE numeros[
+  <!ELEMENT numeros(#PCDATA)>
+]>
+
+<numeros>
+  <numero>25</numero>
+</numero>
 ```
