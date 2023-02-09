@@ -411,3 +411,83 @@
   </musico>
 </musicos>
 ```
+
+<p><b>h. Teléfonos de emergencia</b></p>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE agenda[
+  <!ELEMENT agenda(contacto*)>
+  <!ELEMENT contacto(nombre, telefonoFijo*, telefonoMovil+)>
+  <!ELEMENT nombre(#PCDATA)>
+  <!ELEMENT telefonoFijo(#PCDATA)>
+  <!ELEMENT telefonoMovil(#PCDATA)>
+]>
+
+<agenda>
+  <contacto>
+    <nombre>ayuntamiento</nombre>
+
+    <telefonoFijo>010</telefonoFijo>
+  </contacto>
+
+  <contacto>
+    <nombre>emergencias</nombre>
+
+    <telefonoFijo>112 (unión europea)</telefonoFijo>
+
+    <telefonoMovil>desconocido</telefonoMovil>
+
+    <telefonoFijo>911 (estados unidos)</telefonoFijo>
+  </contacto>
+</agenda>
+```
+
+<p>Respuesta:</p>
+
+```xml
+<!-- primer caso | no aparece ningún elemento "contacto" -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE agenda[
+  <!ELEMENT agenda(contacto*)>
+  <!ELEMENT contacto(nombre, telefonoFijo*, telefonoMovil+)>
+  <!ELEMENT nombre(#PCDATA)>
+  <!ELEMENT telefonoFijo(#PCDATA)>
+  <!ELEMENT telefonoMovil(#PCDATA)>
+]>
+
+<agenda></agenda>
+```
+
+```xml
+<!-- segundo caso | aparecen n elementos "contacto" -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE agenda[
+  <!ELEMENT agenda(contacto*)>
+  <!ELEMENT contacto(nombre, telefonoFijo*, telefonoMovil+)>
+  <!ELEMENT nombre(#PCDATA)>
+  <!ELEMENT telefonoFijo(#PCDATA)>
+  <!ELEMENT telefonoMovil(#PCDATA)>
+]>
+
+<agenda>
+  <contacto>
+    <nombre>ayuntamiento</nombre>
+
+    <telefonoFijo>010</telefonoFijo>
+
+    <telefonoMovil>611 11 11 11</telefonoMovil>
+  </contacto>
+
+  <contacto>
+    <nombre>emergencias</nombre>
+
+    <telefonoMovil>622 22 22 22</telefonoMovil>
+  </contacto>
+</agenda>
+```
