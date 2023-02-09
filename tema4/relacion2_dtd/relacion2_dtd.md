@@ -234,5 +234,16 @@
 <p>Respuesta:</p>
 
 ```xml
+<?xml version="1.0" encoding="UTF-8"?>
 
+<!DOCTYPE animales[
+  <!ELEMENT animales(animal*)>
+  <!ELEMENT animal(#PCDATA)>
+]>
+
+<animales>
+  <animal>caniche</animal>
+
+  <animal>siamés</animal>
+</animales>
 ```
