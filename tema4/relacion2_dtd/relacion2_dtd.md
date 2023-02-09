@@ -34,15 +34,13 @@
 <p>Respuesta:</p>
 
 ```xml
-<?xml version="1.0" encoding="UTF-8"?>
-
+<?xml version="1.0" encoding="UTF-8"?> 
+ 
 <!DOCTYPE perifericos[
-  <!ELEMENT perifericos(#PCDATA)>
-]>
-
-<perifericos>
-  <periferico>Impresora</periferico>
-  <periferico>Monitor</periferico>
-  <periferico>Teclado</periferico>
+  <!ELEMENT periferico(#PCDATA)> 
+]> 
+ 
+<perifericos> 
+  <periferico>Impresora, monitor, teclado</periferico> 
 </perifericos>
 ```
