@@ -234,6 +234,21 @@
 <p>Respuesta:</p>
 
 ```xml
+<!-- primer caso | no aparece ningún elemento "animal" -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE animales[
+  <!ELEMENT animales(animal*)>
+  <!ELEMENT animal(#PCDATA)>
+]>
+
+<animales></animales>
+```
+
+```xml
+<!-- segundo caso | aparecen n elementos "animal" -->
+
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!DOCTYPE animales[
