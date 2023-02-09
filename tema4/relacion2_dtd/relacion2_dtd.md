@@ -337,5 +337,77 @@
 <p><b>g. Músicos</b></p>
 
 ```xml
+<?xml version="1.0" encoding="UTF-8"?>
 
+<!DOCTYPE musicos[
+  <!ELEMENT musicos(musico*)>
+  <!ELEMENT musico((nombre | apodo), fechaNacimiento)>
+  <!ELEMENT nombre(#PCDATA)>
+  <!ELEMENT apodo(#PCDATA)>
+  <!ELEMENT fechaNacimiento(#PCDATA)>
+]>
+
+<musicos>
+  <musico>
+    <nombre>antonio vivaldi</nombre>
+
+    <apodo>el cura pelirrojo</apodo>
+
+    <fechaNacimiento>4 de marzo de              1678</fechaNacimiento>
+  </musico>
+
+  <musico>
+    <nombre>johann sebastian bach</nombre>
+
+    <apodo>el viejo peluca</apodo>
+
+    <fechaNacimiento>21 de marzo de              1685</fechaNacimiento>
+  </musico>
+</musicos>
+```
+
+<p>Respuesta:</p>
+
+```xml
+<!-- primer caso | no aparece ningún elemento "musico" -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE musicos[
+  <!ELEMENT musicos(musico*)>
+  <!ELEMENT musico((nombre | apodo), fechaNacimiento)>
+  <!ELEMENT nombre(#PCDATA)>
+  <!ELEMENT apodo(#PCDATA)>
+  <!ELEMENT fechaNacimiento(#PCDATA)>
+]>
+
+<musicos></musicos>
+```
+
+```xml
+<!-- segundo caso | aparecen n elementos "musico" -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE musicos[
+  <!ELEMENT musicos(musico*)>
+  <!ELEMENT musico((nombre | apodo), fechaNacimiento)>
+  <!ELEMENT nombre(#PCDATA)>
+  <!ELEMENT apodo(#PCDATA)>
+  <!ELEMENT fechaNacimiento(#PCDATA)>
+]>
+
+<musicos>
+  <musico>
+    <nombre>antonio vivaldi</nombre>
+
+    <fechaNacimiento>4 de marzo de 1678</fechaNacimiento>
+  </musico>
+
+  <musico>
+    <apodo>el viejo peluca</apodo>
+
+    <fechaNacimiento>21 de marzo de 1685</fechaNacimiento>
+  </musico>
+</musicos>
 ```
