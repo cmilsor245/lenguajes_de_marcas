@@ -60,7 +60,7 @@
 
 <numeros>
   <numero>25</numero>
-</numero>
+</numeros>
 ```
 
 <p>Respuesta:</p>
@@ -72,9 +72,7 @@
   <!ELEMENT numeros(#PCDATA)>
 ]>
 
-<numeros>
-  <numeros>25</numeros>
-</numeros>
+<numeros>25</numeros>
 ```
 
 <p><b>b. Letras</b></p>
@@ -97,7 +95,20 @@
 <p>Respuesta:</p>
 
 ```xml
+<!-- creo que ya es válido -->
 
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE letras[
+  <!ELEMENT letras(letra)>
+  <!ELEMENT letra(#PCDATA)>
+]>
+
+<letras>
+  <letra>m</letra>
+
+  <letra>uve doble</letra>
+</letras>
 ```
 
 <p><b>c. Colores</b></p>
@@ -160,6 +171,48 @@
 <!DOCTYPE flores[
   <!ELEMENT flores(flor+)>
   <!ELEMENT flor(#PCDATA)>
+]>
+
+<flores>
+  <flor>rosa</flor>
+
+  <flor>lirio</flor>
+
+  <flor>tulipán</flor>
+</flores>
+```
+
+<p><b>e. Animales</b></p>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE favoritos[
+  <!ELEMENT favoritos(marcador)>
+  <!ELEMENT marcador(nombre, uri)>
+  <!ELEMENT nombre(#PCDATA)>
+  <!ELEMENT uri(#PCDATA)>
+]>
+
+<marcadores>
+  <marcador>
+    <nombre>W3C</nombre>
+
+    <uri>http://www.we.org/</uri>
+  marcador>
+<marcador>
+```
+
+<p>Respuesta:</p>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE favoritos[
+  <!ELEMENT favoritos(marcador)>
+  <!ELEMENT marcador(nombre, uri)>
+  <!ELEMENT nombre(#PCDATA)>
+  <!ELEMENT uri(#PCDATA)>
 ]>
 
 
