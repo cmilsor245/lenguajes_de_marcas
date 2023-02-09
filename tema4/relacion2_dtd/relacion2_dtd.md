@@ -60,3 +60,40 @@
   <numero>25</numero>
 </numero>
 ```
+
+<p>Respuesta:</p>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE numeros[
+  <!ELEMENT numeros(#PCDATA)>
+]>
+
+<numeros>
+  <numeros>25</numeros>
+</numeros>
+```
+
+<p><b>b. Letras</b></p>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE letras[
+  <!ELEMENT letras(letra)>
+  <!ELEMENT letra(#PCDATA)>
+]>
+
+<letras>
+  <letra>m</letra>
+
+  <letra>uve doble</letra>
+</letras>
+```
+
+<p>Respuesta:</p>
+
+```xml
+
+```
