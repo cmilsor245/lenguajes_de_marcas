@@ -293,6 +293,8 @@
 <p>Respuesta:</p>
 
 ```xml
+<!-- primer caso | no aparece ningún elemento "escritor" -->
+
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!DOCTYPE escritores[
@@ -302,5 +304,38 @@
   <!ELEMENT nacimiento(#PCDATA)>
 ]>
 
+<escritores></escritores>
+```
+
+```xml
+<!-- segundo caso | aparecen n elementos "escritor" -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE escritores[
+  <!ELEMENT escritores(escritor*)>
+  <!ELEMENT escritor(nombre, nacimiento)>
+  <!ELEMENT nombre(#PCDATA)>
+  <!ELEMENT nacimiento(#PCDATA)>
+]>
+
+<escritores>
+  <escritor>
+    <nombre>mario vargas llosa</nombre>
+
+    <nacimiento>28 de marzo de 1936</nacimiento>
+  </escritor>
+
+  <escritor>
+    <nombre>milan kundera</nombre>
+
+    <nacimiento>1 de abril de 1929</nacimiento>
+  </escritor>
+</escritores>
+```
+
+<p><b>g. Músicos</b></p>
+
+```xml
 
 ```
