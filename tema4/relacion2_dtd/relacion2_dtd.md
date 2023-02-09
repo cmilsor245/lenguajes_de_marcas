@@ -26,7 +26,9 @@
 
 <perifericos>
   <periferico>impresora</periferico>
+
   <periferico>monitor</periferico>
+
   <periferico>teclado</periferico>
 </perifericos>
 ```
@@ -125,6 +127,39 @@
 <!DOCTYPE colores[
   <!ELEMENT colores(color*)>
   <!ELEMENT color(#PCDATA)>
+]>
+
+<colores>
+  <color>azul marino</color>
+
+  <color>negro</color>
+
+  <color>amarillo</color>
+</colores>
+```
+
+<p><b>d. Flores</b></p>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE flores[
+  <!ELEMENT flores(flor+)>
+  <!ELEMENT flor(#PCDATA)>
+]>
+
+<flores>
+</flores>
+```
+
+<p>Respuesta:</p>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE flores[
+  <!ELEMENT flores(flor+)>
+  <!ELEMENT flor(#PCDATA)>
 ]>
 
 
