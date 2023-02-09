@@ -219,39 +219,20 @@
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!DOCTYPE favoritos[
-  <!ELEMENT favoritos(marcador)>
-  <!ELEMENT marcador(nombre, uri)>
-  <!ELEMENT nombre(#PCDATA)>
-  <!ELEMENT uri(#PCDATA)>
+<!DOCTYPE animales[
+  <!ELEMENT animales(animal*)>
+  <!ELEMENT animal(#PCDATA)>
 ]>
 
-<marcadores>
-  <marcador>
-    <nombre>W3C</nombre>
+<animales>
+  <perro>caniche</perro>
 
-    <uri>http://www.w3.org/</uri>
-  marcador>
-<marcador>
+  <gato>siamés</gato>
+</animales>
 ```
 
 <p>Respuesta:</p>
 
 ```xml
-<?xml version="1.0" encoding="UTF-8"?>
 
-<!DOCTYPE favoritos[
-  <!ELEMENT favoritos(marcador)>
-  <!ELEMENT marcador(nombre, uri)>
-  <!ELEMENT nombre(#PCDATA)>
-  <!ELEMENT uri(#PCDATA)>
-]>
-
-<favoritos>
-  <marcador>
-    <nombre>W3C</nombre>
-
-    <uri>http://www.w3.org/</uri>
-  </marcador>
-</favoritos>
 ```
