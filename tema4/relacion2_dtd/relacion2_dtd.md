@@ -289,3 +289,18 @@
   </escritor>
 </escritores>
 ```
+
+<p>Respuesta:</p>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE escritores[
+  <!ELEMENT escritores(escritor*)>
+  <!ELEMENT escritor(nombre, nacimiento)>
+  <!ELEMENT nombre(#PCDATA)>
+  <!ELEMENT nacimiento(#PCDATA)>
+]>
+
+
+```
