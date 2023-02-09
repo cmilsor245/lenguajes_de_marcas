@@ -133,6 +133,21 @@
 <p>Respuesta:</p>
 
 ```xml
+<!-- primer caso | no aparece ningún elemento "color" -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE colores[
+  <!ELEMENT colores(color*)>
+  <!ELEMENT color(#PCDATA)>
+]>
+
+<colores></colores>
+```
+
+```xml
+<!-- segundo caso | aparecen n elementos "color" -->
+
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!DOCTYPE colores[
@@ -166,6 +181,23 @@
 <p>Respuesta:</p>
 
 ```xml
+<!-- primer caso | aparece 1 elemento "flor" -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE flores[
+  <!ELEMENT flores(flor+)>
+  <!ELEMENT flor(#PCDATA)>
+]>
+
+<flores>
+  <flor>rosa</flor>
+</flores>
+```
+
+```xml
+<!-- segundo caso | aparecen n elementos "flor" -->
+
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!DOCTYPE flores[
@@ -198,7 +230,7 @@
   <marcador>
     <nombre>W3C</nombre>
 
-    <uri>http://www.we.org/</uri>
+    <uri>http://www.w3.org/</uri>
   marcador>
 <marcador>
 ```
@@ -215,5 +247,11 @@
   <!ELEMENT uri(#PCDATA)>
 ]>
 
+<favoritos>
+  <marcador>
+    <nombre>W3C</nombre>
 
+    <uri>http://www.w3.org/</uri>
+  </marcador>
+</favoritos>
 ```
