@@ -1007,3 +1007,16 @@ DOCTYPE areopuertos[
   </color>
 </colores>
 ```
+
+<p><b>6. Se quiere definir un lenguaje de marcas para representar los resultados de una liga de fútbol. La información que se quiere almacenar de cada partido es:</b></p>
+
+<li><b>el nombre del equipo local</b></li>
+
+<li><b>el nombre del equipo visitante</b></li>
+
+<li><b>los goles marcados por el equipo local</b></li>
+
+<li><b>los goles marcados por el equipo visitante</b></li>
+
+<p><b>Escribe tres documentos que incluyan los sigueintes resultados:</b></p>
+
