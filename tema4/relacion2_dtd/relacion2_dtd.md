@@ -1053,6 +1053,25 @@ DOCTYPE areopuertos[
 </cuadros>
 ```
 
+<p><b>b. Lista de la compra</b></p>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE listaCompra[
+  <!ELEMENT listaCompra(item*)>
+  ELEMENT item EMPTY>
+  <!ATTLIST item nombre CDATA #REQUIRED>
+  ATTLIST item cantidad CDATA #REQUIRED>
+]>
+
+<listaCompra>
+  <leche cantidad="12 litros"></leche>
+
+  <pan cantidad="3 barras de cuarto"/>
+</listaCompra>
+```
+
 <p><b>6. Se quiere definir un lenguaje de marcas para representar los resultados de una liga de fútbol. La información que se quiere almacenar de cada partido es:</b></p>
 
 <li><b>el nombre del equipo local</b></li>
