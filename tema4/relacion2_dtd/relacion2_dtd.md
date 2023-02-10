@@ -714,13 +714,13 @@
 
 <marcadores>
   <marcador>
-    <nombre>W3C</nombre>
+    <nombre>w3c</nombre>
 
     <uri>http://eee.w3.org</uri>
   </marcador>
 
   <marcador>
-    <nombre>Web Hypertext Application Technology Working Group (WHATWG)</nombre>
+    <nombre>web hypertext application technology working group (whatwg)</nombre>
 
     <uri>http://www.whatwg.org</uri>
   </marcador>
@@ -743,13 +743,13 @@
 
 <marcadores>
   <marcador>
-    <nombre>W3C</nombre>
+    <nombre>w3c</nombre>
 
     <uri>http://eee.w3.org</uri>
   </marcador>
 
   <marcador>
-    <nombre>Web Hypertext Application Technology Working Group (WHATWG)</nombre>
+    <nombre>web hypertext application technology working group (whatwg)</nombre>
 
     <uri>http://www.whatwg.org</uri>
   </marcador>
@@ -770,15 +770,46 @@
 
 <marcadores>
   <marcador>
-    <nombre>W3C</nombre>
+    <nombre>w3c</nombre>
 
     <uri>http://eee.w3.org</uri>
   </marcador>
 
   <marcador>
-    <nombre>Web Hypertext Application Technology Working Group (WHATWG)</nombre>
+    <nombre>web hypertext application technology working group (whatwg)</nombre>
 
     <uri>http://www.whatwg.org</uri>
   </marcador>
 </marcadores>
+```
+
+<p><b>b. Efemérides</b></p>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE efemerides[
+  <!ELEMENT efemerides(efemeride)>
+  <!ELEMENT efemeride(fecha, hecho)>
+]>
+
+<efemerides>
+  <efemeride>
+    <fecha>20 de julio de 1969</fecha>
+
+    <hecho>llegada del hombre a la luna</hecho>
+  </efemeride>
+
+  <efemeride>
+    <fecha>12 de octubre de 1492</fecha>
+
+    <hecho>llegada de colón a américa</hecho>
+  </efemeride>
+
+  <efemeride>
+    <fecha>6 de abril de 1909</fecha>
+
+    <hecho>llegada de robert peary al polo norte</hecho>
+  </efemeride>
+</efemerides>
 ```
