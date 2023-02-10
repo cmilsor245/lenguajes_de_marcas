@@ -1040,6 +1040,10 @@ DOCTYPE areopuertos[
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!DCOTYPE partido[
+  <!ELEMENT >
+]>
 ```
 
 <li>Segundo documento:</li>
