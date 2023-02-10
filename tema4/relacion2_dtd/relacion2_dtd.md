@@ -982,7 +982,9 @@ DOCTYPE areopuertos[
 
 <!DOCTYPE colores[
   <!ELEMENT colores(color*)>
+  <!ELEMENT color(nombreSvg, codigo)>
   <!ELEMENT nombreSvg(#PCDATA)>
+  <!ELEMENT codigo(rgb | cmyk)>
   <!ELEMENT rgb(#PCDATA)>
   <!ELEMENT cmyk(#PCDATA)>
 ]>
