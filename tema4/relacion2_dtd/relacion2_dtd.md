@@ -730,8 +730,6 @@
 <p>Respuesta:</p>
 
 ```xml
-<!-- primer caso | el elemento "favoritos" es realmente "marcadores" y el elemento "marcador" puede aparecer de 0 a n veces -->
-
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!DOCTYPE marcadores[
@@ -754,36 +752,39 @@
     <uri>http://www.whatwg.org</uri>
   </marcador>
 </marcadores>
-```
-
-```xml
-<!-- segundo caso | el elemento "favoritos" es realmente "marcadores" y el elemento "marcador" puede aparecer de 1 a n veces -->
-
-<?xml version="1.0" encoding="UTF-8"?>
-
-<!DOCTYPE marcadores[
-  <!ELEMENT marcadores(marcador+)>
-  <!ELEMENT marcador(nombre, uri)>
-  <!ELEMENT nombre(#PCDATA)>
-  <!ELEMENT uri(#PCDATA)>
-]>
-
-<marcadores>
-  <marcador>
-    <nombre>w3c</nombre>
-
-    <uri>http://eee.w3.org</uri>
-  </marcador>
-
-  <marcador>
-    <nombre>web hypertext application technology working group (whatwg)</nombre>
-
-    <uri>http://www.whatwg.org</uri>
-  </marcador>
-</marcadores>
-```
 
 <p><b>b. Efemérides</b></p>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE efemerides[
+  <!ELEMENT efemerides(efemeride)>
+  <!ELEMENT efemeride(fecha, hecho)>
+]>
+
+<efemerides>
+  <efemeride>
+    <fecha>20 de julio de 1969</fecha>
+
+    <hecho>llegada del hombre a la luna</hecho>
+  </efemeride>
+
+  <efemeride>
+    <fecha>12 de octubre de 1492</fecha>
+
+    <hecho>llegada de colón a américa</hecho>
+  </efemeride>
+
+  <efemeride>
+    <fecha>6 de abril de 1909</fecha>
+
+    <hecho>llegada de robert peary al polo norte</hecho>
+  </efemeride>
+</efemerides>
+```
+
+<p>Respuesta:</p>
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
