@@ -1015,7 +1015,18 @@ DOCTYPE areopuertos[
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 
+<!DOCTYPE cuadros[
+  <!ELEMENT cuadros(cuadro*)>
+  <!ELEMENT cuadro EMPTY>
+  <!ATTLIST cuadro titulo ID #REQUIRED>
+  <!ATTLIST cuadro autor CDATA #REQUIRED>
+]>
 
+<cuadros>
+  <cuadro titulo="adán y eva" autor="alberto durero"/>
+
+  <cuadro autor="lucas cranach, el viejo" titulo="adán y eva"/>
+</cuadros>
 ```
 
 <p><b>6. Se quiere definir un lenguaje de marcas para representar los resultados de una liga de fútbol. La información que se quiere almacenar de cada partido es:</b></p>
