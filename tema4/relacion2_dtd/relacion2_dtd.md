@@ -697,3 +697,6 @@
   </cuerpo>
 </sistemaSolar>
 ```
+
+<p><b>3. Los siguientes documentos no son válidos porque contienen errores (los errores están en el DTD interno). Corrige los errores. Intenta elegir la manera más sencilla de corregir el DTD, ya que casi siempre hay varias maneras distintas.</b></p>
+
