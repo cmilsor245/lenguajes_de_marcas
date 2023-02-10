@@ -974,3 +974,34 @@ DOCTYPE areopuertos[
   </color>
 </colores>
 ```
+
+<p>Respuesta:</p>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE colores[
+  <!ELEMENT colores(color*)>
+  <!ELEMENT nombreSvg(#PCDATA)>
+  <!ELEMENT rgb(#PCDATA)>
+  <!ELEMENT cmyk(#PCDATA)>
+]>
+
+<colores>
+  <color>
+    <nombreSvg>purple</nombreSvg>
+
+    <codigo>
+      <rgb>#800080</rgb>
+    </codigo>
+  </color>
+
+  <color>
+    <nombreSvg>purple</nombreSvg>
+
+    <codigo>
+      <cmyk>#00FF007F</cmyk>
+    </codigo>
+  </color>
+</colores>
+```
