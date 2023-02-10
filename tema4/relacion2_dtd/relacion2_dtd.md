@@ -491,3 +491,139 @@
   </contacto>
 </agenda>
 ```
+
+```xml
+<!-- tercer caso | no aparece ningún elemento "telefonoFijo" y solo aparece 1 elemento "telefonoMovil" -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE agenda[
+  <!ELEMENT agenda(contacto*)>
+  <!ELEMENT contacto(nombre, telefonoFijo*, telefonoMovil+)>
+  <!ELEMENT nombre(#PCDATA)>
+  <!ELEMENT telefonoFijo(#PCDATA)>
+  <!ELEMENT telefonoMovil(#PCDATA)>
+]>
+
+<agenda>
+  <contacto>
+    <nombre>ayuntamiento</nombre>
+
+    <telefonoMovil>611 11 11 11</telefonoMovil>
+  </contacto>
+
+  <contacto>
+    <nombre>emergencias</nombre>
+
+    <telefonoMovil>622 22 22 22</telefonoMovil>
+  </contacto>
+</agenda>
+```
+
+```xml
+<!-- cuarto caso | no aparece ningún elemento "telefonoFijo" y aparecen n elementos "telefonoMovil" -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE agenda[
+  <!ELEMENT agenda(contacto*)>
+  <!ELEMENT contacto(nombre, telefonoFijo*, telefonoMovil+)>
+  <!ELEMENT nombre(#PCDATA)>
+  <!ELEMENT telefonoFijo(#PCDATA)>
+  <!ELEMENT telefonoMovil(#PCDATA)>
+]>
+
+<agenda>
+  <contacto>
+    <nombre>ayuntamiento</nombre>
+
+    <telefonoMovil>611 11 11 11</telefonoMovil>
+
+    <telefonoMovil>633 33 33 33</telefonoMovil>
+  </contacto>
+
+  <contacto>
+    <nombre>emergencias</nombre>
+
+    <telefonoMovil>622 22 22 22</telefonoMovil>
+
+    <telefonoMovil>644 44 44 44</telefonoMovil>
+  </contacto>
+</agenda>
+```
+
+```xml
+<!-- quinto caso | aparecen n elementos "telefonoFijo" y solo aparece 1 elemento "telefonoMovil" -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE agenda[
+  <!ELEMENT agenda(contacto*)>
+  <!ELEMENT contacto(nombre, telefonoFijo*, telefonoMovil+)>
+  <!ELEMENT nombre(#PCDATA)>
+  <!ELEMENT telefonoFijo(#PCDATA)>
+  <!ELEMENT telefonoMovil(#PCDATA)>
+]>
+
+<agenda>
+  <contacto>
+    <nombre>ayuntamiento</nombre>
+
+    <telefonoFijo>010</telefonoFijo>
+
+    <telefonoFijo>020</telefonoFijo>
+
+    <telefonoMovil>611 11 11 11</telefonoMovil>
+  </contacto>
+
+  <contacto>
+    <nombre>emergencias</nombre>
+
+    <telefonoFijo>112</telefonoFijo>
+
+    <telefonoFijo>911</telefonoFijo>
+
+    <telefonoMovil>622 22 22 22</telefonoMovil>
+  </contacto>
+</agenda>
+```
+
+```xml
+<!-- sexto caso | aparecen n elementos "telefonoFijo" y aparecen n elementos "telefonoMovil" -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE agenda[
+  <!ELEMENT agenda(contacto*)>
+  <!ELEMENT contacto(nombre, telefonoFijo*, telefonoMovil+)>
+  <!ELEMENT nombre(#PCDATA)>
+  <!ELEMENT telefonoFijo(#PCDATA)>
+  <!ELEMENT telefonoMovil(#PCDATA)>
+]>
+
+<agenda>
+  <contacto>
+    <nombre>ayuntamiento</nombre>
+
+    <telefonoFijo>010</telefonoFijo>
+
+    <telefonoFijo>020</telefonoFijo>
+
+    <telefonoMovil>611 11 11 11</telefonoMovil>
+
+    <telefonoMovil>633 33 33 33</telefonoMovil>
+  </contacto>
+
+  <contacto>
+    <nombre>emergencias</nombre>
+
+    <telefonoFijo>112</telefonoFijo>
+
+    <telefonoFijo>911</telefonoFijo>
+
+    <telefonoMovil>622 22 22 22</telefonoMovil>
+
+    <telefonoMovil>644 44 44 44</telefonoMovil>
+  </contacto>
+</agenda>
+```
