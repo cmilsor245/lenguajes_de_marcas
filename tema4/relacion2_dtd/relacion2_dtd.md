@@ -700,3 +700,85 @@
 
 <p><b>3. Los siguientes documentos no son válidos porque contienen errores (los errores están en el DTD interno). Corrige los errores. Intenta elegir la manera más sencilla de corregir el DTD, ya que casi siempre hay varias maneras distintas.</b></p>
 
+<p><b>a. Marcadores</b></p>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE favoritos[
+  <!ELEMENT favoritos(marcador)>
+  <!ELEMENT marcador(nombre, uri)>
+  <!ELEMENT nombre(#PCDATA)>
+  <!ELEMENT uri(#PCDATA)>
+]>
+
+<marcadores>
+  <marcador>
+    <nombre>W3C</nombre>
+
+    <uri>http://eee.w3.org</uri>
+  </marcador>
+
+  <marcador>
+    <nombre>Web Hypertext Application Technology Working Group (WHATWG)</nombre>
+
+    <uri>http://www.whatwg.org</uri>
+  </marcador>
+</marcadores>
+```
+
+<p>Respuesta:</p>
+
+```xml
+<!-- primer caso | el elemento "favoritos" es realmente "marcadores" y el elemento "marcador" puede aparecer de 0 a n veces -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE marcadores[
+  <!ELEMENT marcadores(marcador*)>
+  <!ELEMENT marcador(nombre, uri)>
+  <!ELEMENT nombre(#PCDATA)>
+  <!ELEMENT uri(#PCDATA)>
+]>
+
+<marcadores>
+  <marcador>
+    <nombre>W3C</nombre>
+
+    <uri>http://eee.w3.org</uri>
+  </marcador>
+
+  <marcador>
+    <nombre>Web Hypertext Application Technology Working Group (WHATWG)</nombre>
+
+    <uri>http://www.whatwg.org</uri>
+  </marcador>
+</marcadores>
+```
+
+```xml
+<!-- segundo caso | el elemento "favoritos" es realmente "marcadores" y el elemento "marcador" puede aparecer de 1 a n veces -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE marcadores[
+  <!ELEMENT marcadores(marcador+)>
+  <!ELEMENT marcador(nombre, uri)>
+  <!ELEMENT nombre(#PCDATA)>
+  <!ELEMENT uri(#PCDATA)>
+]>
+
+<marcadores>
+  <marcador>
+    <nombre>W3C</nombre>
+
+    <uri>http://eee.w3.org</uri>
+  </marcador>
+
+  <marcador>
+    <nombre>Web Hypertext Application Technology Working Group (WHATWG)</nombre>
+
+    <uri>http://www.whatwg.org</uri>
+  </marcador>
+</marcadores>
+```
