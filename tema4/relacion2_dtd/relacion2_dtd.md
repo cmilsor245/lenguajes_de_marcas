@@ -1020,3 +1020,36 @@ DOCTYPE areopuertos[
 
 <p><b>Escribe tres documentos que incluyan los sigueintes resultados:</b></p>
 
+<li><b>Nottingham Presa: 0 - Inter de Mitente: 1</b></li>
+
+<li><b>Vodka Juniors: 3 - Sparta da Risa: 3</b></li>
+
+<li><b>Water de Munich: 4 - Esteaua es del grifo: 2</b></li>
+
+<p><b>Cada documento incluirá un DTD diferente para representar ese lenguaje de marcas:</b></p>
+
+<li><b>un DTD en el que no haya atributos, sino únicamente etiquetas</b></li>
+
+<li><b>un DTD en el que los goles sean atributos</b></li>
+
+<li><b>un DTD en el que toda la información se guarde en forma de atributos</b></li>
+
+<p>Respuesta:</p>
+
+<li>Primer documento:</li>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+```
+
+<li>Segundo documento:</li>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+```
+
+<li>Tercer documento:</li>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+```
