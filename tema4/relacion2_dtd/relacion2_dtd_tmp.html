@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>relacion2_dtd.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<style>
+  h1{
+    border: none;
+    margin-bottom: 0px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  p{
+    text-align: justify;
+  }
+</style>
+<h1>SEGUNDA RELACI&#xD3;N</h1>
+<hr>
+<p><b>1. El siguiente documento XML est&#xE1; bien formado. Sin embargo, no es v&#xE1;lido. Para que lo sea, realiza los cambios necesarios en dicho documento, pero sin modificar la DTD interna.</b></p>
+<pre class="hljs"><code><div><span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+
+<span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">perifericos</span>[
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">perifericos</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+]&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">perifericos</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">periferico</span>&gt;</span>impresora<span class="hljs-tag">&lt;/<span class="hljs-name">periferico</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">periferico</span>&gt;</span>monitor<span class="hljs-tag">&lt;/<span class="hljs-name">periferico</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">periferico</span>&gt;</span>teclado<span class="hljs-tag">&lt;/<span class="hljs-name">periferico</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">perifericos</span>&gt;</span>
+</div></code></pre>
+<p>Respuesta:</p>
+<pre class="hljs"><code><div><span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+
+<span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">perifericos</span>[
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">periferico</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+]&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">perifericos</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">periferico</span>&gt;</span>impresora, monitor, teclado<span class="hljs-tag">&lt;/<span class="hljs-name">periferico</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">perifericos</span>&gt;</span>
+</div></code></pre>
+<p><b>2. Los siguientes documentos no son v&#xE1;lidos porque contienen uno o dos errores (los errores no est&#xE1;n en la DTD interna). Corrige los errores.</b></p>
+<p><b>a. N&#xFA;meros</b></p>
+<pre class="hljs"><code><div><span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+
+<span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">numeros</span>[
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">numeros</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+]&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">numeros</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">numero</span>&gt;</span>25<span class="hljs-tag">&lt;/<span class="hljs-name">numero</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">numeros</span>&gt;</span>
+</div></code></pre>
+<p>Respuesta:</p>
+<pre class="hljs"><code><div><span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+
+<span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">numeros</span>[
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">numeros</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+]&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">numeros</span>&gt;</span>25<span class="hljs-tag">&lt;/<span class="hljs-name">numeros</span>&gt;</span>
+</div></code></pre>
+<p><b>b. Letras</b></p>
+<pre class="hljs"><code><div><span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+
+<span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">letras</span>[
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">letras</span>(<span class="hljs-meta-keyword">letra</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">letra</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+]&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">letras</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">letra</span>&gt;</span>m<span class="hljs-tag">&lt;/<span class="hljs-name">letra</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">letra</span>&gt;</span>uve doble<span class="hljs-tag">&lt;/<span class="hljs-name">letra</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">letras</span>&gt;</span>
+</div></code></pre>
+<p>Respuesta:</p>
+<pre class="hljs"><code><div><span class="hljs-comment">&lt;!-- creo que ya es válido --&gt;</span>
+
+<span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+
+<span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">letras</span>[
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">letras</span>(<span class="hljs-meta-keyword">letra</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">letra</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+]&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">letras</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">letra</span>&gt;</span>m<span class="hljs-tag">&lt;/<span class="hljs-name">letra</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">letra</span>&gt;</span>uve doble<span class="hljs-tag">&lt;/<span class="hljs-name">letra</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">letras</span>&gt;</span>
+</div></code></pre>
+<p><b>c. Colores</b></p>
+<pre class="hljs"><code><div><span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+
+<span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">colores</span>[
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">colores</span>(<span class="hljs-meta-keyword">color</span>*)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">color</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+]&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">colores</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">color</span>&gt;</span>azul marino<span class="hljs-tag">&lt;/<span class="hljs-name">color</span>&gt;</span>
+
+  negro
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">color</span>&gt;</span>amarillo<span class="hljs-tag">&lt;/<span class="hljs-name">color</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">colores</span>&gt;</span>
+</div></code></pre>
+<p>Respuesta:</p>
+<pre class="hljs"><code><div><span class="hljs-comment">&lt;!-- primer caso | no aparece ningún elemento "color" --&gt;</span>
+
+<span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+
+<span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">colores</span>[
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">colores</span>(<span class="hljs-meta-keyword">color</span>*)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">color</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+]&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">colores</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">colores</span>&gt;</span>
+</div></code></pre>
+<pre class="hljs"><code><div><span class="hljs-comment">&lt;!-- segundo caso | aparecen n elementos "color" --&gt;</span>
+
+<span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+
+<span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">colores</span>[
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">colores</span>(<span class="hljs-meta-keyword">color</span>*)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">color</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+]&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">colores</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">color</span>&gt;</span>azul marino<span class="hljs-tag">&lt;/<span class="hljs-name">color</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">color</span>&gt;</span>negro<span class="hljs-tag">&lt;/<span class="hljs-name">color</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">color</span>&gt;</span>amarillo<span class="hljs-tag">&lt;/<span class="hljs-name">color</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">colores</span>&gt;</span>
+</div></code></pre>
+<p><b>d. Flores</b></p>
+<pre class="hljs"><code><div><span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+
+<span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">flores</span>[
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">flores</span>(<span class="hljs-meta-keyword">flor</span>+)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">flor</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+]&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">flores</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">flores</span>&gt;</span>
+</div></code></pre>
+<p>Respuesta:</p>
+<pre class="hljs"><code><div><span class="hljs-comment">&lt;!-- primer caso | aparece 1 elemento "flor" --&gt;</span>
+
+<span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+
+<span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">flores</span>[
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">flores</span>(<span class="hljs-meta-keyword">flor</span>+)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">flor</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+]&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">flores</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">flor</span>&gt;</span>rosa<span class="hljs-tag">&lt;/<span class="hljs-name">flor</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">flores</span>&gt;</span>
+</div></code></pre>
+<pre class="hljs"><code><div><span class="hljs-comment">&lt;!-- segundo caso | aparecen n elementos "flor" --&gt;</span>
+
+<span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+
+<span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">flores</span>[
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">flores</span>(<span class="hljs-meta-keyword">flor</span>+)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">flor</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+]&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">flores</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">flor</span>&gt;</span>rosa<span class="hljs-tag">&lt;/<span class="hljs-name">flor</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">flor</span>&gt;</span>lirio<span class="hljs-tag">&lt;/<span class="hljs-name">flor</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">flor</span>&gt;</span>tulipán<span class="hljs-tag">&lt;/<span class="hljs-name">flor</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">flores</span>&gt;</span>
+</div></code></pre>
+<p><b>e. Animales</b></p>
+<pre class="hljs"><code><div><span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+
+<span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">animales</span>[
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">animales</span>(<span class="hljs-meta-keyword">animal</span>*)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">animal</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+]&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">animales</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">perro</span>&gt;</span>caniche<span class="hljs-tag">&lt;/<span class="hljs-name">perro</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">gato</span>&gt;</span>siamés<span class="hljs-tag">&lt;/<span class="hljs-name">gato</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">animales</span>&gt;</span>
+</div></code></pre>
+<p>Respuesta:</p>
+<pre class="hljs"><code><div><span class="hljs-comment">&lt;!-- primer caso | no aparece ningún elemento "animal" --&gt;</span>
+
+<span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+
+<span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">animales</span>[
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">animales</span>(<span class="hljs-meta-keyword">animal</span>*)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">animal</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+]&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">animales</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">animales</span>&gt;</span>
+</div></code></pre>
+<pre class="hljs"><code><div><span class="hljs-comment">&lt;!-- segundo caso | aparecen n elementos "animal" --&gt;</span>
+
+<span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+
+<span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">animales</span>[
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">animales</span>(<span class="hljs-meta-keyword">animal</span>*)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">animal</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+]&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">animales</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">animal</span>&gt;</span>caniche<span class="hljs-tag">&lt;/<span class="hljs-name">animal</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">animal</span>&gt;</span>siamés<span class="hljs-tag">&lt;/<span class="hljs-name">animal</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">animales</span>&gt;</span>
+</div></code></pre>
+<p><b>f. Escritores</b></p>
+<pre class="hljs"><code><div><span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+
+<span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">escritores</span>[
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">escritores</span>(<span class="hljs-meta-keyword">escritor</span>*)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">escritor</span>(<span class="hljs-meta-keyword">nombre</span>, <span class="hljs-meta-keyword">nacimiento</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">nombre</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">nacimiento</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+]&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">escritores</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">escritor</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">nombre</span>&gt;</span>mario vargas llosa<span class="hljs-tag">&lt;/<span class="hljs-name">nombre</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">nacimiento</span>&gt;</span>28 de marzo de 1936<span class="hljs-tag">&lt;/<span class="hljs-name">nacimiento</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">escritor</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">escritor</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">nacimiento</span>&gt;</span>1 de abril de 1929<span class="hljs-tag">&lt;/<span class="hljs-name">nacimiento</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">nombre</span>&gt;</span>milan kundera<span class="hljs-tag">&lt;/<span class="hljs-name">nombre</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">escritor</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">escritores</span>&gt;</span>
+</div></code></pre>
+<p>Respuesta:</p>
+<pre class="hljs"><code><div><span class="hljs-comment">&lt;!-- primer caso | no aparece ningún elemento "escritor" --&gt;</span>
+
+<span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+
+<span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">escritores</span>[
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">escritores</span>(<span class="hljs-meta-keyword">escritor</span>*)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">escritor</span>(<span class="hljs-meta-keyword">nombre</span>, <span class="hljs-meta-keyword">nacimiento</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">nombre</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">nacimiento</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+]&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">escritores</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">escritores</span>&gt;</span>
+</div></code></pre>
+<pre class="hljs"><code><div><span class="hljs-comment">&lt;!-- segundo caso | aparecen n elementos "escritor" --&gt;</span>
+
+<span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+
+<span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">escritores</span>[
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">escritores</span>(<span class="hljs-meta-keyword">escritor</span>*)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">escritor</span>(<span class="hljs-meta-keyword">nombre</span>, <span class="hljs-meta-keyword">nacimiento</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">nombre</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">nacimiento</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+]&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">escritores</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">escritor</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">nombre</span>&gt;</span>mario vargas llosa<span class="hljs-tag">&lt;/<span class="hljs-name">nombre</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">nacimiento</span>&gt;</span>28 de marzo de 1936<span class="hljs-tag">&lt;/<span class="hljs-name">nacimiento</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">escritor</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">escritor</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">nombre</span>&gt;</span>milan kundera<span class="hljs-tag">&lt;/<span class="hljs-name">nombre</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">nacimiento</span>&gt;</span>1 de abril de 1929<span class="hljs-tag">&lt;/<span class="hljs-name">nacimiento</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">escritor</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">escritores</span>&gt;</span>
+</div></code></pre>
+<p><b>g. M&#xFA;sicos</b></p>
+<pre class="hljs"><code><div><span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+
+<span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">musicos</span>[
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">musicos</span>(<span class="hljs-meta-keyword">musico</span>*)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">musico</span>((<span class="hljs-meta-keyword">nombre</span> | <span class="hljs-meta-keyword">apodo</span>), <span class="hljs-meta-keyword">fechaNacimiento</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">nombre</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">apodo</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">fechaNacimiento</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+]&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">musicos</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">musico</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">nombre</span>&gt;</span>antonio vivaldi<span class="hljs-tag">&lt;/<span class="hljs-name">nombre</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">apodo</span>&gt;</span>el cura pelirrojo<span class="hljs-tag">&lt;/<span class="hljs-name">apodo</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">fechaNacimiento</span>&gt;</span>4 de marzo de              1678<span class="hljs-tag">&lt;/<span class="hljs-name">fechaNacimiento</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">musico</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">musico</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">nombre</span>&gt;</span>johann sebastian bach<span class="hljs-tag">&lt;/<span class="hljs-name">nombre</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">apodo</span>&gt;</span>el viejo peluca<span class="hljs-tag">&lt;/<span class="hljs-name">apodo</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">fechaNacimiento</span>&gt;</span>21 de marzo de              1685<span class="hljs-tag">&lt;/<span class="hljs-name">fechaNacimiento</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">musico</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">musicos</span>&gt;</span>
+</div></code></pre>
+<p>Respuesta:</p>
+<pre class="hljs"><code><div><span class="hljs-comment">&lt;!-- primer caso | no aparece ningún elemento "musico" --&gt;</span>
+
+<span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+
+<span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">musicos</span>[
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">musicos</span>(<span class="hljs-meta-keyword">musico</span>*)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">musico</span>((<span class="hljs-meta-keyword">nombre</span> | <span class="hljs-meta-keyword">apodo</span>), <span class="hljs-meta-keyword">fechaNacimiento</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">nombre</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">apodo</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">fechaNacimiento</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+]&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">musicos</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">musicos</span>&gt;</span>
+</div></code></pre>
+<pre class="hljs"><code><div><span class="hljs-comment">&lt;!-- segundo caso | aparecen n elementos "musico" --&gt;</span>
+
+<span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+
+<span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">musicos</span>[
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">musicos</span>(<span class="hljs-meta-keyword">musico</span>*)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">musico</span>((<span class="hljs-meta-keyword">nombre</span> | <span class="hljs-meta-keyword">apodo</span>), <span class="hljs-meta-keyword">fechaNacimiento</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">nombre</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">apodo</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">fechaNacimiento</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+]&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">musicos</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">musico</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">nombre</span>&gt;</span>antonio vivaldi<span class="hljs-tag">&lt;/<span class="hljs-name">nombre</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">fechaNacimiento</span>&gt;</span>4 de marzo de 1678<span class="hljs-tag">&lt;/<span class="hljs-name">fechaNacimiento</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">musico</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">musico</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">apodo</span>&gt;</span>el viejo peluca<span class="hljs-tag">&lt;/<span class="hljs-name">apodo</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">fechaNacimiento</span>&gt;</span>21 de marzo de 1685<span class="hljs-tag">&lt;/<span class="hljs-name">fechaNacimiento</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">musico</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">musicos</span>&gt;</span>
+</div></code></pre>
+<p><b>h. Tel&#xE9;fonos de emergencia</b></p>
+<pre class="hljs"><code><div><span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+
+<span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">agenda</span>[
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">agenda</span>(<span class="hljs-meta-keyword">contacto</span>*)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">contacto</span>(<span class="hljs-meta-keyword">nombre</span>, <span class="hljs-meta-keyword">telefonoFijo</span>*, <span class="hljs-meta-keyword">telefonoMovil</span>+)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">nombre</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">telefonoFijo</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">telefonoMovil</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+]&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">agenda</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">contacto</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">nombre</span>&gt;</span>ayuntamiento<span class="hljs-tag">&lt;/<span class="hljs-name">nombre</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">telefonoFijo</span>&gt;</span>010<span class="hljs-tag">&lt;/<span class="hljs-name">telefonoFijo</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">contacto</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">contacto</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">nombre</span>&gt;</span>emergencias<span class="hljs-tag">&lt;/<span class="hljs-name">nombre</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">telefonoFijo</span>&gt;</span>112 (unión europea)<span class="hljs-tag">&lt;/<span class="hljs-name">telefonoFijo</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">telefonoMovil</span>&gt;</span>desconocido<span class="hljs-tag">&lt;/<span class="hljs-name">telefonoMovil</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">telefonoFijo</span>&gt;</span>911 (estados unidos)<span class="hljs-tag">&lt;/<span class="hljs-name">telefonoFijo</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">contacto</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">agenda</span>&gt;</span>
+</div></code></pre>
+<p>Respuesta:</p>
+<pre class="hljs"><code><div><span class="hljs-comment">&lt;!-- primer caso | no aparece ningún elemento "contacto" --&gt;</span>
+
+<span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+
+<span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">agenda</span>[
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">agenda</span>(<span class="hljs-meta-keyword">contacto</span>*)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">contacto</span>(<span class="hljs-meta-keyword">nombre</span>, <span class="hljs-meta-keyword">telefonoFijo</span>*, <span class="hljs-meta-keyword">telefonoMovil</span>+)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">nombre</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">telefonoFijo</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">telefonoMovil</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+]&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">agenda</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">agenda</span>&gt;</span>
+</div></code></pre>
+<pre class="hljs"><code><div><span class="hljs-comment">&lt;!-- segundo caso | aparecen n elementos "contacto" --&gt;</span>
+
+<span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+
+<span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">agenda</span>[
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">agenda</span>(<span class="hljs-meta-keyword">contacto</span>*)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">contacto</span>(<span class="hljs-meta-keyword">nombre</span>, <span class="hljs-meta-keyword">telefonoFijo</span>*, <span class="hljs-meta-keyword">telefonoMovil</span>+)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">nombre</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">telefonoFijo</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">telefonoMovil</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+]&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">agenda</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">contacto</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">nombre</span>&gt;</span>ayuntamiento<span class="hljs-tag">&lt;/<span class="hljs-name">nombre</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">telefonoFijo</span>&gt;</span>010<span class="hljs-tag">&lt;/<span class="hljs-name">telefonoFijo</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">telefonoMovil</span>&gt;</span>611 11 11 11<span class="hljs-tag">&lt;/<span class="hljs-name">telefonoMovil</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">contacto</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">contacto</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">nombre</span>&gt;</span>emergencias<span class="hljs-tag">&lt;/<span class="hljs-name">nombre</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">telefonoMovil</span>&gt;</span>622 22 22 22<span class="hljs-tag">&lt;/<span class="hljs-name">telefonoMovil</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">contacto</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">agenda</span>&gt;</span>
+</div></code></pre>
+<pre class="hljs"><code><div><span class="hljs-comment">&lt;!-- tercer caso | no aparece ningún elemento "telefonoFijo" y solo aparece 1 elemento "telefonoMovil" --&gt;</span>
+
+<span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+
+<span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">agenda</span>[
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">agenda</span>(<span class="hljs-meta-keyword">contacto</span>*)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">contacto</span>(<span class="hljs-meta-keyword">nombre</span>, <span class="hljs-meta-keyword">telefonoFijo</span>*, <span class="hljs-meta-keyword">telefonoMovil</span>+)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">nombre</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">telefonoFijo</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">telefonoMovil</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+]&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">agenda</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">contacto</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">nombre</span>&gt;</span>ayuntamiento<span class="hljs-tag">&lt;/<span class="hljs-name">nombre</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">telefonoMovil</span>&gt;</span>611 11 11 11<span class="hljs-tag">&lt;/<span class="hljs-name">telefonoMovil</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">contacto</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">contacto</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">nombre</span>&gt;</span>emergencias<span class="hljs-tag">&lt;/<span class="hljs-name">nombre</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">telefonoMovil</span>&gt;</span>622 22 22 22<span class="hljs-tag">&lt;/<span class="hljs-name">telefonoMovil</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">contacto</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">agenda</span>&gt;</span>
+</div></code></pre>
+<pre class="hljs"><code><div><span class="hljs-comment">&lt;!-- cuarto caso | no aparece ningún elemento "telefonoFijo" y aparecen n elementos "telefonoMovil" --&gt;</span>
+
+<span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+
+<span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">agenda</span>[
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">agenda</span>(<span class="hljs-meta-keyword">contacto</span>*)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">contacto</span>(<span class="hljs-meta-keyword">nombre</span>, <span class="hljs-meta-keyword">telefonoFijo</span>*, <span class="hljs-meta-keyword">telefonoMovil</span>+)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">nombre</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">telefonoFijo</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">telefonoMovil</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+]&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">agenda</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">contacto</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">nombre</span>&gt;</span>ayuntamiento<span class="hljs-tag">&lt;/<span class="hljs-name">nombre</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">telefonoMovil</span>&gt;</span>611 11 11 11<span class="hljs-tag">&lt;/<span class="hljs-name">telefonoMovil</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">telefonoMovil</span>&gt;</span>633 33 33 33<span class="hljs-tag">&lt;/<span class="hljs-name">telefonoMovil</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">contacto</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">contacto</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">nombre</span>&gt;</span>emergencias<span class="hljs-tag">&lt;/<span class="hljs-name">nombre</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">telefonoMovil</span>&gt;</span>622 22 22 22<span class="hljs-tag">&lt;/<span class="hljs-name">telefonoMovil</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">telefonoMovil</span>&gt;</span>644 44 44 44<span class="hljs-tag">&lt;/<span class="hljs-name">telefonoMovil</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">contacto</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">agenda</span>&gt;</span>
+</div></code></pre>
+<pre class="hljs"><code><div><span class="hljs-comment">&lt;!-- quinto caso | aparecen n elementos "telefonoFijo" y solo aparece 1 elemento "telefonoMovil" --&gt;</span>
+
+<span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+
+<span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">agenda</span>[
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">agenda</span>(<span class="hljs-meta-keyword">contacto</span>*)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">contacto</span>(<span class="hljs-meta-keyword">nombre</span>, <span class="hljs-meta-keyword">telefonoFijo</span>*, <span class="hljs-meta-keyword">telefonoMovil</span>+)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">nombre</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">telefonoFijo</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">telefonoMovil</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+]&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">agenda</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">contacto</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">nombre</span>&gt;</span>ayuntamiento<span class="hljs-tag">&lt;/<span class="hljs-name">nombre</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">telefonoFijo</span>&gt;</span>010<span class="hljs-tag">&lt;/<span class="hljs-name">telefonoFijo</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">telefonoFijo</span>&gt;</span>020<span class="hljs-tag">&lt;/<span class="hljs-name">telefonoFijo</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">telefonoMovil</span>&gt;</span>611 11 11 11<span class="hljs-tag">&lt;/<span class="hljs-name">telefonoMovil</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">contacto</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">contacto</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">nombre</span>&gt;</span>emergencias<span class="hljs-tag">&lt;/<span class="hljs-name">nombre</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">telefonoFijo</span>&gt;</span>112<span class="hljs-tag">&lt;/<span class="hljs-name">telefonoFijo</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">telefonoFijo</span>&gt;</span>911<span class="hljs-tag">&lt;/<span class="hljs-name">telefonoFijo</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">telefonoMovil</span>&gt;</span>622 22 22 22<span class="hljs-tag">&lt;/<span class="hljs-name">telefonoMovil</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">contacto</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">agenda</span>&gt;</span>
+</div></code></pre>
+<pre class="hljs"><code><div><span class="hljs-comment">&lt;!-- sexto caso | aparecen n elementos "telefonoFijo" y aparecen n elementos "telefonoMovil" --&gt;</span>
+
+<span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+
+<span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">agenda</span>[
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">agenda</span>(<span class="hljs-meta-keyword">contacto</span>*)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">contacto</span>(<span class="hljs-meta-keyword">nombre</span>, <span class="hljs-meta-keyword">telefonoFijo</span>*, <span class="hljs-meta-keyword">telefonoMovil</span>+)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">nombre</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">telefonoFijo</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">telefonoMovil</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+]&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">agenda</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">contacto</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">nombre</span>&gt;</span>ayuntamiento<span class="hljs-tag">&lt;/<span class="hljs-name">nombre</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">telefonoFijo</span>&gt;</span>010<span class="hljs-tag">&lt;/<span class="hljs-name">telefonoFijo</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">telefonoFijo</span>&gt;</span>020<span class="hljs-tag">&lt;/<span class="hljs-name">telefonoFijo</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">telefonoMovil</span>&gt;</span>611 11 11 11<span class="hljs-tag">&lt;/<span class="hljs-name">telefonoMovil</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">telefonoMovil</span>&gt;</span>633 33 33 33<span class="hljs-tag">&lt;/<span class="hljs-name">telefonoMovil</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">contacto</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">contacto</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">nombre</span>&gt;</span>emergencias<span class="hljs-tag">&lt;/<span class="hljs-name">nombre</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">telefonoFijo</span>&gt;</span>112<span class="hljs-tag">&lt;/<span class="hljs-name">telefonoFijo</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">telefonoFijo</span>&gt;</span>911<span class="hljs-tag">&lt;/<span class="hljs-name">telefonoFijo</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">telefonoMovil</span>&gt;</span>622 22 22 22<span class="hljs-tag">&lt;/<span class="hljs-name">telefonoMovil</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">telefonoMovil</span>&gt;</span>644 44 44 44<span class="hljs-tag">&lt;/<span class="hljs-name">telefonoMovil</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">contacto</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">agenda</span>&gt;</span>
+</div></code></pre>
+<p><b>i. El Sistema Solar</b></p>
+<pre class="hljs"><code><div><span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+
+<span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">sistemaSolar</span>[
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">sistemaSolar</span>(<span class="hljs-meta-keyword">cuerpo</span>*)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">cuerpo</span>(<span class="hljs-meta-keyword">planeta</span> | <span class="hljs-meta-keyword">satelite</span> | <span class="hljs-meta-keyword">asteroide</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">planeta</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">satelite</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">asteroide</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+]&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">sistemaSolar</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">cuerpo</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">planeta</span>&gt;</span>tierra<span class="hljs-tag">&lt;/<span class="hljs-name">planeta</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">satelite</span>&gt;</span>luna<span class="hljs-tag">&lt;/<span class="hljs-name">satelite</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">cuerpo</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">asteroide</span>&gt;</span>ceres<span class="hljs-tag">&lt;/<span class="hljs-name">asteroide</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">sistemaSolar</span>&gt;</span>
+</div></code></pre>
+<p>Respuesta:</p>
+<pre class="hljs"><code><div><span class="hljs-comment">&lt;!-- primer caso | no aparece ningún elemento "cuerpo" --&gt;</span>
+
+<span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+
+<span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">sistemaSolar</span>[
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">sistemaSolar</span>(<span class="hljs-meta-keyword">cuerpo</span>*)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">cuerpo</span>(<span class="hljs-meta-keyword">planeta</span> | <span class="hljs-meta-keyword">satelite</span> | <span class="hljs-meta-keyword">asteroide</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">planeta</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">satelite</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">asteroide</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+]&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">sistemaSolar</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">sistemaSolar</span>&gt;</span>
+</div></code></pre>
+<pre class="hljs"><code><div><span class="hljs-comment">&lt;!-- segundo caso | aparecen n elementos "cuerpo" y aparece un elemento "planeta", otro "satelite" y otro "asteroide", pero no todos a la vez en un mismo elemento --&gt;</span>
+
+<span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+
+<span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">sistemaSolar</span>[
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">sistemaSolar</span>(<span class="hljs-meta-keyword">cuerpo</span>*)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">cuerpo</span>(<span class="hljs-meta-keyword">planeta</span> | <span class="hljs-meta-keyword">satelite</span> | <span class="hljs-meta-keyword">asteroide</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">planeta</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">satelite</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">asteroide</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+]&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">sistemaSolar</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">cuerpo</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">planeta</span>&gt;</span>tierra<span class="hljs-tag">&lt;/<span class="hljs-name">planeta</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">cuerpo</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">cuerpo</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">satelite</span>&gt;</span>luna<span class="hljs-tag">&lt;/<span class="hljs-name">satelite</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">cuerpo</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">cuerpo</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">asteroide</span>&gt;</span>ceres<span class="hljs-tag">&lt;/<span class="hljs-name">asteroide</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">cuerpo</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">sistemaSolar</span>&gt;</span>
+</div></code></pre>
+<p><b>3. Los siguientes documentos no son v&#xE1;lidos porque contienen errores (los errores est&#xE1;n en el DTD interno). Corrige los errores. Intenta elegir la manera m&#xE1;s sencilla de corregir el DTD, ya que casi siempre hay varias maneras distintas.</b></p>
+<p><b>a. Marcadores</b></p>
+<pre class="hljs"><code><div><span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+
+<span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">favoritos</span>[
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">favoritos</span>(<span class="hljs-meta-keyword">marcador</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">marcador</span>(<span class="hljs-meta-keyword">nombre</span>, <span class="hljs-meta-keyword">uri</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">nombre</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">uri</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+]&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">marcadores</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">marcador</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">nombre</span>&gt;</span>w3c<span class="hljs-tag">&lt;/<span class="hljs-name">nombre</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">uri</span>&gt;</span>http://eee.w3.org<span class="hljs-tag">&lt;/<span class="hljs-name">uri</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">marcador</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">marcador</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">nombre</span>&gt;</span>web hypertext application technology working group (whatwg)<span class="hljs-tag">&lt;/<span class="hljs-name">nombre</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">uri</span>&gt;</span>http://www.whatwg.org<span class="hljs-tag">&lt;/<span class="hljs-name">uri</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">marcador</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">marcadores</span>&gt;</span>
+</div></code></pre>
+<p>Respuesta:</p>
+<pre class="hljs"><code><div><span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+
+<span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">marcadores</span>[
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">marcadores</span>(<span class="hljs-meta-keyword">marcador</span>*)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">marcador</span>(<span class="hljs-meta-keyword">nombre</span>, <span class="hljs-meta-keyword">uri</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">nombre</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">uri</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+]&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">marcadores</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">marcador</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">nombre</span>&gt;</span>w3c<span class="hljs-tag">&lt;/<span class="hljs-name">nombre</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">uri</span>&gt;</span>http://eee.w3.org<span class="hljs-tag">&lt;/<span class="hljs-name">uri</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">marcador</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">marcador</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">nombre</span>&gt;</span>web hypertext application technology working group (whatwg)<span class="hljs-tag">&lt;/<span class="hljs-name">nombre</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">uri</span>&gt;</span>http://www.whatwg.org<span class="hljs-tag">&lt;/<span class="hljs-name">uri</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">marcador</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">marcadores</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>b. Efemérides<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+```xml
+<span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+
+<span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">efemerides</span>[
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">efemerides</span>(<span class="hljs-meta-keyword">efemeride</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">efemeride</span>(<span class="hljs-meta-keyword">fecha</span>, <span class="hljs-meta-keyword">hecho</span>)&gt;</span>
+]&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">efemerides</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">efemeride</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">fecha</span>&gt;</span>20 de julio de 1969<span class="hljs-tag">&lt;/<span class="hljs-name">fecha</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">hecho</span>&gt;</span>llegada del hombre a la luna<span class="hljs-tag">&lt;/<span class="hljs-name">hecho</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">efemeride</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">efemeride</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">fecha</span>&gt;</span>12 de octubre de 1492<span class="hljs-tag">&lt;/<span class="hljs-name">fecha</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">hecho</span>&gt;</span>llegada de colón a américa<span class="hljs-tag">&lt;/<span class="hljs-name">hecho</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">efemeride</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">efemeride</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">fecha</span>&gt;</span>6 de abril de 1909<span class="hljs-tag">&lt;/<span class="hljs-name">fecha</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">hecho</span>&gt;</span>llegada de robert peary al polo norte<span class="hljs-tag">&lt;/<span class="hljs-name">hecho</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">efemeride</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">efemerides</span>&gt;</span>
+</div></code></pre>
+<p>Respuesta:</p>
+<pre class="hljs"><code><div><span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+
+<span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">efemerides</span>[
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">efemerides</span>(<span class="hljs-meta-keyword">efemeride</span>+)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">efemeride</span>(<span class="hljs-meta-keyword">fecha</span>, <span class="hljs-meta-keyword">hecho</span>)&gt;</span>
+]&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">efemerides</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">efemeride</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">fecha</span>&gt;</span>20 de julio de 1969<span class="hljs-tag">&lt;/<span class="hljs-name">fecha</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">hecho</span>&gt;</span>llegada del hombre a la luna<span class="hljs-tag">&lt;/<span class="hljs-name">hecho</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">efemeride</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">efemeride</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">fecha</span>&gt;</span>12 de octubre de 1492<span class="hljs-tag">&lt;/<span class="hljs-name">fecha</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">hecho</span>&gt;</span>llegada de colón a américa<span class="hljs-tag">&lt;/<span class="hljs-name">hecho</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">efemeride</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">efemeride</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">fecha</span>&gt;</span>6 de abril de 1909<span class="hljs-tag">&lt;/<span class="hljs-name">fecha</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">hecho</span>&gt;</span>llegada de robert peary al polo norte<span class="hljs-tag">&lt;/<span class="hljs-name">hecho</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">efemeride</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">efemerides</span>&gt;</span>
+</div></code></pre>
+<p><b>c. Aeropuertos</b></p>
+<pre class="hljs"><code><div><span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+
+DOCTYPE areopuertos[
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">aeropuertos</span>(<span class="hljs-meta-keyword">aeropuerto</span>*)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">aeropuerto</span>(<span class="hljs-meta-keyword">nombre</span>, <span class="hljs-meta-keyword">cerrado</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">nombre</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">cerrado</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+]&gt;
+
+<span class="hljs-tag">&lt;<span class="hljs-name">aeropuertos</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">aeropuerto</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">nombre</span>&gt;</span>berlín schönefeld (sfx)<span class="hljs-tag">&lt;/<span class="hljs-name">nombre</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">aeropuerto</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">aeropuerto</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">nombre</span>&gt;</span>berlín tempelhof (thf)<span class="hljs-tag">&lt;/<span class="hljs-name">nombre</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">cerrado</span>/&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">aeropuerto</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">aeropuertos</span>&gt;</span>
+</div></code></pre>
+<p>Respuesta:</p>
+<pre class="hljs"><code><div><span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+
+<span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">areopuertos</span>[
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">aeropuertos</span>(<span class="hljs-meta-keyword">aeropuerto</span>*)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">aeropuerto</span>(<span class="hljs-meta-keyword">nombre</span>, <span class="hljs-meta-keyword">cerrado</span>?)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">nombre</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">cerrado</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+]&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">aeropuertos</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">aeropuerto</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">nombre</span>&gt;</span>berlín schönefeld (sfx)<span class="hljs-tag">&lt;/<span class="hljs-name">nombre</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">aeropuerto</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">aeropuerto</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">nombre</span>&gt;</span>berlín tempelhof (thf)<span class="hljs-tag">&lt;/<span class="hljs-name">nombre</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">cerrado</span>/&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">aeropuerto</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">aeropuertos</span>&gt;</span>
+</div></code></pre>
+<p><b>d. Reyes espa&#xF1;oles</b></p>
+<pre class="hljs"><code><div><span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+
+<span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">reyesEspanoles</span>[
+  ELEMENT reyesEspanoles(rey*, reina*)&gt;
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">rey</span>(<span class="hljs-meta-keyword">nombre</span>, <span class="hljs-meta-keyword">padre</span>, <span class="hljs-meta-keyword">madre</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">padre</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">madre</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+]&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">reyesEspanoles</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">rey</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">nombre</span>&gt;</span>felipe iii<span class="hljs-tag">&lt;/<span class="hljs-name">nombre</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">padre</span>&gt;</span>felipe ii<span class="hljs-tag">&lt;/<span class="hljs-name">padre</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">madre</span>&gt;</span>ana de austria<span class="hljs-tag">&lt;/<span class="hljs-name">madre</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">rey</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">reina</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">nombre</span>&gt;</span>juana la loca<span class="hljs-tag">&lt;/<span class="hljs-name">nombre</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">padre</span>&gt;</span>fernando el católico<span class="hljs-tag">&lt;/<span class="hljs-name">padre</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">madre</span>&gt;</span>isabel la católica<span class="hljs-tag">&lt;/<span class="hljs-name">madre</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">reina</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">rey</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">nombre</span>&gt;</span>carlos i<span class="hljs-tag">&lt;/<span class="hljs-name">nombre</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">padre</span>&gt;</span>felipe el hermoso<span class="hljs-tag">&lt;/<span class="hljs-name">padre</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">madre</span>&gt;</span>juana la loca<span class="hljs-tag">&lt;/<span class="hljs-name">madre</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">rey</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">reyesEspanoles</span>&gt;</span>
+</div></code></pre>
+<p>Respuesta:</p>
+<pre class="hljs"><code><div><span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+
+<span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">reyesEspanoles</span>[
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">reyesEspanoles</span>(<span class="hljs-meta-keyword">rey</span>*, <span class="hljs-meta-keyword">reina</span>*)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">rey</span>(<span class="hljs-meta-keyword">nombre</span>, <span class="hljs-meta-keyword">padre</span>, <span class="hljs-meta-keyword">madre</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">nombre</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">padre</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">madre</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+]&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">reyesEspanoles</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">rey</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">nombre</span>&gt;</span>felipe iii<span class="hljs-tag">&lt;/<span class="hljs-name">nombre</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">padre</span>&gt;</span>felipe ii<span class="hljs-tag">&lt;/<span class="hljs-name">padre</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">madre</span>&gt;</span>ana de austria<span class="hljs-tag">&lt;/<span class="hljs-name">madre</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">rey</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">reina</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">nombre</span>&gt;</span>juana la loca<span class="hljs-tag">&lt;/<span class="hljs-name">nombre</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">padre</span>&gt;</span>fernando el católico<span class="hljs-tag">&lt;/<span class="hljs-name">padre</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">madre</span>&gt;</span>isabel la católica<span class="hljs-tag">&lt;/<span class="hljs-name">madre</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">reina</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">rey</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">nombre</span>&gt;</span>carlos i<span class="hljs-tag">&lt;/<span class="hljs-name">nombre</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">padre</span>&gt;</span>felipe el hermoso<span class="hljs-tag">&lt;/<span class="hljs-name">padre</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">madre</span>&gt;</span>juana la loca<span class="hljs-tag">&lt;/<span class="hljs-name">madre</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">rey</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">reyesEspanoles</span>&gt;</span>
+</div></code></pre>
+<p><b>e. C&#xF3;digos de colores</b></p>
+<pre class="hljs"><code><div><span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+
+<span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">colores</span>[
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">colores</span>(<span class="hljs-meta-keyword">color</span>*)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">nombreSvg</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">rgb</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">cmyk</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+]&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">colores</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">color</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">nombreSvg</span>&gt;</span>purple<span class="hljs-tag">&lt;/<span class="hljs-name">nombreSvg</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">codigo</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">rgb</span>&gt;</span>#800080<span class="hljs-tag">&lt;/<span class="hljs-name">rgb</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">codigo</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">color</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">color</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">nombreSvg</span>&gt;</span>purple<span class="hljs-tag">&lt;/<span class="hljs-name">nombreSvg</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">codigo</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">cmyk</span>&gt;</span>#00FF007F<span class="hljs-tag">&lt;/<span class="hljs-name">cmyk</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">codigo</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">color</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">colores</span>&gt;</span>
+</div></code></pre>
+<p>Respuesta:</p>
+<pre class="hljs"><code><div><span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+
+<span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">colores</span>[
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">colores</span>(<span class="hljs-meta-keyword">color</span>*)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">color</span>(<span class="hljs-meta-keyword">nombreSvg</span>, <span class="hljs-meta-keyword">codigo</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">nombreSvg</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">codigo</span>(<span class="hljs-meta-keyword">rgb</span> | <span class="hljs-meta-keyword">cmyk</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">rgb</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+  <span class="hljs-meta">&lt;!ELEMENT <span class="hljs-meta-keyword">cmyk</span>(<span class="hljs-meta-keyword">#PCDATA</span>)&gt;</span>
+]&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">colores</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">color</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">nombreSvg</span>&gt;</span>purple<span class="hljs-tag">&lt;/<span class="hljs-name">nombreSvg</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">codigo</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">rgb</span>&gt;</span>#800080<span class="hljs-tag">&lt;/<span class="hljs-name">rgb</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">codigo</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">color</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">color</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">nombreSvg</span>&gt;</span>purple<span class="hljs-tag">&lt;/<span class="hljs-name">nombreSvg</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">codigo</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">cmyk</span>&gt;</span>#00FF007F<span class="hljs-tag">&lt;/<span class="hljs-name">cmyk</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">codigo</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">color</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">colores</span>&gt;</span>
+</div></code></pre>
+<p><b>4. Elementos con atributos, corregir los errores en los elementos (sin tocar el DTD).</b></p>
+<p><b>a. Cuadros</b></p>
+<pre class="hljs"><code><div><span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+
+
+</div></code></pre>
+<p><b>6. Se quiere definir un lenguaje de marcas para representar los resultados de una liga de f&#xFA;tbol. La informaci&#xF3;n que se quiere almacenar de cada partido es:</b></p>
+<li><b>el nombre del equipo local</b></li>
+<li><b>el nombre del equipo visitante</b></li>
+<li><b>los goles marcados por el equipo local</b></li>
+<li><b>los goles marcados por el equipo visitante</b></li>
+<p><b>Escribe tres documentos que incluyan los sigueintes resultados:</b></p>
+<li><b>Nottingham Presa: 0 - Inter de Mitente: 1</b></li>
+<li><b>Vodka Juniors: 3 - Sparta da Risa: 3</b></li>
+<li><b>Water de Munich: 4 - Esteaua es del grifo: 2</b></li>
+<p><b>Cada documento incluir&#xE1; un DTD diferente para representar ese lenguaje de marcas:</b></p>
+<li><b>un DTD en el que no haya atributos, sino &#xFA;nicamente etiquetas</b></li>
+<li><b>un DTD en el que los goles sean atributos</b></li>
+<li><b>un DTD en el que toda la informaci&#xF3;n se guarde en forma de atributos</b></li>
+<p>Respuesta:</p>
+<li>Primer documento:</li>
+<pre class="hljs"><code><div><span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+
+<span class="hljs-meta">&lt;!DCOTYPE <span class="hljs-meta-keyword">partido</span>[
+  <span class="hljs-meta">&lt;!ELEMENT &gt;</span>
+]&gt;</span>
+</div></code></pre>
+<li>Segundo documento:</li>
+<pre class="hljs"><code><div><span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+</div></code></pre>
+<li>Tercer documento:</li>
+<pre class="hljs"><code><div><span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+</div></code></pre>
+
+</body>
+</html>

@@ -1008,6 +1008,16 @@ DOCTYPE areopuertos[
 </colores>
 ```
 
+<p><b>4. Elementos con atributos, corregir los errores en los elementos (sin tocar el DTD).</b></p>
+
+<p><b>a. Cuadros</b></p>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+```
+
 <p><b>6. Se quiere definir un lenguaje de marcas para representar los resultados de una liga de fútbol. La información que se quiere almacenar de cada partido es:</b></p>
 
 <li><b>el nombre del equipo local</b></li>
