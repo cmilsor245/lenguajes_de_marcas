@@ -1045,11 +1045,11 @@ DOCTYPE areopuertos[
 ]>
 
 <cuadros>
-  <cuadro titulo="La Persistencia de la Memoria" autor="Salvador Dali"/>
+  <cuadro titulo="la_persistencia_de_la_memoria" autor="salvador dali"/>
 
-  <cuadro titulo="La Noche Estrellada" autor="Vincent van Gogh"/>
+  <cuadro titulo="la_noche_estrellada" autor="vincent van gogh"/>
 
-  <cuadro titulo="El Jardín de las Delicias" autor="Jheronimus Bosch"/>
+  <cuadro titulo="el_jardín_de_las_delicias" autor="jheronimus bosch"/>
 </cuadros>
 ```
 
