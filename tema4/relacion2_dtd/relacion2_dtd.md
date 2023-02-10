@@ -627,3 +627,73 @@
   </contacto>
 </agenda>
 ```
+
+<p><b>i. El Sistema Solar</b></p>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE sistemaSolar[
+  <!ELEMENT sistemaSolar(cuerpo*)>
+  <!ELEMENT cuerpo(planeta | satelite | asteroide)>
+  <!ELEMENT planeta(#PCDATA)>
+  <!ELEMENT satelite(#PCDATA)>
+  <!ELEMENT asteroide(#PCDATA)>
+]>
+
+<sistemaSolar>
+  <cuerpo>
+    <planeta>tierra</planeta>
+
+    <satelite>luna</satelite>
+  </cuerpo>
+
+  <asteroide>ceres</asteroide>
+</sistemaSolar>
+```
+
+<p>Respuesta:</p>
+
+```xml
+<!-- primer caso | no aparece ningún elemento "cuerpo" -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE sistemaSolar[
+  <!ELEMENT sistemaSolar(cuerpo*)>
+  <!ELEMENT cuerpo(planeta | satelite | asteroide)>
+  <!ELEMENT planeta(#PCDATA)>
+  <!ELEMENT satelite(#PCDATA)>
+  <!ELEMENT asteroide(#PCDATA)>
+]>
+
+<sistemaSolar></sistemaSolar>
+```
+
+```xml
+<!-- segundo caso | aparecen n elementos "cuerpo" y aparece un elemento "planeta", otro "satelite" y otro "asteroide", pero no todos a la vez en un mismo elemento -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE sistemaSolar[
+  <!ELEMENT sistemaSolar(cuerpo*)>
+  <!ELEMENT cuerpo(planeta | satelite | asteroide)>
+  <!ELEMENT planeta(#PCDATA)>
+  <!ELEMENT satelite(#PCDATA)>
+  <!ELEMENT asteroide(#PCDATA)>
+]>
+
+<sistemaSolar>
+  <cuerpo>
+    <planeta>tierra</planeta>
+  </cuerpo>
+
+  <cuerpo>
+    <satelite>luna</satelite>
+  </cuerpo>
+
+  <cuerpo>
+    <asteroide>ceres</asteroide>
+  </cuerpo>
+</sistemaSolar>
+```
