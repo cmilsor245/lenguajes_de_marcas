@@ -790,7 +790,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!DOCTYPE efemerides[
-  <!ELEMENT efemerides(efemeride)>
+  <!ELEMENT efemerides(efemeride+)>
   <!ELEMENT efemeride(fecha, hecho)>
 ]>
 
@@ -813,4 +813,141 @@
     <hecho>llegada de robert peary al polo norte</hecho>
   </efemeride>
 </efemerides>
+```
+
+<p><b>c. Aeropuertos</b></p>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+DOCTYPE areopuertos[
+  <!ELEMENT aeropuertos(aeropuerto*)>
+  <!ELEMENT aeropuerto(nombre, cerrado)>
+  <!ELEMENT nombre(#PCDATA)>
+  <!ELEMENT cerrado(#PCDATA)>
+]>
+
+<aeropuertos>
+  <aeropuerto>
+    <nombre>berlín schönefeld (sfx)</nombre>
+  </aeropuerto>
+
+  <aeropuerto>
+    <nombre>berlín tempelhof (thf)</nombre>
+
+    <cerrado/>
+  </aeropuerto>
+</aeropuertos>
+```
+
+<p>Respuesta:</p>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE areopuertos[
+  <!ELEMENT aeropuertos(aeropuerto*)>
+  <!ELEMENT aeropuerto(nombre, cerrado?)>
+  <!ELEMENT nombre(#PCDATA)>
+  <!ELEMENT cerrado(#PCDATA)>
+]>
+
+<aeropuertos>
+  <aeropuerto>
+    <nombre>berlín schönefeld (sfx)</nombre>
+  </aeropuerto>
+
+  <aeropuerto>
+    <nombre>berlín tempelhof (thf)</nombre>
+
+    <cerrado/>
+  </aeropuerto>
+</aeropuertos>
+```
+
+<p><b>d. Reyes españoles</b></p>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE reyesEspanoles[
+  ELEMENT reyesEspanoles(rey*, reina*)>
+  <!ELEMENT rey(nombre, padre, madre)>
+  <!ELEMENT padre(#PCDATA)>
+  <!ELEMENT madre(#PCDATA)>
+]>
+
+<reyesEspanoles>
+  <rey>
+    <nombre>felipe iii</nombre>
+
+    <padre>felipe ii</padre>
+
+    <madre>ana de austria</madre>
+  </rey>
+
+  <reina>
+    <nombre>juana la loca</nombre>
+
+    <padre>fernando el católico</padre>
+
+    <madre>isabel la católica</madre>
+  </reina>
+
+  <rey>
+    <nombre>carlos i</nombre>
+
+    <padre>felipe el hermoso</padre>
+
+    <madre>juana la loca</madre>
+  </rey>
+</reyesEspanoles>
+```
+
+<p>Respuesta:</p>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE reyesEspanoles[
+  <!ELEMENT reyesEspanoles(rey*, reina*)>
+  <!ELEMENT rey(nombre, padre, madre)>
+  <!ELEMENT nombre(#PCDATA)>
+  <!ELEMENT padre(#PCDATA)>
+  <!ELEMENT madre(#PCDATA)>
+]>
+
+<reyesEspanoles>
+  <rey>
+    <nombre>felipe iii</nombre>
+
+    <padre>felipe ii</padre>
+
+    <madre>ana de austria</madre>
+  </rey>
+
+  <reina>
+    <nombre>juana la loca</nombre>
+
+    <padre>fernando el católico</padre>
+
+    <madre>isabel la católica</madre>
+  </reina>
+
+  <rey>
+    <nombre>carlos i</nombre>
+
+    <padre>felipe el hermoso</padre>
+
+    <madre>juana la loca</madre>
+  </rey>
+</reyesEspanoles>
+```
+
+<p><b>e. Códigos de colores</b></p>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+
 ```
