@@ -752,6 +752,7 @@
     <uri>http://www.whatwg.org</uri>
   </marcador>
 </marcadores>
+```
 
 <p><b>b. Efemérides</b></p>
 
@@ -792,6 +793,8 @@
 <!DOCTYPE efemerides[
   <!ELEMENT efemerides(efemeride+)>
   <!ELEMENT efemeride(fecha, hecho)>
+  <!ELEMENT fecha(#PCDATA)>
+  <!ELEMENT hecho(#PCDATA)>
 ]>
 
 <efemerides>
@@ -1026,6 +1029,27 @@ DOCTYPE areopuertos[
   <cuadro titulo="adán y eva" autor="alberto durero"/>
 
   <cuadro autor="lucas cranach, el viejo" titulo="adán y eva"/>
+</cuadros>
+```
+
+<p>Respuesta:</p>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE cuadros[
+  <!ELEMENT cuadros(cuadro*)>
+  <!ELEMENT cuadro EMPTY>
+  <!ATTLIST cuadro titulo ID #REQUIRED>
+  <!ATTLIST cuadro autor CDATA #REQUIRED>
+]>
+
+<cuadros>
+  <cuadro titulo="La Persistencia de la Memoria" autor="Salvador Dali"/>
+
+  <cuadro titulo="La Noche Estrellada" autor="Vincent van Gogh"/>
+
+  <cuadro titulo="El Jardín de las Delicias" autor="Jheronimus Bosch"/>
 </cuadros>
 ```
 
