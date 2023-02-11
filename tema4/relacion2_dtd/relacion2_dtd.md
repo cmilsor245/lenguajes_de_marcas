@@ -1045,11 +1045,9 @@ DOCTYPE areopuertos[
 ]>
 
 <cuadros>
-  <cuadro titulo="la_persistencia_de_la_memoria" autor="salvador dali"/>
+  <cuadro titulo="adan_y_eva" autor="alberto duero"/>
 
-  <cuadro titulo="la_noche_estrellada" autor="vincent van gogh"/>
-
-  <cuadro titulo="el_jardín_de_las_delicias" autor="jheronimus bosch"/>
+  <cuadro titulo="adan_y_eva" autor="lucas_cranach"/>
 </cuadros>
 ```
 
@@ -1069,6 +1067,25 @@ DOCTYPE areopuertos[
   <leche cantidad="12 litros"></leche>
 
   <pan cantidad="3 barras de cuarto"/>
+</listaCompra>
+```
+
+<p>Respuesta:</p>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE listaCompra[
+  <!ELEMENT listaCompra(item*)>
+  ELEMENT item EMPTY>
+  <!ATTLIST item nombre CDATA #REQUIRED>
+  ATTLIST item cantidad CDATA #REQUIRED>
+]>
+
+<listaCompra>
+  <item nombre="leche" cantidad="12 litros"/>
+
+  <item nombre="pan" cantidad="3 barras de cuarto"/>
 </listaCompra>
 ```
 
