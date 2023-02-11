@@ -1170,7 +1170,36 @@ DOCTYPE areopuertos[
 ]>
 
 <albumesMortadelo>
-  <album nombre="el sulfato atómico"/>
+  <album nombre="el sulfato atómico" fecha="1969"/>
+
+  <album nombre="la caja de diez cerrojos" fecha="1971"/>
+
+  <album nombre="el otro yo del profesor bacterio" fecha="1973"/>
+
+  <album nombre="los cacharros majaretas" fecha="1974"/>
+</albumesMortadelo>
+```
+
+<p>Repsuesta:</p>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE albumesMortadelo[
+  <!ELEMENT albumesMortadelo(album*)>
+  <!ELEMENT album(nombre, fecha)>
+  <!ATTLIST album nombre CDATA #REQUIRED>
+  <!ATTLIST album fecha(1969, 1970, 1971, 1972, 1973, 1974) #REQUIRED>
+]>
+
+<albumesMortadelo>
+  <album nombre="el sulfato atómico" fecha="1969"/>
+
+  <album nombre="la caja de diez cerrojos" fecha="1971"/>
+
+  <album nombre="el otro yo del profesor bacterio" fecha="1973"/>
+
+  <album nombre="los cacharros majaretas" fecha="1974"/>
 </albumesMortadelo>
 ```
 
