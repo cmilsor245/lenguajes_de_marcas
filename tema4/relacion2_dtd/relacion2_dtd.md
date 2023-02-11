@@ -1067,13 +1067,13 @@ DOCTYPE areopuertos[
 ]>
 
 <futbol>
-  <jugador nombre="alfredo di stéfano" cogido="ads"/>
+  <jugador nombre="alfredo di stéfano" codigo="ads"/>
 
-  <jugador nombre="edison arantes do nascimiento" cogido="ean"/>
+  <jugador nombre="edison arantes do nascimiento" codigo="ean"/>
 
-  <jugador nombre="diego armando maradona" cogido="dam"/>
+  <jugador nombre="diego armando maradona" codigo="dam"/>
 
-  <jugador nombre="johan cruyff" cogido="jc"/>
+  <jugador nombre="johan cruyff" codigo="jc"/>
 
   <equipo nombre="società sportiva calcio napoli" jugadores="maradona"/>
 
@@ -1084,6 +1084,8 @@ DOCTYPE areopuertos[
 <p>Respuesta:</p>
 
 ```xml
+<!-- no sé si solo deben aparecer elementos "jugador" o "equipo", pero no los dos a la vez -->
+
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!DOCTYPE futbol[
@@ -1097,18 +1099,79 @@ DOCTYPE areopuertos[
 ]>
 
 <futbol>
-  <jugador nombre="alfredo_di_stéfano" cogido="ads"/>
+  <jugador nombre="alfredo_di_stéfano" codigo="ads"/>
 
-  <jugador nombre="edison_arantes_do_nascimiento" cogido="ean"/>
+  <jugador nombre="edison_arantes_do_nascimiento" codigo="ean"/>
 
-  <jugador nombre="diego_armando_maradona" cogido="dam"/>
+  <jugador nombre="diego_armando_maradona" codigo="dam"/>
 
-  <jugador nombre="johan cruyff" cogido="jc"/>
+  <jugador nombre="johan cruyff" codigo="jc"/>
 
   <equipo nombre="società sportiva calcio napoli" jugadores="dam"/>
 
-  <equipo nombre="fútbol club barcelona" jugadores="jc, dam"/>
+  <equipo nombre="fútbol club barcelona" jugadores="jc dam"/>
 </futbol>
+```
+
+<p><b>5. Elementos con atributos. Corrige los errores del DTD:</b></p>
+
+<p><b>b. Resoluciones de pantalla</b></p>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE resoluciones[
+  <!ELEMENT resoluciones EMPTY>
+  <!ATTLIST resoluciones nombre NMTOKEN #REQUIRED>
+  <!ATTLIST resoluciones alto CDATA #REQUIRED>
+  <!ATTLIST resoluciones ancho CDATA #REQUIRED>
+]>
+
+<resoluciones>
+  <resolucion nombre="vga" alto="480" ancho="640"/>
+
+  <resolucion nombre="xga" alto="1024" ancho="768"/>
+
+  <resolucion nombre="hd 1080" alto="1920" ancho="1080"/>
+</resoluciones>
+```
+
+<p>Respuesta:</p>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE resoluciones[
+  <!ELEMENT resoluciones(resolucion+)>
+  <!ATTLIST resolucion nombre CDATA #REQUIRED>
+  <!ATTLIST resolucion alto CDATA #REQUIRED>
+  <!ATTLIST resolucion ancho CDATA #REQUIRED>
+]>
+
+<resoluciones>
+  <resolucion nombre="vga" alto="480" ancho="640"/>
+
+  <resolucion nombre="xga" alto="1024" ancho="768"/>
+
+  <resolucion nombre="hd 1080" alto="1920" ancho="1080"/>
+</resoluciones>
+```
+
+<p><b>c. Álbumes de Mortadelo y Filemón</b></p>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE albumesMortadelo[
+  <!ELEMENT albumesMortadelo(album*)>
+  <!ELEMENT album(nombre, fecha)>
+  <!ATTLIST album nombre CDATA #REQUIRED>
+  <!ATTLIST album fecha(1969, 1970, 1971, 1972, 1973, 1974) #REQUIRED>
+]>
+
+<albumesMortadelo>
+  <album nombre="el sulfato atómico"/>
+</albumesMortadelo>
 ```
 
 <p><b>6. Se quiere definir un lenguaje de marcas para representar los resultados de una liga de fútbol. La información que se quiere almacenar de cada partido es:</b></p>
