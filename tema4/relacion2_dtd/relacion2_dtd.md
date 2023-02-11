@@ -1013,44 +1013,6 @@ DOCTYPE areopuertos[
 
 <p><b>4. Elementos con atributos, corregir los errores en los elementos (sin tocar el DTD).</b></p>
 
-<p><b>a. Cuadros</b></p>
-
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-
-<!DOCTYPE cuadros[
-  <!ELEMENT cuadros(cuadro*)>
-  <!ELEMENT cuadro EMPTY>
-  <!ATTLIST cuadro titulo ID #REQUIRED>
-  <!ATTLIST cuadro autor CDATA #REQUIRED>
-]>
-
-<cuadros>
-  <cuadro titulo="adán y eva" autor="alberto durero"/>
-
-  <cuadro autor="lucas cranach, el viejo" titulo="adán y eva"/>
-</cuadros>
-```
-
-<p>Respuesta:</p>
-
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-
-<!DOCTYPE cuadros[
-  <!ELEMENT cuadros(cuadro*)>
-  <!ELEMENT cuadro EMPTY>
-  <!ATTLIST cuadro titulo ID #REQUIRED>
-  <!ATTLIST cuadro autor CDATA #REQUIRED>
-]>
-
-<cuadros>
-  <cuadro titulo="adan_y_eva" autor="alberto duero"/>
-
-  <cuadro titulo="adan_y_eva" autor="lucas_cranach"/>
-</cuadros>
-```
-
 <p><b>b. Lista de la compra</b></p>
 
 ```xml
@@ -1087,6 +1049,66 @@ DOCTYPE areopuertos[
 
   <item nombre="pan" cantidad="3 barras de cuarto"/>
 </listaCompra>
+```
+
+<p><b>c. Jugadores y equipos de fútbol</b></p>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE futbol[
+  <!ELEMENT futbol((jugador | equipo)*)>
+  <!ELEMENT jugador EMPTY>
+  <!ATTLIST jugador nombre NMTOKENS #REQUIRED>
+  <!ATTLIST jugador codigo ID #REQUIRED>
+  <!ELEMENT equipo EMPTY>
+  <!ATTLIST equipo nombre CDATA #REQUIRED>
+  <!ATTLIST equipo jugadores IDREFS #IMPLIED>
+]>
+
+<futbol>
+  <jugador nombre="alfredo di stéfano" cogido="ads"/>
+
+  <jugador nombre="edison arantes do nascimiento" cogido="ean"/>
+
+  <jugador nombre="diego armando maradona" cogido="dam"/>
+
+  <jugador nombre="johan cruyff" cogido="jc"/>
+
+  <equipo nombre="società sportiva calcio napoli" jugadores="maradona"/>
+
+  <equipo nombre="fútbol club barcelona" jugadores="cruyff, maradona"/>
+</futbol>
+```
+
+<p>Respuesta:</p>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE futbol[
+  <!ELEMENT futbol((jugador | equipo)*)>
+  <!ELEMENT jugador EMPTY>
+  <!ATTLIST jugador nombre NMTOKENS #REQUIRED>
+  <!ATTLIST jugador codigo ID #REQUIRED>
+  <!ELEMENT equipo EMPTY>
+  <!ATTLIST equipo nombre CDATA #REQUIRED>
+  <!ATTLIST equipo jugadores IDREFS #IMPLIED>
+]>
+
+<futbol>
+  <jugador nombre="alfredo_di_stéfano" cogido="ads"/>
+
+  <jugador nombre="edison_arantes_do_nascimiento" cogido="ean"/>
+
+  <jugador nombre="diego_armando_maradona" cogido="dam"/>
+
+  <jugador nombre="johan cruyff" cogido="jc"/>
+
+  <equipo nombre="società sportiva calcio napoli" jugadores="dam"/>
+
+  <equipo nombre="fútbol club barcelona" jugadores="jc, dam"/>
+</futbol>
 ```
 
 <p><b>6. Se quiere definir un lenguaje de marcas para representar los resultados de una liga de fútbol. La información que se quiere almacenar de cada partido es:</b></p>
