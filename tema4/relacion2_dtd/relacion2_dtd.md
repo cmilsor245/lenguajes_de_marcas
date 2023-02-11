@@ -1187,7 +1187,7 @@ DOCTYPE areopuertos[
 
 <!DOCTYPE albumesMortadelo[
   <!ELEMENT albumesMortadelo(album*)>
-  <!ELEMENT album(nombre, fecha)>
+  <!ELEMENT album>
   <!ATTLIST album nombre CDATA #REQUIRED>
   <!ATTLIST album fecha(1969, 1970, 1971, 1972, 1973, 1974) #REQUIRED>
 ]>
