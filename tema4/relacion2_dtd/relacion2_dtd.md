@@ -1314,5 +1314,52 @@ DOCTYPE areopuertos[
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 
+<!DOCTYPE panel_vuelos[
+  <!ELEMENT panel_vuelos(nombre_aeropuerto, vuelos, fecha_panel)>
+  <!ELEMENT vuelos(vuelo+)>
+  <!ELEMENT vuelo(diario, origen, destino, hora_salida, hora_llegada, estado)>
+  <!ATTLIST vuelo codigo ID #REQUIRED>
+  <!ELEMENT diario IMPLIED>
+  <!ELEMENT estado(C | E | R)>
+  <!ELEMENT estado "E">
+]>
 
+<panel_vuelos>
+  <nombre_aeropuerto>JFK</nombre_aeropuerto>
+
+  <vuelos>
+    <vuelo codigo="V22">
+      <diario/>
+
+      <origen>New York</origen>
+
+      <destino>Chicago</destino>
+
+      <hora_salida>09:30:00</hora_salida>
+
+      <hora_llegada>11:30:00</hora_llegada>
+
+      <estado>R</estado>
+    </vuelo>
+
+    <vuelo codigo="V23">
+      <origen>New York</origen>
+
+      <destino>Miami</destino>
+
+      <hora_salida>10:15:00</hora_salida>
+
+      <hora_llegada>11:15:00</hora_llegada>
+
+      <estado>C</estado>
+    </vuelo>
+  </vuelos>
+
+  <fecha_panel>20/12/2013</fecha_panel>
+</panel_vuelos>
 ```
+
+<p><b>8. Escribir un documento XML con un DTD interno que represente la información contenida en la siguiente factura ficticia:</b></p>
+
+<img src="img/8.png">
+
