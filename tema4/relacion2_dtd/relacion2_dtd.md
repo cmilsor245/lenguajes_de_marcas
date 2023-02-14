@@ -1319,7 +1319,11 @@ DOCTYPE areopuertos[
   <!ELEMENT vuelos(vuelo+)>
   <!ELEMENT vuelo(diario, origen, destino, hora_salida, hora_llegada, estado)>
   <!ATTLIST vuelo codigo ID #REQUIRED>
-  <!ELEMENT diario IMPLIED>
+  <!ELEMENT diario EMPTY IMPLIED>
+  <!ELEMENT origen(#PCDATA)>
+  <!ELEMENT destino(#PCDATA)>
+  <!ELEMENT hora_salida(#PCDATA)>
+  <!ELEMENT hora_llegada(#PCDATA)>
   <!ELEMENT estado(C | E | R)>
   <!ELEMENT estado "E">
 ]>
@@ -1377,6 +1381,76 @@ DOCTYPE areopuertos[
 
 <li><b>En el DTD debe indicarse que al menos tiene que aparecer una línea de detalle y, para cada una de ellas, se tiene que guardar la información en el mismo orden en el que aparece en la factura.</b></li>
 
-<li><b>Para indicar si un artículo está de oferta, se debe utilizar un elemento vacía que, respecto a cada artículo, podrá aparecer (en caso de estar de oferta) o no aparecer (en el caso contario).</b></li>
+<li><b>Para indicar si un artículo está de oferta, se debe utilizar un elemento vacío que, respecto a cada artículo, podrá aparecer (en caso de estar de oferta) o no aparecer (en el caso contario).</b></li>
 
 <li><b>Respecto al número de la factura y su fecha de emisión, deben representarse mediante atributos obligatorios donde se estime más apropiado.</b></li>
+
+<p>Respuesta:</p>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE factura[
+  <!ELEMENT factura(datos_emisor, datos_cliente, detalle_factura+)>
+    <!ATTLIST factura numero_factura CDATA>
+    <!ATTLIST factura fecha_emision CDATA>
+
+    <!ELEMENT datos_emisor(nombre, cif, telefono)>
+      <!ELEMENT nombre_emi(#PCDATA)>
+      <!ELEMENT cif_emi(#PCDATA)>
+      <!ELEMENT telefono_emi(#PCDATA)>
+
+    <!ELEMENT datos_cliente(nombre, cif, telefono)>
+      <!ELEMENT nombre_cli(#PCDATA)>
+      <!ELEMENT cif_cli(#PCDATA)>
+      <!ELEMENT telefono_cli(#PCDATA)>
+
+    <!ELEMENT detalle_factura(articulo)>
+      <!ATTLIST detalle_factura importe CDATA #REQUIRED>
+
+      <!ELEMENT articulo(descripcion, cantidad, oferta, pvp)>
+        <!ATTLIST articulo codigo_articulo ID #REQUIRED>
+        <!ATTLIST articulo tipo(Libro | DVD | Varios) IMPLIED>
+        <!ELEMENT descripcion(#PCDATA)>
+        <!ELEMENT oferta EMPTY IMPLIED>
+        <!ELEMENT pvp(#PCDATA)>
+]>
+
+<factura numero_factura="27" fecha_emision="18/12/2018">
+  <datos_emisor>
+    <nombre_emi>Librería Pérez</nombre_emi>
+
+    <cif_emi>CIF: 44555666B</cif_emi>
+
+    <telefono_emi>Teléfono: 777888999</telefono_emi>
+  </datos_emisor>
+
+  <datos_cliente>
+    <nombre_cli>Biblioteca Txantrea</nombre_cli>
+
+    <cif_cli>CIF: 33111222A</cif_cli>
+
+    <telefono_cli>Teléfono: 333999444</telefono_cli>
+  </datos_cliente>
+
+  <detalle_factura importe="85.00 €">
+    <articulo codigo_articulo="AW7" tipo="Libro">
+      <descripcion>Analítica Web 2.0</descripcion>
+
+      <cantidad>1</cantidad>
+
+      <oferta/>
+
+      <pvp>25.00 €</pvp>
+    </articulo>
+
+    <articulo codigo_articulo="CP5" tipo="DVD">
+      <descripcion>Curso de HTML</descripcion>
+
+      <cantidad>2</cantidad>
+
+      <pvp>30.00 €</pvp>
+    </articulo>
+  </detalle_factura>
+</factura>
+```
