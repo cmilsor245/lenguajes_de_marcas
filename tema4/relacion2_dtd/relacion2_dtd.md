@@ -1290,3 +1290,24 @@ DOCTYPE areopuertos[
 
 <partido local="water de munich" visitante="esteaua es del grifo" goles_local="4" goles_visitante="2"></partido>
 ```
+
+<p><b>7. Escribir un documento XML con un DTD interno que represente la siguiente información ficticia:</b></p>
+
+<img src="img/7.png">
+
+<p><b>Consideraciones respecto al DTD:</b></p>
+
+<li>Hay que guardar el nombre del aeropuerto, lo datos de cada vuelo agrupados y la fecha del panel, en ese orden.</li>
+
+<li>En el DTD, sólo el código de un vuelo y su estado deben representarse mediante atributos.</li>
+
+<li>Se tiene que indicar que el código ha de ser único y obligatorio para cada vuelo.</li>
+
+<li>Los posibles estados de un vuelo son "C" (cancelado), "E" (en hora) y "R" (retrasado). El valor por defecto debe ser "E".</li>
+
+<li>En el DTD debe indicarse que al menos tiene que aparecer un vuelo y, para cada uno de ellos, se tiene que guardar la información en el mismo orden en el que aparece en el panel.</li>
+
+<li>Para indicar si un vuelo es diario, se debe utilizar un elemento vacío que, respecto a cada vuelo, podrá aparecer (en el caso de ser diario) o no aparecer (en el caso contrario).</li>
+
+<p>Respuesta:</p>
+
