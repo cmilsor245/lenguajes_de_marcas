@@ -1236,19 +1236,57 @@ DOCTYPE areopuertos[
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!DCOTYPE partido[
-  <!ELEMENT >
+<!DOCTYPE partido[
+  <!ELEMENT partido(local, visitante, goles_local, goles_visitante)>
+  <!ELEMENT local #PCDATA>
+  <!ELEMENT visitante #PCDATA>
+  <!ELEMENT goles_local #PCDATA>
+  <!ELEMENT goles_visitante #PCDATA>
 ]>
+
+<partido>
+  <local>nottigham presa</local>
+
+  <visitante>inter de mitente</visitante>
+
+  <goles_local>0</goles_local>
+
+  <goles_visitante>1</goles_visitante>
+</partido>
 ```
 
 <li>Segundo documento:</li>
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE partido[
+  <!ELEMENT partido(local, visitante)>
+  <!ELEMENT local #PCDATA>
+  <!ATTLIST local goles_local CDATA>
+  <!ELEMENT visitante #PCDATA>
+  <!ATTLIST visitante goles_visitante CDATA>
+]>
+
+<partido>
+  <local goles_local="3">vodka juniros</local>
+
+  <visitante goles_visitante="3">sparta da risa</visitante>
+</partido>
 ```
 
 <li>Tercer documento:</li>
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE partido[
+  <!ELEMENT partido EMPTY>
+  <!ATTLIST partido local CDATA>
+  <!ATTLIST partido visitante CDATA>
+  <!ATTLIST partido goles_local CDATA>
+  <!ATTLIST partido goles_visitante CDATA>
+]>
+
+<partido local="water de munich" visitante="esteaua es del grifo" goles_local="4" goles_visitante="2"></partido>
 ```
