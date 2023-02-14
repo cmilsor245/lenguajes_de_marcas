@@ -1363,3 +1363,20 @@ DOCTYPE areopuertos[
 
 <img src="img/8.png">
 
+<p>Consideraciones respecto al DTD:</p>
+
+<li><b>Hay que guardar los datos del emisor de la factura agrupados. A continuación, los datos del cliente, también agrupados. Y finalmente, los datos de detalle donde se escriben (en líneas) los datos de cada artículo, así como el importe total.</b></li>
+
+<li><b>Obsérvese que en cada línea se indica el código de un artículo, el tipo al que pertenece, su descripción, la cntidad facturada, si está de oferta o no, y el PVP (precio de venta al público). Ahora bien, de los datos que aparecen en cada línea, sólo el código del artículo y el tipo deben representarse mediante atributos en el DTD.</b></li>
+
+<li><b>Se tiene que indicar que el código del artículo ha de ser único y obligatorio para cada artículo.</b></li>
+
+<li><b>Los posbiles tipos de un artículo son "Libro", "DVD" o "Varios", no permitiéndose otro valor. Ahora bien, este atributo debe indicarse que es opcional.</b></li>
+
+<li><b>El importe también debe representarse por medio de un atributo, que debe ser obligatorio.</b></li>
+
+<li><b>En el DTD debe indicarse que al menos tiene que aparecer una línea de detalle y, para cada una de ellas, se tiene que guardar la información en el mismo orden en el que aparece en la factura.</b></li>
+
+<li><b>Para indicar si un artículo está de oferta, se debe utilizar un elemento vacía que, respecto a cada artículo, podrá aparecer (en caso de estar de oferta) o no aparecer (en el caso contario).</b></li>
+
+<li><b>Respecto al número de la factura y su fecha de emisión, deben representarse mediante atributos obligatorios donde se estime más apropiado.</b></li>
