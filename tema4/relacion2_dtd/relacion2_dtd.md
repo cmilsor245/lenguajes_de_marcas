@@ -1363,7 +1363,7 @@ DOCTYPE areopuertos[
 
 <img src="img/8.png">
 
-<p>Consideraciones respecto al DTD:</p>
+<p><b>Consideraciones respecto al DTD:</b></p>
 
 <li><b>Hay que guardar los datos del emisor de la factura agrupados. A continuación, los datos del cliente, también agrupados. Y finalmente, los datos de detalle donde se escriben (en líneas) los datos de cada artículo, así como el importe total.</b></li>
 
