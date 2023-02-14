@@ -1454,3 +1454,79 @@ DOCTYPE areopuertos[
   </detalle_factura>
 </factura>
 ```
+
+<p><b>12. Según el documento XML indicado a continuación, contruye un documento XML con DTD. Comprueba la buena formación y la validez del documento. El DTD que valide este documento debe tener en cuenta las siguientes características:</b></p>
+
+<li><b>El título original de una película solo aparecerá cuando la película no sea española.</b></li>
+
+<li><b>Es posible que en un momento dado una película esté pendiente de clasificación. En caso de que esté clasificada, siempre deberá indicar los años para los que se recomienda: TP (todos los públicos), 8, 12, 16 o 18.</b></li>
+
+<li><b>No siempre existe una web con la información de la película.</b></li>
+
+<li><b>Se quiere guardar información sobre el fichero gráfico que contiene el cartel de la película. Este fichero no siempre está disponible.</b></li>
+
+<li><b>En caso de que no se proporcione el año de una película, se asumirá que es del 2003.</b></li>
+
+<li><b>En el reparto deberá aparecer un actor como mínimo.</b></li>
+
+```xml
+<cartelera>
+  <pelicula código="p1" duracion="152" anio="2002">
+    <titulo>AQUELLAS JUERGAS UNIVERSITARIAS</titulo>
+
+    <titulo_original>OLD SCHOOL</titulo_original>
+
+    <nacionalidad>Estados Unidos</nacionalidad>
+
+    <genero>Comedia</genero>
+
+    <clasificacion edad="tp"/>
+
+    <sinopsis>Mitch, Frank y Beanie son tres amigos treintañeros cuyas vidas no son exactamente lo que esperaban. Mitch tiene una novia ninfómana que se mete en la cama con el primero que agarra. Frank se ha casado y su matrimonio nada tiene que ver con las juergas salvajes que organizaban años atrás. Y Beanie es un padre de familia que se muere por recuperar su alocada juventud. Pero las cosas cambian cuando Beanie sugiere que creen su propia fraternidad, en la nueva casa que Mitch tiene junto al campus de la universidad. Una ocasión para revivir tiempos gloriosos, hacer nuevos amigos y de volver a sus viejas, salvajes y desmadradas juergas de estudiantes.</sinopsis>
+
+    <director>Todd Philips</director>
+
+    <reparto>
+      <actor>Luke Wilson</actor>
+
+      <actor>Will Farrel</actor>
+
+      <actor>Vince Vaughn</actor>
+    </reparto>
+
+    <web>http://www.uip.es</web>
+
+    <cartel>caratulas/aquellas_juergas.jpg</cartel>
+  </pelicula>
+
+  <pelicula código="p1" duracion="06">
+    <titulo>EL ORO DE MOSCÚ</titulo>
+
+    <nacionalidad>España</nacionalidad>
+
+    <genero>Comedia</genero>
+
+    <sin_clasificar/>
+
+    <sinopsis>Por una extraña coincidencia del destino, alguien recibe una información extraconfidencial de un anciano en sus últimos segundos de vida: el secreto mejor guardado de la Historia. El receptor, un trabajador de hospital, se lo comunica secretamente a un supuesto amigo. Ambos inician una aventura rocambolesca y llena de misterio. Ante la inutilidad de sus intentos y muy a su pesar, tienen que recurrir a otras personas que así mismo van cayendo en el pozo sin fondo que conlleva descifrar el enigma.</sinopsis>
+
+    <director>Jesús Bonilla</director>
+
+    <reparto>
+      <actor>Jesús Bonilla</actor>
+
+      <actor>Santiago Segura</actor>
+
+      <actor>Alfredo Landa</actor>
+
+      <actor>Concha Velasco</actor>
+
+      <actor>Antonio Resines</actor>
+
+      <actor>Gabino Diego</actor>
+
+      <actor>María Barranco</actor>
+    </reparto>
+  </pelicula>
+</cartelera>
+```
