@@ -1297,17 +1297,22 @@ DOCTYPE areopuertos[
 
 <p><b>Consideraciones respecto al DTD:</b></p>
 
-<li>Hay que guardar el nombre del aeropuerto, lo datos de cada vuelo agrupados y la fecha del panel, en ese orden.</li>
+<li><b>Hay que guardar el nombre del aeropuerto, lo datos de cada vuelo agrupados y la fecha del panel, en ese orden.</b></li>
 
-<li>En el DTD, sólo el código de un vuelo y su estado deben representarse mediante atributos.</li>
+<li><b>En el DTD, sólo el código de un vuelo y su estado deben representarse mediante atributos.</b></li>
 
-<li>Se tiene que indicar que el código ha de ser único y obligatorio para cada vuelo.</li>
+<li><b>Se tiene que indicar que el código ha de ser único y obligatorio para cada vuelo.</b></li>
 
-<li>Los posibles estados de un vuelo son "C" (cancelado), "E" (en hora) y "R" (retrasado). El valor por defecto debe ser "E".</li>
+<li><b>Los posibles estados de un vuelo son "C" (cancelado), "E" (en hora) y "R" (retrasado). El valor por defecto debe ser "E".</b></li>
 
-<li>En el DTD debe indicarse que al menos tiene que aparecer un vuelo y, para cada uno de ellos, se tiene que guardar la información en el mismo orden en el que aparece en el panel.</li>
+<li><b>En el DTD debe indicarse que al menos tiene que aparecer un vuelo y, para cada uno de ellos, se tiene que guardar la información en el mismo orden en el que aparece en el panel.</b></li>
 
-<li>Para indicar si un vuelo es diario, se debe utilizar un elemento vacío que, respecto a cada vuelo, podrá aparecer (en el caso de ser diario) o no aparecer (en el caso contrario).</li>
+<li><b>Para indicar si un vuelo es diario, se debe utilizar un elemento vacío que, respecto a cada vuelo, podrá aparecer (en el caso de ser diario) o no aparecer (en el caso contrario).</b></li>
 
 <p>Respuesta:</p>
 
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+```
