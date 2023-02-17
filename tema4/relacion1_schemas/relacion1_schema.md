@@ -80,3 +80,33 @@
   </xs:restriction>
 </xs:simpleType>
 ```
+
+<p><b>6. Se quiere reflejar que las tallas de ropa se pueden identificar por números (38, 40, 42) o por letras, que son las iniciales en inglés (S, M, L).</b></p>
+
+<p>Primera opción:</p>
+
+```xml
+<xs:simpleType name="TipoTallaNumerica">
+  <xs:restriction base="xs:integer">
+    <xs:enumeration value="38"/>
+
+    <xs:enumeration value="40"/>
+
+    <xs:enumeration value="42"/>
+  </xs:restriction>
+</xs:simpleType>
+```
+
+<p>Segunda opción:</p>
+
+```xml
+<xs:simpleType name="TipoTallaTextual">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="S"/>
+
+    <xs:enumeration value="M"/>
+
+    <xs:enumeration value="L"/>
+  </xs:restriction>
+</xs:simpleType>
+```
