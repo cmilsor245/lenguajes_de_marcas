@@ -70,3 +70,9 @@
   </xs:restriction>
 </xs:simpleType>
 ```
+
+<p><b>5. Un número de teléfono que se debe representar de la siguiente manera: 3 dígitos -> 1 punto -> 3 dígitos -> 1 punto -> 3 dígitos -> 1 punto.</b></p>
+
+```xml
+
+```
