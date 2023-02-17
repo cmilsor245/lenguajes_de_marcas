@@ -17,7 +17,7 @@
 
 <p><b>1. El elemento "< edadLaboral >" es un entero no negativo, que debe tener un valor mínimo de 16, incluido, y máximo 70, no incluido.</b></p>
 
-```xml
+```xsd
 <xs:element name="edadLaboral">
   <xs:simpleType>
     <xs:restriction base="xs:nonNegativeInteger">
@@ -27,4 +27,10 @@
     </xs:restriction>
   </xs:simpleType>
 </xs:simpleType>
+```
+
+<p><b>2. Si quisiéramos definir un tipo de datos al que poder referenciar repetidas veces y declarar un elemento "< edadLaboral >" de ese tipo sería...</b></p>
+
+```xsd
+
 ```
