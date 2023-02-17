@@ -46,5 +46,15 @@
 <p><b>3. Se quiere definir un tipo de dato simple llamado "TipoEstaciones", basado en el tipo predefinido "xs:token", y que solamente permita como valores los nombres de las cuatro estaciones.</b></p>
 
 ```xml
+<xs:simpleType name="TipoEstaciones">
+  <xs:restriction base="xs:token">
+    <xs:enumeration value="Primavera"/>
 
+    <xs:enumeration value="Verano"/>
+
+    <xs:enumeration value="Otoño"/>
+
+    <xs:enumeration value="Invierno"/>
+  </xs:restriction>
+</xs:simpleType>
 ```
