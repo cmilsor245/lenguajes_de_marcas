@@ -74,5 +74,9 @@
 <p><b>5. Un número de teléfono que se debe representar de la siguiente manera: 3 dígitos -> 1 punto -> 3 dígitos -> 1 punto -> 3 dígitos -> 1 punto.</b></p>
 
 ```xml
-
+<xs:simpleType name="TipoTelefonoPunteado">
+  <xs:restriction base="xs:string">
+    <xs:pattern value="[0-9]{3}\.[0-9]{3}\.[0-9]{3}">
+  </xs:restriction>
+</xs:simpleType>
 ```
