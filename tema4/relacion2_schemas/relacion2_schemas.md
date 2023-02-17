@@ -44,3 +44,13 @@
   </xs:simpleType>
 </xs:element>
 ```
+
+<p><b>3. Define un elemento llamado "letra" restricción. El único valor aceptable es de tres de las letras mayúsculas de la A a la Z.</b></p>
+
+```xml
+<xs:element name="letra">
+  <xs:simpleType>
+    
+  </xs:simpleType>
+</xs:element>
+```
