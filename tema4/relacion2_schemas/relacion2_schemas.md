@@ -1,6 +1,6 @@
 <style>
   h1{
-    tex-align: center;
+    text-align: center;
     font-weight: bold;
     border: none;
     margin-bottom: 0px;
