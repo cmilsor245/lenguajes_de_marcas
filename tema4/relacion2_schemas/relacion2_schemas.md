@@ -311,4 +311,4 @@
 
 <p>En el esquema XML proporcionado, el campo "edad" representa la edad del contacto en años. Al utilizar el tipo de datos "xs:unsignedByte", se garantiza que el valor de edad no puede ser negativo y no puede ser mayor de 255.</p>
 
-<p>Por lo tanto, los valores que puede tomar el campo "edad" en una instancia XML que siga este esquema deben ser números enteros no negativos entre 0 y 255.</p>
+<p>Por lo tanto, los valores que puede tomar el campo "edad" en una instancia XML que siga este esquema deben ser números enteros no negativos entre 0 y 255.</p>w
