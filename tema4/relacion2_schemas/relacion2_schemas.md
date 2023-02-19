@@ -194,9 +194,9 @@
   <contacto>
     <nombre>Carla López</nombre>
 
-    <telefono>555-555-1212</telefono>
+    <telefono>911-11-22-33</telefono>
 
-    <telefono>555-555-2121</telefono>
+    <telefono>912-22-33-44</telefono>
 
     <edad>25</edad>
 
@@ -206,7 +206,7 @@
   <contacto>
     <nombre>Pablo Sánchez</nombre>
 
-    <telefono>555-555-1212</telefono>
+    <telefono>913-33-44-55</telefono>
 
     <edad>35</edad>
 
@@ -216,9 +216,9 @@
   <contacto>
     <nombre>Sofia Rodríguez</nombre>
 
-    <telefono>555-555-1212</telefono>
+    <telefono>914-44-55-66</telefono>
 
-    <telefono>555-555-3434</telefono>
+    <telefono>915-55-66-77</telefono>
 
     <edad>30</edad>
 
@@ -228,7 +228,7 @@
   <contacto>
     <nombre>Miguel Álvarez</nombre>
 
-    <telefono>555-555-1212</telefono>
+    <telefono>916-66-77-88</telefono>
 
     <edad>45</edad>
 
@@ -238,7 +238,7 @@
   <contacto>
     <nombre>Paula Gómez</nombre>
 
-    <telefono>555-555-1212</telefono>
+    <telefono>917-77-88-99</telefono>
 
     <edad>28</edad>
 
@@ -248,9 +248,9 @@
   <contacto>
     <nombre>Adrián Fernández</nombre>
 
-    <telefono>555-555-1212</telefono>
+    <telefono>918-88-99-00</telefono>
 
-    <telefono>555-555-4545</telefono>
+    <telefono>919-99-00-11</telefono>
 
     <edad>32</edad>
 
@@ -260,13 +260,14 @@
   <contacto>
     <nombre>Julia García</nombre>
 
-    <telefono>555-555-1212</telefono>
+    <telefono>920-00-11-22</telefono>
 
     <edad>37</edad>
 
     <email>julia.garcia@example.com</email>
   </contacto>
 </agenda>
+
 ```
 
 <p><b>b. Si un usuario deja el campo de teléfono sin rellenar, ¿estaría bien?</b></p>
@@ -284,11 +285,11 @@
   <contacto>
     <nombre>Andrés</nombre>
 
-    <telefono>555-123-4567</telefono>
+    <telefono>910-123-456</telefono>
 
-    <telefono>555-987-6543</telefono>
+    <telefono>911-987-654</telefono>
 
-    <telefono>022-123-4567</telefono>
+    <telefono>912-123-456</telefono>
 
     <edad>30</edad>
 
