@@ -51,7 +51,7 @@
 <xs:element name="letra">
   <xs:simpleType>
     <xs:restriction base="xs:string">
-      <xs:pattern value="[A-Z]{3}">
+      <xs:pattern value="[A-Z]{3}"/>
     </xs:restriction>
   </xs:simpleType>
 </xs:element>
@@ -62,11 +62,33 @@
 ```xml
 <xs:element name="prodid">
   <xs:simpleType>
-    <xs:restriction>
-      <xs:pattern value="[0-9]{5}">
+    <xs:restriction base="xs:integer">
+      <xs:pattern value="[0-9]{5}"/>
     </xs:restriction>
   </xs:simpleType>
 </xs:element>
 ```
 
-<p><b>5. </b></p>
+<p><b>5. Define un elemento llamado "letra" con una restricción. El único valor aceptable es cero o más ocurrencias de letras minúsculas de la a a la z.</b></p>
+
+```xml
+<xs:element name="letra">
+  <xs:simpleType>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[a-z]*"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:element>
+```
+
+<p><b>6. Define un elemento llamado "contraseña" con una restricción. Debe haber exactamente ocho caracteres en una fila y los caracteres deben estar en minúsculas o en mayúsculas (desde la a/A a la z/Z) o ser números del 0 al 9.</b></p>
+
+```xml
+<xs:element name="contraseña">
+  <xs:simpleType>
+    <xs:restriction base="xs:string">
+      
+    </xs:restriction>
+  </xs:simpleType>
+</xs:element>
+```
