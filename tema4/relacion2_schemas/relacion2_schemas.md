@@ -118,3 +118,39 @@
   </xs:simpleType>
 </xs:element>
 ```
+
+<p><b>9. Rellena los huecos que faltan en la siguiente parte del esquema:</b></p>
+
+```xml
+<xs:element name="bola">
+  <xs:complexType>
+    <xs:attribute name="numero" type="_____"/>
+  </xs:complexType>
+</xs:element>
+
+<xs:simpleType name="numeroDeBola">
+  <xs:_____ base="xs:positiveInteger">
+    <xs:_____ value="1"/>
+
+    <xs:_____ value="90"/>
+  </xs:restriction>
+</xs:_____>
+```
+
+<p>Respuesta:</p>
+
+```xml
+<xs:element name="bola">
+  <xs:complexType>
+    <xs:attribute name="numero" type="numeroDeBola"/>
+  </xs:complexType>
+</xs:element>
+
+<xs:simpleType name="numeroDeBola">
+  <xs:restriction base="xs:positiveInteger">
+    <xs:minInclusive value="1"/>
+
+    <xs:maxInclusive value="90"/>
+  </xs:restriction>
+</xs:simpleType>
+```
