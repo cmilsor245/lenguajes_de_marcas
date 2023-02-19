@@ -154,3 +154,53 @@
   </xs:restriction>
 </xs:simpleType>
 ```
+
+<p><b>10. Dado el siguiente esquema, responde a las siguientes preguntas:</b></p>
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="agenda">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="contacto" maxoccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nombre" type="xs:string"/>
+
+              <xs:element name="telefono" type="xs:string" minoccurs="0" maxoccurs="2"/>
+
+              <xs:element name="telefono" type="unsignedInt"/>
+
+              <xs:element name="edad" type="xs:unsignedByte"/>
+
+              <xs:element name="email" type="xs:string" minoccurs="1" maxoccurs="3"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+```
+
+<p><b>a. ¿Podrías añadir 7 contactos más a la agenda?</b></p>
+
+<p></p>
+
+<p><b>b. Si un usuario deja el campo de teléfono sin rellenar, estaría bien?</b></p>
+
+<p></p>
+
+<p><b>c. Si el usuario Andrés dispone de dos teléfonos móviles y uno fijo, ¿podrían añadirse todos en XML?</b></p>
+
+<p></p>
+
+<p><b>d. ¿Cuántos correos electrónicos, como máximo y mínimo, hay que introducir?</b></p>
+
+<p></p>
+
+<p><b>e. ¿De qué tipo es el campo edad? ¿Qué significa? ¿Qué valores podrá tomar según el tipo?</b></p>
+
+<p></p>
