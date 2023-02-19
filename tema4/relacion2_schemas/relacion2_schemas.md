@@ -34,7 +34,7 @@
 ```xml
 <xs:element name="coche">
   <xs:simpleType>
-    <xs:restriction base="string">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Audi"/>
 
       <xs:enumeration value="Golf"/>
@@ -50,7 +50,23 @@
 ```xml
 <xs:element name="letra">
   <xs:simpleType>
-    
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Z]{3}">
+    </xs:restriction>
   </xs:simpleType>
 </xs:element>
 ```
+
+<p><b>4. Define un elemento llamado "prodid" con una restricción. El único valor aceptable es de cinco dígitos en una secuencia, y cada dígito debe estar en un rango de 0 a 9.</b></p>
+
+```xml
+<xs:element name="prodid">
+  <xs:simpleType>
+    <xs:restriction>
+      <xs:pattern value="[0-9]{5}">
+    </xs:restriction>
+  </xs:simpleType>
+</xs:element>
+```
+
+<p><b>5. </b></p>
