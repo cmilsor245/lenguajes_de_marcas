@@ -104,3 +104,17 @@
   </xs:simpleType>
 </xs:element>
 ```
+
+<p><b>8. Define otro elemento llamado "contraseña" con una restricción. El valor debe ser como mínimo de cinco caracteres y un máximo de ocho caracteres.</b></p>
+
+```xml
+<xs:element name="contraseña">
+  <xs:simpleType>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="5"/>
+
+      <xs:maxLength value="8"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:element>
+```
