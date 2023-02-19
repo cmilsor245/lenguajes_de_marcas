@@ -187,20 +187,128 @@
 
 <p><b>a. ¿Podrías añadir 7 contactos más a la agenda?</b></p>
 
-<p></p>
+<p>Sí, se pueden añadir 7 contactos a la agenda. Por ejemplo:</p>
 
-<p><b>b. Si un usuario deja el campo de teléfono sin rellenar, estaría bien?</b></p>
+```xml
+<agenda>
+  <contacto>
+    <nombre>Carla López</nombre>
 
-<p></p>
+    <telefono>555-555-1212</telefono>
+
+    <telefono>555-555-2121</telefono>
+
+    <edad>25</edad>
+
+    <email>carla.lopez@example.com</email>
+  </contacto>
+
+  <contacto>
+    <nombre>Pablo Sánchez</nombre>
+
+    <telefono>555-555-1212</telefono>
+
+    <edad>35</edad>
+
+    <email>pablo.sanchez@example.com</email>
+  </contacto>
+
+  <contacto>
+    <nombre>Sofia Rodríguez</nombre>
+
+    <telefono>555-555-1212</telefono>
+
+    <telefono>555-555-3434</telefono>
+
+    <edad>30</edad>
+
+    <email>sofia.rodriguez@example.com</email>
+  </contacto>
+
+  <contacto>
+    <nombre>Miguel Álvarez</nombre>
+
+    <telefono>555-555-1212</telefono>
+
+    <edad>45</edad>
+
+    <email>miguel.alvarez@example.com</email>
+  </contacto>
+
+  <contacto>
+    <nombre>Paula Gómez</nombre>
+
+    <telefono>555-555-1212</telefono>
+
+    <edad>28</edad>
+
+    <email>paula.gomez@example.com</email>
+  </contacto>
+
+  <contacto>
+    <nombre>Adrián Fernández</nombre>
+
+    <telefono>555-555-1212</telefono>
+
+    <telefono>555-555-4545</telefono>
+
+    <edad>32</edad>
+
+    <email>adrian.fernandez@example.com</email>
+  </contacto>
+
+  <contacto>
+    <nombre>Julia García</nombre>
+
+    <telefono>555-555-1212</telefono>
+
+    <edad>37</edad>
+
+    <email>julia.garcia@example.com</email>
+  </contacto>
+</agenda>
+```
+
+<p><b>b. Si un usuario deja el campo de teléfono sin rellenar, ¿estaría bien?</b></p>
+
+<p>En el esquema XML proporcionado, el campo "telefono" tiene un atributo "minoccurs" con valor "0", lo que indica que no es obligatorio que se proporcione un número de teléfono para cada contacto. Por lo tanto, si un usuario deja el campo "telefono" sin rellenar en un formulario o en una aplicación que utiliza este esquema, no habría ningún problema en términos de validación del esquema XML.</p>
 
 <p><b>c. Si el usuario Andrés dispone de dos teléfonos móviles y uno fijo, ¿podrían añadirse todos en XML?</b></p>
 
-<p></p>
+<p>Sí, en el esquema XML proporcionado, el campo "telefono" tiene un atributo "maxoccurs" con un valor de "2", lo que significa que se pueden proporcionar hasta dos valores para el campo "telefono". Además, se definen dos elementos de teléfono distintos en el esquema XML: uno con el tipo de datos "xs:string" y otro con el tipo de datos "xs:unsignedInt". Por lo tanto, es posible proporcionar dos números de teléfono móvil y un número de teléfono fijo para el contacto Andrés.</p>
+
+<p>Por ejemplo, una posible instancia XML que represente los datos de contacto de Andrés con dos números de teléfono móvil y uno fijo sería:</p>
+
+```xml
+<agenda>
+  <contacto>
+    <nombre>Andrés</nombre>
+
+    <telefono>555-123-4567</telefono>
+
+    <telefono>555-987-6543</telefono>
+
+    <telefono>022-123-4567</telefono>
+
+    <edad>30</edad>
+
+    <email>andres@example.com</email>
+  </contacto>
+</agenda>
+```
 
 <p><b>d. ¿Cuántos correos electrónicos, como máximo y mínimo, hay que introducir?</b></p>
 
-<p></p>
+<p>En el esquema XML proporcionado, el campo "email" tiene un atributo "minoccurs" con valor "1" y un atributo "maxoccurs" con valor "3". Esto significa que cada contacto debe tener al menos un correo electrónico ("minoccurs"="1") y puede tener hasta tres correos electrónicos ("maxoccurs"="3").</p>
+
+<p>Por lo tanto, al crear una instancia XML que siga este esquema, debe proporcionarse al menos un correo electrónico para cada contacto, y se puede proporcionar hasta un máximo de tres correos electrónicos para cada contacto. Si se proporcionan más de tres correos electrónicos para un contacto en una instancia XML, la validación del esquema XML fallará.</p>
 
 <p><b>e. ¿De qué tipo es el campo edad? ¿Qué significa? ¿Qué valores podrá tomar según el tipo?</b></p>
 
-<p></p>
+<p>El campo "edad" en el esquema XML proporcionado tiene el tipo de datos "xs:unsignedByte". Este es un tipo de datos numérico que puede almacenar valores enteros no negativos entre 0 y 255.</p>
+
+<p>El tipo "xs:unsignedByte" es una subclase de "xs:unsignedShort", que a su vez es una subclase de "xs:unsignedInt", que es una subclase de "xs:decimal". Esto significa que el tipo "xs:unsignedByte" hereda las propiedades y restricciones de sus clases padre, como la capacidad de realizar operaciones matemáticas y de comparación.</p>
+
+<p>En el esquema XML proporcionado, el campo "edad" representa la edad del contacto en años. Al utilizar el tipo de datos "xs:unsignedByte", se garantiza que el valor de edad no puede ser negativo y no puede ser mayor de 255.</p>
+
+<p>Por lo tanto, los valores que puede tomar el campo "edad" en una instancia XML que siga este esquema deben ser números enteros no negativos entre 0 y 255.</p>
