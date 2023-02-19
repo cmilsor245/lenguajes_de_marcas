@@ -87,8 +87,9 @@
 <xs:element name="contraseña">
   <xs:simpleType>
     <xs:restriction base="xs:string">
-      
+      <xs:pattern value="[a-zA-Z0-9]{8}"/>
     </xs:restriction>
   </xs:simpleType>
 </xs:element>
 ```
+
