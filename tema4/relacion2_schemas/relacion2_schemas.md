@@ -93,3 +93,14 @@
 </xs:element>
 ```
 
+<p><b>7. Define un elemento llamado "dirección" con una restricción. La restricción de espacio en blanco en ajustado a "preservar". No eliminará los caracteres de espacio en blanco.</b></p>
+
+```xml
+<xs:element name="dirección">
+  <xs:simpleType>
+    <xs:restriction base="xs:string">
+      <xs:whiteSpace value="preserve"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:element>
+```
