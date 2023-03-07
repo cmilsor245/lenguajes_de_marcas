@@ -106,3 +106,43 @@
   </xs:element>
 </xs:schema>
 ```
+
+<p><b>4. Utilizando el mismo documento XML del ejercicio anterior, escribir el contenido del archivo "fichas.xsd" que permita validarlo, teniendo en cuenta que se debe definir la edad con la restricción de que el valor que tome no pueda ser menor que 0 ni mayor que 130. Además, en vez de "xs:minInclusive" y "xs:maxInclusive", se debe utilizar:</b></p>
+
+<li><b>"xs:minExclusive": que sirve para especificar que el valor debe ser mayor que el indicado.</b></li>
+
+<li><b>"xs:maxExclusive": que sirve para especificar que el valor debe ser menor que el indicado.</b></li>
+
+<p>Respuesta:</p>
+
+```xml
+<?xml version="1.0"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="fichas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="ficha" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nombre" type="xs:string"/>
+
+              <xs:element name="edad">
+                <xs:simpleType>
+                  <xs:restriction base="xs:integer">
+                    <xs:minExclusive value="-1"/>
+
+                    <xs:maxExclusive value="131"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+
+            <xs:attribute name="numero" type="xs:integer" use="required"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+```
