@@ -29,4 +29,17 @@
 
 <p><b>Escribir sus definiciones simples correspondientes.</b></p>
 
-<li><code>< ciudad ></code></li></li>
+<li><code>< ciudad ></code>: Un elemento simple que contiene el nombre de una ciudad.</li>
+
+<li><code>< hora ></code>: Un elemento simple que contiene una hora en el formato "hora:minutos:segundos".</li>
+
+<li><code>< nota ></code>: Un elemento simple que contiene una calificación en formato decimal.</li>
+
+<li><code>< apto ></code>: Un elemento simple que indica si una persona está apta o no, representado por un valor booleano.</li>
+
+<p><b>2. Definir un elemento llamado "puertaCerrada" de tipo lógico, que por defecto tenga el valor "falso", y otro elemento llamado "ventanaAbierta" también de tipo lógico, que tenga asignado el valor fijo "verdadero".</b></p>
+
+```xml
+<puertaCerrada>false</puertaCerrada>
+<ventanaAbierta>true</ventanaAbierta>
+```
