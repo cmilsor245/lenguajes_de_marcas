@@ -61,3 +61,48 @@
 <puertaCerrada>false</puertaCerrada>
 <ventanaAbierta>true</ventanaAbierta>
 ```
+
+<p><b>3. Dado el siguiente documento XML:</b></p>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<fichas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="fichas.xsd">
+ <ficha numero="1">
+  <nombre>Ana Sanz Tin</nombre>
+
+  <edad>22</edad>
+ </ficha>
+
+ <ficha numero="2">
+  <nombre>Iker Rubio Mol</nombre>
+
+  <edad>23</edad>
+ </ficha>
+</fichas>
+```
+
+<p><b>Escribir el contenido del archivo "fichas.xsd" que permita validarlo.</b></p>
+
+```xml
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="fichas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="ficha" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nombre" type="xs:string"/>
+
+              <xs:element name="edad" type="xs:integer"/>
+            </xs:sequence>
+
+            <xs:attribute name="numero" type="xs:integer" use="required"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+```
