@@ -40,6 +40,24 @@
 <p><b>2. Definir un elemento llamado "puertaCerrada" de tipo lógico, que por defecto tenga el valor "falso", y otro elemento llamado "ventanaAbierta" también de tipo lógico, que tenga asignado el valor fijo "verdadero".</b></p>
 
 ```xml
+<?xml version="1.0"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="puertaCerrada" type="xs:boolean" default="false"/>
+
+        <xs:element name="ventanaAbierta" type="xs:boolean" fixed="true"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+```
+
+<p>Ejemplo:</p>
+
+```xml
 <puertaCerrada>false</puertaCerrada>
 <ventanaAbierta>true</ventanaAbierta>
 ```
