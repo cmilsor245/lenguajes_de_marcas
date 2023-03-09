@@ -220,4 +220,32 @@
 </xs:schema>
 ```
 
-<p><b>6. </b></p>
+<p><b>6. Explica esta línea y realiza su equivalente en XML Schema (xsd):</b></p>
+
+```xml
+<!ELEMENT receta (titulo, ingrediente+, procedimiento+, tiempo?)>
+```
+
+<p>Explicación:</p>
+
+<p>La línea "<!ELEMENT receta (titulo, ingrediente+, procedimiento+, tiempo?)>" es una declaración de tipo de elemento en DTD (Document Type Definition) que especifica la estructura de un elemento llamado "receta". Esta línea indica que un elemento "receta" debe tener como sub-elementos un elemento "titulo", uno o más elementos "ingrediente", uno o más elementos "procedimiento", y un elemento opcional "tiempo".</p>
+
+<p>Equivalente:</p>
+
+```xml
+<xs:element name="receta">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="titulo" type="xs:string"/>
+
+      <xs:element name="ingrediente" type="xs:string" maxOccurs="unbounded"/>
+
+      <xs:element name="procedimiento" type="xs:string" maxOccurs="unbounded"/>
+
+      <xs:element name="tiempo" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+```
+
+<p><b>7. </b></p>
