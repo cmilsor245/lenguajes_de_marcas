@@ -86,6 +86,7 @@
 
 ```xml
 <?xml version="1.0"?>
+
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="fichas">
     <xs:complexType>
@@ -198,7 +199,7 @@
 <p>XML Schema:</p>
 
 ```xml
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="etiqueta" type="etiquetaType"/>
@@ -267,7 +268,7 @@
 <p>XML Schema:</p>
 
 ```xml
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="nota" type="notaType"/>
@@ -300,4 +301,172 @@
 
   <contenido>A las 7:00 pm en la puerta del teatro</contenido>
 </nota>
+```
+
+<p><b>8. Escribir un XML Schema para el siguiente documento XML, e incluir los cambios necesarios en el mismo para referenciar al esquema creado. Se debe cumplir también lo siguiente:</b></p>
+
+<li><b>Los elementos "vehículo", "nombre" y "modificacion" deben aparecer una vez como mínimo, el máximo no está limitado. El resto de elementos deben aparecer 1 vez.</b></li>
+
+<li><b>Todos los elementos que aparecen en el documento instancia de abajo son obligatorios y deben aparecer siempre en el mismo orden.</b></li>
+
+<li><b>Los elementos que obtienen información de fecha son todos de tipo cadena.</b></li>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<vehiculos>
+  <vehiculo>
+    <nombre>Count Zero</nombre>
+
+    <modelo>Series I, 80"</modelo>
+
+    <fabricacion>
+      <inicio>
+        <dia>21</dia>
+
+        <mes>July</mes>
+
+        <anyo>1949</anyo>
+      </inicio>
+
+      <fin>
+        <dia>9</dia>
+
+        <mes>August</mes>
+
+        <anyo>1949</anyo>
+      </fin>
+    </fabricacion>
+
+    <modificaciones>
+      <modificacion>Change Engine</modificacion>
+
+      <modificacion>Change pedals</modificacion>
+
+      <modificacion>Change gearbox</modificacion>
+
+      <modificacion>Fit Rollcage</modificacion>
+    </modificaciones>
+  </vehiculo>
+</vehiculos>
+```
+
+<p>XML Schema:</p>
+
+```xml
+<?xml version="1.0"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="vehiculos" type="vehiculosType"/>
+
+  <xs:complexType name="vehiculosType">
+    <xs:sequence>
+      <xs:element name="vehiculo" type="vehiculoType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="vehiculoType">
+    <xs:sequence>
+      <xs:element name="nombre" type="xs:string"/>
+
+      <xs:element name="modelo" type="xs:string"/>
+
+      <xs:element name="fabricacion" type="fabricacionType"/>
+
+      <xs:element name="modificaciones" type="modificacionesType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="fabricacionType">
+    <xs:sequence>
+      <xs:element name="inicio" type="fechaType"/>
+
+      <xs:element name="fin" type="fechaType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="fechaType">
+    <xs:sequence>
+      <xs:element name="dia" type="xs:string"/>
+
+      <xs:element name="mes" type="xs:string"/>
+
+      <xs:element name="anyo" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="modificacionesType">
+    <xs:sequence>
+      <xs:element name="modificacion" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+```
+
+<p>Cambios en el XML:</p>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<vehiculos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="nombre_del_archivo.xsd">
+  <vehiculo>
+    <nombre>Count Zero</nombre>
+
+    <modelo>Series I, 80"</modelo>
+
+    <fabricacion>
+      <inicio>
+        <dia>21</dia>
+
+        <mes>July</mes>
+
+        <anyo>1949</anyo>
+      </inicio>
+
+      <fin>
+        <dia>9</dia>
+
+        <mes>August</mes>
+
+        <anyo>1949</anyo>
+      </fin>
+    </fabricacion>
+
+    <modificaciones>
+      <modificacion>Change Engine</modificacion>
+
+      <modificacion>Change pedals</modificacion>
+
+      <modificacion>Change gearbox</modificacion>
+
+      <modificacion>Fit Rollcage</modificacion>
+    </modificaciones>
+  </vehiculo>
+</vehiculos>
+```
+
+<p><b>9. Escribir un XML Schema para el siguiente documento XML, e incluir los cambios necesarios en el mismo para referenciar al esquema creado. Se debe cumplir también lo siguiente:</b></p>
+
+<li><b>Todos los elementos que aparecen en el documento instancia de abajo son obligatorios y debe aparecer siempre en el mismo orden.</b></li>
+
+<li><b>Se deben definir dos tipos de datos: "tipoPersona" (los elementos "persona" son de este tipo) e "info" (los elementos "datos" son de este tipo).</b></li>
+
+<li><b>El atributo "nacimiento" es de tipo "date".</b></li>
+
+<li><b>El elemento "comentario" no es obligatorio; si aparece lo hace solo 1 vez.</b></li>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<persona nacimiento="1999-10-20">
+  <datos>
+    <nombre>Pepe</nombre>
+
+    <apellidos>Garcia</apellidos>
+
+    <dni>25390952</dni>
+  </datos>
+
+  <comentario>buena gente...</comentario>
+</persona>
 ```
