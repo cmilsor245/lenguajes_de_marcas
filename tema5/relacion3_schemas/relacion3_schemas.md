@@ -470,3 +470,58 @@
   <comentario>buena gente...</comentario>
 </persona>
 ```
+
+<p>XML Schema:</p>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- definición del tipo de datos "info" -->
+    <xs:complexType name="info">
+      <xs:sequence>
+        <xs:element name="nombre" type="xs:string"/>
+
+        <xs:element name="apellidos" type="xs:string"/>
+
+        <xs:element name="dni" type="xs:integer"/>
+      </xs:sequence>
+    </xs:complexType>
+
+  <!-- definición del tipo de datos "tipoPersona" -->
+    <xs:complexType name="tipoPersona">
+      <xs:sequence>
+        <xs:element name="datos" type="info"/>
+
+        <xs:element name="comentario" type="xs:string" minOccurs="0"/>
+      </xs:sequence>
+
+      <xs:attribute name="nacimiento" type="xs:date"/>
+    </xs:complexType>
+
+  <!-- definición del elemento "persona" -->
+    <xs:element name="persona" type="tipoPersona"/>
+
+</xs:schema>
+```
+
+<p>Cambios en el XML:</p>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<persona nacimiento="1999-10-20" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="personas.xsd">
+  <datos>
+    <nombre>Pepe</nombre>
+
+    <apellidos>Garcia</apellidos>
+
+    <dni>25390952</dni>
+  </datos>
+
+  <comentario>buena gente...</comentario>
+</persona>
+```
+
+<p><b>10. </b></p>
