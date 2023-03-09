@@ -475,9 +475,7 @@
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-
   <!-- definición del tipo de datos "info" -->
     <xs:complexType name="info">
       <xs:sequence>
@@ -502,7 +500,6 @@
 
   <!-- definición del elemento "persona" -->
     <xs:element name="persona" type="tipoPersona"/>
-
 </xs:schema>
 ```
 
@@ -560,5 +557,50 @@
 <p>XML Schema:</p>
 
 ```xml
+<?xml version="1.0" encoding="UTF-8"?>
 
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="matricula">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="personal" minOccurs="1" maxOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="dni" minOccurs="1" maxOccurs="1" type="xs:string"/>
+
+              <xs:element name="nombre" minOccurs="1" maxOccurs="1" type="xs:string"/>
+
+              <xs:element name="titulacion" minOccurs="1" maxOccurs="1" type="xs:string"/>
+
+              <xs:element name="curso_academico" minOccurs="1" maxOccurs="1" type="xs:string"/>
+
+              <xs:element name="domicilios" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="domicilio" minOccurs="2" maxOccurs="2">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="tipo" type="xs:string"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="pago" minOccurs="1" maxOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="tipo_matricula" minOccurs="1" maxOccurs="1" type="xs:string"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
 ```
