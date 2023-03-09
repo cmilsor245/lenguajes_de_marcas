@@ -264,8 +264,40 @@
 </nota>
 ```
 
-<p>Respuesta:</p>
+<p>XML Schema:</p>
 
 ```xml
+<?xml version="1.0" encoding="UTF-8"?>
 
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="nota" type="notaType"/>
+
+  <xs:complexType name="notaType">
+    <xs:sequence>
+      <xs:element name="para" type="xs:string"/>
+
+      <xs:element name="de" type="xs:string"/>
+
+      <xs:element name="titulo" type="xs:string"/>
+
+      <xs:element name="contenido" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+```
+
+<p>Cambios en el XML para referenciar al esquema:</p>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<nota xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="nombre_del_archivo.xsd">
+  <para>Pedro</para>
+
+  <de>Laura</de>
+
+  <titulo>Recordatorio</titulo>
+
+  <contenido>A las 7:00 pm en la puerta del teatro</contenido>
+</nota>
 ```
