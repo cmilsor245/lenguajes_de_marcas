@@ -146,3 +146,78 @@
   </xs:element>
 </xs:schema>
 ```
+
+<p><b>5. Determina y corrige el/los error/errores que provoca que el fichero XML no esté bien formado.</b></p>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE etiqueta[
+  <!ELEMENT etiqueta (nombre, calle, ciudad, pais, codigo)>
+  <!ELEMENT nombre (#PCDATA)>
+  <!ELEMENT calle (#PCDATA)>
+  <!ELEMENT ciudad (#PCDATA)>
+  <!ELEMENT pais (#PCDATA)>
+  <!ELEMENT codigo (#PCDATA)>
+]>
+
+<nombre>Pepe García</nombre>
+<calle>C/Ronda, 3</calle>
+<pais>España<pais>
+<codigo>18465</codigo>
+</etiqueta>
+```
+
+<p>Corrección:</p>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE etiqueta[
+  <!ELEMENT etiqueta (nombre, calle, ciudad, pais, codigo)>
+  <!ELEMENT nombre (#PCDATA)>
+  <!ELEMENT calle (#PCDATA)>
+  <!ELEMENT ciudad (#PCDATA)>
+  <!ELEMENT pais (#PCDATA)>
+  <!ELEMENT codigo (#PCDATA)>
+]>
+
+<etiqueta>
+  <nombre>Pepe García</nombre>
+
+  <calle>C/Ronda, 3</calle>
+
+  <ciudad>Granada</ciudad>
+
+  <pais>España</pais>
+
+  <codigo>18465</codigo>
+</etiqueta>
+```
+
+<p>XML Schema:</p>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="etiqueta" type="etiquetaType"/>
+  <xs:element name="nombre" type="xs:string"/>
+  <xs:element name="calle" type="xs:string"/>
+  <xs:element name="ciudad" type="xs:string"/>
+  <xs:element name="pais" type="xs:string"/>
+  <xs:element name="codigo" type="xs:string"/>
+
+  <xs:complexType name="etiquetaType">
+    <xs:sequence>
+      <xs:element ref="nombre"/>
+      <xs:element ref="calle"/>
+      <xs:element ref="ciudad"/>
+      <xs:element ref="pais"/>
+      <xs:element ref="codigo"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+```
+
+<p><b>6. </b></p>
