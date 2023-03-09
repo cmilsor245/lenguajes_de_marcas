@@ -524,4 +524,41 @@
 </persona>
 ```
 
-<p><b>10. </b></p>
+<p><b>10. Escribir un XML Schema para el siguiente documento XML, e incluir los cambios necesarios en el mismo para referenciar al esquema creado.</b></p>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE matricula SYSTEM "matricula.dtd">
+<matricula>
+  <personal>
+    <dni>99223366M</dni>
+
+    <nombre>Juan Pardo Martín</nombre>
+
+    <titulacion>Ingeniería Informática</titulacion>
+
+    <curso_academico>1997/1998</curso_academico>
+
+    <domicilios>
+      <domicilio tipo="familiar">
+        <nombre>C/Principal nº1</nombre>
+      </domicilio>
+
+      <domicilio tipo="habitual">
+        <nombre>C/Secundaria nº2</nombre>
+      </domicilio>
+    </domicilios>
+  </personal>
+
+  <pago>
+    <tipo_matricula>Matrícula Ordinaria</tipo_matricula>
+  </pago>
+</matricula>
+```
+
+<p>XML Schema:</p>
+
+```xml
+
+```
