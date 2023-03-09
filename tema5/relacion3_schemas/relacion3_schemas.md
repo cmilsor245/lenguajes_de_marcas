@@ -248,4 +248,24 @@
 </xs:element>
 ```
 
-<p><b>7. </b></p>
+<p><b>7. Escribir un XML Schema para el siguiente documento XML, e incluir los cambios necesarios en el mismo para referenciar al esquema creado. Se sabe que todos los elementos hijos del elemento "nota" son obligatorios y deben aparecer solo una vez.</b></p>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<nota>
+  <para>Pedro</para>
+
+  <de>Laura</de>
+
+  <titulo>Recordatorio</titulo>
+
+  <contenido>A las 7:00 pm en la puerta del teatro</contenido>
+</nota>
+```
+
+<p>Respuesta:</p>
+
+```xml
+
+```
