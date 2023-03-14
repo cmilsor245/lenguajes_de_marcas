@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<alumnos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:SchemaLocation="schema.xsd"> 
+ <alumno> 
+  <nombre>Jose Ramón</nombre> 
+  <apellidos>García González</apellidos> 
+  <direccion> 
+   <domicilio>El Pez, 12</domicilio> 
+   <codigo_postal>85620</codigo_postal> 
+   <localidad>Suances</localidad> 
+   <provincia>Cantabria</provincia> 
+  </direccion> 
+  <contactar> 
+   <telf._casa>985623165</telf._casa> 
+   <telf._movil>611233544</telf._movil>
+<telf._trabajo>965847536</telf._trabajo> 
+   <email>pepito@educadistancia.com</email> 
+  </contactar> 
+  <aficiones> 
+   <musica>Pop</musica> 
+   <cine>Terror</cine> 
+   <deporte> Futbol</deporte> 
+  </aficiones> 
+ </alumno> 
+ <alumno> 
+  <nombre>Carlos</nombre> 
+  <apellidos>López Pérez</apellidos> 
+  <direccion> 
+   <domicilio>El Cangrejo, 25</domicilio> 
+   <codigo_postal>86290</codigo_postal> 
+   <localidad>Santillana</localidad> 
+   <provincia>Cantabria</provincia> 
+  </direccion> 
+  <contactar> 
+   <telf._casa>931132565</telf._casa> 
+   <telf._movil>623863544</telf._movil> 
+   <telf._trabajo>984657536</telf._trabajo> 
+   <email>carlos@educadistancia.com</email> 
+  </contactar> 
+  <aficiones> 
+   <musica>Rock</musica> 
+   <cine>Comedia</cine> 
+   <deporte> Judo</deporte> 
+  </aficiones> 
+ </alumno> 
+</alumnos>

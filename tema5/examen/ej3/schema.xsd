@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Definición del tipo de datos para Direccion -->
+  <xs:simpleType name="TipoCodigoPostal">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]{5}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="TipoDireccion">
+    <xs:sequence>
+      <xs:element name="domicilio" type="xs:string"/>
+      <xs:element name="codigo_postal" type="TipoCodigoPostal"/>
+      <xs:element name="localidad" type="xs:string"/>
+      <xs:element name="provincia" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Definición del tipo de datos para Contactar -->
+  <xs:simpleType name="TipoTelefono">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]+"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="TipoEmail">
+    <xs:restriction base="xs:string">
+      <xs:pattern value=".+@.+\..+"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="TipoContactar">
+    <xs:list itemType="TipoTelefono"/>
+  </xs:simpleType>
+
+  <xs:complexType name="TipoContactarCompleto">
+    <xs:sequence>
+      <xs:element name="telf._casa" type="TipoTelefono"/>
+      <xs:element name="telf._movil" type="TipoTelefono"/>
+      <xs:element name="telf._trabajo" type="TipoTelefono" minOccurs="0"/>
+      <xs:element name="email" type="TipoEmail"/>
+    </xs:sequence>
+    <xs:attribute name="num_tels" type="xs:integer" use="required" fixed="1"/>
+  </xs:complexType>
+
+  <!-- Definición del tipo de datos para Aficiones -->
+  <xs:simpleType name="TipoMusica">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Rock"/>
+      <xs:enumeration value="Pop"/>
+      <xs:enumeration value="Jazz"/>
+      <xs:enumeration value="Clásica"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="TipoCine">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Comedia"/>
+      <xs:enumeration value="Drama"/>
+      <xs:enumeration value="Acción"/>
+      <xs:enumeration value="Terror"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="TipoDeporte">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Fútbol"/>
+      <xs:enumeration value="Baloncesto"/>
+      <xs:enumeration value="Tenis"/>
+      <xs: </xs:simpleType>
+
+<xs:simpleType name="TipoLectura">
+<xs:restriction base="xs:string">
+<xs:enumeration value="Novela"/>
+<xs:enumeration value="Poesía"/>
+<xs:enumeration value="Ensayo"/>
+</xs:restriction>
+</xs:simpleType>
+
+<xs:complexType name="TipoAficiones">
+xs:sequence
+<xs:element name="musica_favorita" type="TipoMusica"/>
+<xs:element name="genero_cine_favorito" type="TipoCine"/>
+<xs:element name="deporte_favorito" type="TipoDeporte"/>
+<xs:element name="tipo_lectura" type="TipoLectura"/>
+</xs:sequence>
+</xs:complexType>
+
+  <!-- Definición del tipo de datos para DatosPersonales -->
+<xs:complexType name="TipoDatosPersonales">
+xs:sequence
+<xs:element name="nombre" type="xs:string"/>
+<xs:element name="apellidos" type="xs:string"/>
+<xs:element name="fecha_nacimiento" type="xs:date"/>
+<xs:element name="direccion" type="TipoDireccion"/>
+<xs:element name="contactar" type="TipoContactarCompleto"/>
+<xs:element name="aficiones" type="TipoAficiones"/>
+</xs:sequence>
+</xs:complexType>
+
+  <!-- Definición del elemento root -->
+<xs:element name="persona" type="TipoDatosPersonales"/>
+
+</xs:schema>
