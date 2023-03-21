@@ -1,0 +1,44 @@
+<personas>
+<persona edad="34">
+<nif>nif1</nif>
+<nombre>nombre1</nombre>
+<direccion> calle 1</direccion>
+<poblacion>pueblo1</poblacion>
+<telefono> telefono1 </telefono>
+</persona>
+<persona edad="18">
+<nif>nif2</nif>
+<nombre>nombre2</nombre>
+<direccion>calle 2</direccion>
+<poblacion>pueblo1</poblacion>
+<telefono>telefono2 </telefono>
+</persona>
+<persona edad="20">
+<nif>nif3</nif>
+<nombre>nombre3</nombre>
+<direccion>calle 3</direccion>
+<poblacion>pueblo2</poblacion>
+<telefono>telefono3 </telefono>
+</persona>
+<persona edad="36">
+<nif>nif4</nif>
+<nombre>nombre4</nombre>
+<direccion>calle 4</direccion>
+<poblacion>pueblo2</poblacion>
+<telefono>telefono4 </telefono>
+</persona>
+<persona edad="19">
+<nif>nif5</nif>
+<nombre> nombre5</nombre>
+<direccion> calle 5</direccion>
+<poblacion>pueblo3 </poblacion>
+<telefono> telefono5 </telefono>
+</persona>
+<persona edad="25">
+<nif>nif6</nif>
+<nombre> nombre6</nombre>
+<direccion> calle 6</direccion>
+<poblacion>pueblo3 </poblacion>
+<telefono> telefono1 </telefono>
+</persona>
+</personas>
