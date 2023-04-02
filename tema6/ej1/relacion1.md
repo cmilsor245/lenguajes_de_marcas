@@ -62,4 +62,9 @@
 <ol type="a">
 <li><b>Mostrar el nombre del instituto.</b></li>
 
+```bash
+/ies/nombre/text()
+```
+
+<img src="img/1.png">
 </ol>
