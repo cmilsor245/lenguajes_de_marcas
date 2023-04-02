@@ -56,3 +56,10 @@
   </ciclos>
 </ies>
 ```
+
+<p><b>1. Realiza las siguientes consultas:</b></p>
+
+<ol type="a">
+<li><b>Mostrar el nombre del instituto.</b></li>
+
+</ol>
