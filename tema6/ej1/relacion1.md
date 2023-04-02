@@ -170,7 +170,7 @@
 <li><b>Mostrar el nombre sin etiquetas de los módulos que se imparten en el instituto.</b></li>
 
 ```bash
-
+//modulo/nombre/text()
 ```
 
 <img src="img/10.png">
