@@ -273,7 +273,7 @@
 <li><b>Mostrar los nombres de los módulos del ciclo de "Sistemas Microinformáticos y Redes".</b></li>
 
 ```bash
-/ies/modulos/modulo[ciclo='SMR']/nombre/text()
+//modulo[ciclo = "SMR"]/nombre
 ```
 
 <img src="img/16.png">
@@ -281,7 +281,7 @@
 <li><b>Mostrar los nombres de los ciclos formativos que incluyen el módulo "Lenguajes de Marcas y Sistemas de Gestión de Información".</b></li>
 
 ```bash
-
+//modulo[nombre = "Lenguajes de Marcas y Sistemas de Gestión"]/ciclo
 ```
 
 <img src="img/17.png">
@@ -289,7 +289,7 @@
 <li><b>Mostrar los nombres de los módulos de ciclos de Grado Superior.</b></li>
 
 ```bash
-
+//modulo[../ciclo/grado = "Superior"]/nombre
 ```
 
 <img src="img/18.png">
@@ -297,7 +297,7 @@
 <li><b>Mostrar los nombres de los módulos de los ciclos formativos cuyo título se aprobó en el año 2008.</b></li>
 
 ```bash
-
+//ciclo[decretoTitulo/@anyo = "2008"]/modulos/modulo/nombre
 ```
 
 <img src="img/19.png">
@@ -305,7 +305,7 @@
 <li><b>Mostrar los grados de lso ciclos formativos con módulos de primer curso.</b></li>
 
 ```bash
-
+//modulo[curso = "1"]/../grado
 ```
 
 <img src="img/20.png">
