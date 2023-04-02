@@ -82,3 +82,19 @@
 ```
 
 <img src="img/3.png">
+
+<li><b>Mostrar las siglas por las que se conocen los ciclos formativos.</b></li>
+
+```bash
+//ciclo/@id
+```
+
+<img src="img/4.png">
+
+<li><b>Mostrar los años en lso que se publicaron los decretos de los ciclos formativos.</b></li>
+
+```bash
+
+```
+
+<img src="img/5.png">
