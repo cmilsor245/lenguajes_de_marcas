@@ -174,3 +174,43 @@
 ```
 
 <img src="img/10.png">
+
+<li><b>Mostrar el nombre de los módulos que se imparten en ciclo formativo ASIR.</b></li>
+
+```bash
+//modulo[ciclo = 'ASIR']/nombre/text()
+```
+
+<img src="img/11.png">
+
+<li><b>Mostrar el nombre de los módulos que se imparten en segundo curso de cualquier ciclo formativo.</b></li>
+
+```bash
+//modulo[curso = 2]/nombre/text()
+```
+
+<img src="img/12.png">
+
+<li><b>Mostrar el nombre de los módulos que tengan menos de 5 horas semanales.</b></li>
+
+```bash
+//modulo[horasSemanales < 5]/nombre/text()
+```
+
+<img src="img/13.png">
+
+<li><b>Mostrar el nombre de los módulos que se imparten en el primer curso del ciclo formativo ASIR.</b></li>
+
+```bash
+//modulo[ciclo = 'ASIR' and curso = 1]/nombre/text()
+```
+
+<img src="img/14.png">
+
+<li><b>Mostrar las horas semanales sin etiquetas de los módulos que se imparten en mas de 3 horas semanales.</b></li>
+
+```bash
+//modulo[horasSemanales > 3]/horasSemanales/text()
+```
+
+<img src="img/15.png">
