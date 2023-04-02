@@ -202,7 +202,7 @@
 <li><b>Mostrar el nombre de los módulos que se imparten en el primer curso del ciclo formativo ASIR.</b></li>
 
 ```bash
-//modulo[ciclo = 'ASIR' and curso = 1]/nombre/text()
+//modulo[ciclo='ASIR' and curso=1]/nombre/text()
 ```
 
 <img src="img/14.png">
@@ -214,3 +214,98 @@
 ```
 
 <img src="img/15.png">
+
+<p><b>3. Dado el siguiente documento XML, realiza las siuigente consultas con XPATH:</b></p>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ies>
+  <nombre>IES TicArte</nombre>
+
+  <web>http://www.ticarte.com</web>
+
+  <ciclos>
+    <ciclo id="ASIR">
+      <nombre>Administración de Sistemas Informáticos en Red</nombre>Z
+      <grado>Superior</grado>
+      <decretoTitulo anyo="2009"/>
+    </ciclo>
+
+    <ciclo id="DAW">
+      <nombre>Desarrollo de Aplicaciones Web</nombre>Z
+      <grado>Superior</grado>
+      <decretoTitulo anyo="2010"/>
+    </ciclo>
+
+    <ciclo id="SMR">
+      <nombre>Sistemas Microinformáticos y Redes</nombre>Z
+      <grado>Medio</grado>
+      <decretoTitulo anyo="2008"/>
+    </ciclo>
+  </ciclos>
+
+  <modulos>
+    <modulo id="0372">
+      <nombre>Gestión de Bases de Datos</nombre>
+      <curso>1</curso>
+      <horasSemanales>5</horasSemanales>
+      <ciclo>ASIR</ciclo>
+    </modulo>
+
+    <modulo id="0373">
+      <nombre>Lenguajes de Marcas y Sistemas de Gestión</nombre>
+      <curso>1</curso>
+      <horasSemanales>3</horasSemanales>
+      <ciclo>DAW</ciclo>
+    </modulo>
+
+    <modulo id="0376">
+      <nombre>Implantación de Aplicaciones Web</nombre>
+      <curso>2</curso>
+      <horasSemanales>5</horasSemanales>
+      <ciclo>ASIR</ciclo>
+    </modulo>
+  </modulos>
+</ies>
+```
+
+<li><b>Mostrar los nombres de los módulos del ciclo de "Sistemas Microinformáticos y Redes".</b></li>
+
+```bash
+
+```
+
+<img src="img/16.png">
+
+<li><b>Mostrar los nombres de los ciclos formativos que incluyen el módulo "Lenguajes de Marcas y Sistemas de Gestión de Información".</b></li>
+
+```bash
+
+```
+
+<img src="img/17.png">
+
+<li><b>Mostrar los nombres de los módulos de ciclos de Grado Superior.</b></li>
+
+```bash
+
+```
+
+<img src="img/18.png">
+
+<li><b>Mostrar los nombres de los módulos de los ciclos formativos cuyo título se aprobó en el año 2008.</b></li>
+
+```bash
+
+```
+
+<img src="img/19.png">
+
+<li><b>Mostrar los grados de lso ciclos formativos con módulos de primer curso.</b></li>
+
+```bash
+
+```
+
+<img src="img/20.png">
