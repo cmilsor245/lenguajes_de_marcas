@@ -59,7 +59,6 @@
 
 <p><b>1. Realiza las siguientes consultas:</b></p>
 
-<ol type="a">
 <li><b>Mostrar el nombre del instituto.</b></li>
 
 ```bash
@@ -67,4 +66,13 @@
 ```
 
 <img src="img/1.png">
-</ol>
+
+<li><b>Mostrar la página web del instituto sin etiquetas.</b></li>
+
+```bash
+/ies/web/text()
+```
+
+<img src="img/2.png">
+
+<li><b></b></li>
