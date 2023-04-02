@@ -273,7 +273,7 @@
 <li><b>Mostrar los nombres de los módulos del ciclo de "Sistemas Microinformáticos y Redes".</b></li>
 
 ```bash
-
+/ies/modulos/modulo[ciclo='SMR']/nombre/text()
 ```
 
 <img src="img/16.png">
