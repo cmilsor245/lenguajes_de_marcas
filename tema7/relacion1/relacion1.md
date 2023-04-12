@@ -50,7 +50,7 @@
 
 <p>Dentro de cada fila, se crea una celda que va a contener el título del libro. Para obtener el título, se utiliza una expresión XQuery que toma el contenido del elemento "< titulo >" de cada libro seleccionado y lo convierte en una cadena de caracteres con la función string(). Esta cadena de caracteres se agrega dentro de la etiqueta "< td >" para mostrar el título en la celda correspondiente.</p>
 
-<p>En resumen, el código utiliza una consulta XQuery para seleccionar los títulos de los libros en un archivo XML y los muestra en una tabla HTML en una página web. La consulta se hace con la cláusula for y los resultados se insertan en la tabla HTML usando las etiquetas "< tr >" y "< td >".</p>
+<p>En resumen, el código utiliza una consulta XQuery para seleccionar los títulos de los libros en un archivo XML y los muestra en una tabla HTML en una página web. La consulta se hace con la cláusula for y los resultados se insertan en la tabla HTML usando las etiquetas "< tr >" y "<p td >".</p>
 
 <p><b>b. ¿Qué resultado obtienes tras la ejecución de la consulta y añadir el resultado al código HTML que lo envuelve?</b></p>
 
@@ -83,7 +83,7 @@ where $baile/precio>30
 return $baile/nombre
 ```
 
-<p><b>1. Explica que se realiza con estas sentencias.</b></p>
+<p><b>1. Explica qué se realiza con estas sentencias.</b></p>
 
 <p>En la primera línea, se utiliza el comando "for" para establecer una variable $baile que se usará para iterar sobre todos los elementos "baile" del documento XML. La ruta "/bailes/baile" especifica que los elementos "baile" se encuentran en la raíz del documento.</p>
 
@@ -92,3 +92,55 @@ return $baile/nombre
 <p>En la tercera línea, se utiliza el comando "return" para especificar que se debe devolver el nombre de los bailes que cumplen con la condición establecida en la línea anterior. El resultado de esta consulta sería una lista de los nombres de los bailes que cumplen con la condición establecida.</p>
 
 <p>En resumen, estas sentencias son una consulta XQuery que busca el nombre de los bailes cuyo precio es mayor que 30 en un documento XML.</p>
+
+<p><b>2. Modifica estas sentencias para que desaparezca la cláusula "where" pero donde se haga el control del precio del baile.</b></p>
+
+<p>Respuesta:</p>
+
+```xquery
+for $baile in /bailes/baile[precio>30]/nombre
+return $baile
+```
+
+<p><b>b.</b></p>
+
+```xquery
+for $baile in /bailes/baile
+where $baile/precio>30 and $baile/precio/@moneda="euro"
+return $baile/nombre
+```
+
+<p><b>1. Explica qué realizan estas sentencias.</b></p>
+
+<p>Estas sentencias realizan una consulta a un documento XML que contiene información sobre bailes y sus precios. La consulta filtra los elementos "baile" que tienen un precio mayor a 30 euros y que la moneda en la que está establecido el precio sea "euro". A continuación, devuelve el nombre de cada uno de los bailes que cumple con estos criterios.</p>
+
+<p>La consulta comienza con un "for" que recorre todos los elementos "baile" que se encuentran en la ruta "/bailes/baile". La variable $baile toma el valor de cada uno de los elementos "baile" que se recorren.</p>
+
+<p>A continuación, se utiliza la cláusula "where" para filtrar los elementos "baile" que cumplan con la condición de tener un precio mayor a 30 euros y que la moneda en la que está establecido el precio sea "euro". Para hacer esto, se utiliza la sintaxis "$baile/precio>30" para indicar que el precio del baile debe ser mayor a 30 euros y se utiliza la sintaxis "$baile/precio/@moneda="euro"" para indicar que la moneda en la que está establecido el precio debe ser "euro". El operador "and" se utiliza para indicar que ambas condiciones deben cumplirse para que un elemento "baile" se considere válido.</p>
+
+<p>Por último, se utiliza la cláusula "return" para devolver el nombre de cada uno de los elementos "baile" que cumplen con los criterios establecidos. Para hacer esto, se utiliza la sintaxis "$baile/nombre" para indicar que se debe devolver el contenido del elemento "nombre" que se encuentra dentro del elemento "baile" que cumple con las condiciones.</p>
+
+<p><b>2. Modifica estas sentencias para que desaparezca la cláusula "where" pero donde se haga el control del precio del baile.</b></p>
+
+<p>Respuesta:</p>
+
+```xquery
+for $baile in /bailes/baile[precio>30 and precio/@moneda="euro"]
+return $baile/nombre
+```
+
+<p><b>c.</b></p>
+
+```xquery
+for $baile in /bailes/baile
+order by $baile/sala
+return 
+  <baile>
+    {$baile/profesor}
+    {$baile/sala}
+  </baile>
+```
+
+<p><b>1. Explica qué realizan estas sentencias.</b></p>
+
+<p></p>
