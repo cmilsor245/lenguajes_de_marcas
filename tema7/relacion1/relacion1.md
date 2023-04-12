@@ -143,4 +143,32 @@ return
 
 <p><b>1. Explica qué realizan estas sentencias.</b></p>
 
-<p></p>
+<p>Estas sentencias realizan una consulta a un documento XML que contiene información sobre bailes. La consulta devuelve una lista de elementos "baile" que incluyen información sobre el profesor que imparte el baile y la sala en la que se lleva a cabo, ordenados por el nombre de la sala.</p>
+
+<p>La consulta comienza con la cláusula "for", que establece la variable $baile para iterar a través de todos los elementos "baile" que se encuentran en el documento XML. Dentro del ciclo "for", se crea un elemento "baile" que incluye información sobre el profesor y la sala en la que se lleva a cabo el baile. Para agregar esta información, se utiliza la sintaxis "{$baile/profesor}" y "{$baile/sala}", que accede al contenido de los elementos "profesor" y "sala" que están dentro del elemento "baile".</p>
+
+<p>La cláusula "order by" se utiliza para ordenar los elementos "baile" por el nombre de la sala. En este caso, se utiliza la sintaxis "$baile/sala" para acceder al contenido del elemento "sala" que se encuentra dentro del elemento "baile" y ordenar los resultados en función de este valor.</p>
+
+<p>En resumen, estas sentencias realizan una consulta que devuelve una lista de elementos "baile" que incluyen información sobre el profesor y la sala en la que se lleva a cabo el baile, ordenados por el nombre de la sala.</p>
+
+<p><b>2. Modifica estas sentencias para que se produzcan criterios de búsqueda por un determinado profesor y por una determinada sala.</b></p>
+
+<p>Respuesta:</p>
+
+```xquery
+
+```
+
+<p><b>3. Realiza un pequeño programa en XQUERY que proporcione el siguiente resultado:</b></p>
+
+```xml
+<test>1 2 3 4 5</test>
+<test>1 2 3 4 5</test>
+<test>1 2 3 4 5</test>
+```
+
+<p>Respuesta:</p>
+
+```xquery
+
+```
