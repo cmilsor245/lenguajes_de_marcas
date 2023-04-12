@@ -52,7 +52,7 @@
 
 <p>En resumen, el código utiliza una consulta XQuery para seleccionar los títulos de los libros en un archivo XML y los muestra en una tabla HTML en una página web. La consulta se hace con la cláusula for y los resultados se insertan en la tabla HTML usando las etiquetas "< tr >" y "< td >".</p>
 
-<p><b>b. ¿Qué resultado obtienes tras la ejecución de la consulta y añadir el resultado al código html que lo envuelve?</b></p>
+<p><b>b. ¿Qué resultado obtienes tras la ejecución de la consulta y añadir el resultado al código HTML que lo envuelve?</b></p>
 
 <p>El resultado de la consulta sería una tabla HTML que mostraría los títulos de los libros contenidos en el archivo XML "libros.xml". Si se agrega el resultado de la consulta al código HTML que lo envuelve, se generaría una página web completa que incluiría la tabla con los títulos de los libros.</p>
 
@@ -72,3 +72,23 @@
 ```
 
 <p>Y si se carga este archivo HTML en un navegador web, se mostraría una página con una tabla que contiene los títulos de los libros del archivo XML "libros.xml".</p>
+
+<p><b>2. Dado el siguiente código:</b></p>
+
+<p><b>a.</b></p>
+
+```xquery
+for $baile in /bailes/baile
+where $baile/precio>30
+return $baile/nombre
+```
+
+<p><b>1. Explica que se realiza con estas sentencias.</b></p>
+
+<p>En la primera línea, se utiliza el comando "for" para establecer una variable $baile que se usará para iterar sobre todos los elementos "baile" del documento XML. La ruta "/bailes/baile" especifica que los elementos "baile" se encuentran en la raíz del documento.</p>
+
+<p>En la segunda línea, se utiliza el comando "where" para establecer una condición. La condición es que el precio del baile ($baile/precio) debe ser mayor que 30.</p>
+
+<p>En la tercera línea, se utiliza el comando "return" para especificar que se debe devolver el nombre de los bailes que cumplen con la condición establecida en la línea anterior. El resultado de esta consulta sería una lista de los nombres de los bailes que cumplen con la condición establecida.</p>
+
+<p>En resumen, estas sentencias son una consulta XQuery que busca el nombre de los bailes cuyo precio es mayor que 30 en un documento XML.</p>
