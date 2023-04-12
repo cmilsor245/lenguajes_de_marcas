@@ -156,7 +156,14 @@ return
 <p>Respuesta:</p>
 
 ```xquery
-
+for $baile in /bailes/baile
+where $baile/profesor="nombre_profesor" and $baile/sala="nombre_sala"
+order by $baile/sala
+return 
+  <baile>
+    {$baile/profesor}
+    {$baile/sala}
+  </baile>
 ```
 
 <p><b>3. Realiza un pequeño programa en XQUERY que proporcione el siguiente resultado:</b></p>
@@ -170,5 +177,10 @@ return
 <p>Respuesta:</p>
 
 ```xquery
-
+for $i in (1 to 3)
+return <test>{(1 to 5)}</test>
 ```
+
+<p>Explicación:</p>
+
+<p>Se utiliza la cláusula "for" para iterar tres veces, asignando a la variable $i los valores del 1 al 3. Se utiliza la sintaxis de paréntesis para crear una secuencia que va del 1 al 5, y se inserta esta secuencia dentro del elemento "test" utilizando llaves. El resultado es una secuencia de tres elementos "test", cada uno con los valores del 1 al 5 dentro.</p>
