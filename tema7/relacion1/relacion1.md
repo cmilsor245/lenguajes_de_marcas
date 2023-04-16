@@ -50,7 +50,7 @@
 
 <p>Dentro de cada fila, se crea una celda que va a contener el título del libro. Para obtener el título, se utiliza una expresión XQuery que toma el contenido del elemento "< titulo >" de cada libro seleccionado y lo convierte en una cadena de caracteres con la función string(). Esta cadena de caracteres se agrega dentro de la etiqueta "< td >" para mostrar el título en la celda correspondiente.</p>
 
-<p>En resumen, el código utiliza una consulta XQuery para seleccionar los títulos de los libros en un archivo XML y los muestra en una tabla HTML en una página web. La consulta se hace con la cláusula for y los resultados se insertan en la tabla HTML usando las etiquetas "< tr >" y "<p td >".</p>
+<p>En resumen, el código utiliza una consulta XQuery para seleccionar los títulos de los libros en un archivo XML y los muestra en una tabla HTML en una página web. La consulta se hace con la cláusula for y los resultados se insertan en la tabla HTML usando las etiquetas "< tr >" y "< td >".</>
 
 <p><b>b. ¿Qué resultado obtienes tras la ejecución de la consulta y añadir el resultado al código HTML que lo envuelve?</b></p>
 
