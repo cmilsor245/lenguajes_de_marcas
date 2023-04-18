@@ -1,0 +1,35 @@
+<actividades>
+  <actividad id="1">
+    <nombre>BodyPump</nombre>
+    <precio cuota="quincenal" moneda="euro">14</precio>
+    <plazas>5</plazas>
+    <comienzo>13/04/2020</comienzo>
+    <fin>27/04/2020</fin>
+    <profesor>Ricardo Leal</profesor>
+    <categoría>Cardio_fuerza</categoría>
+    <nivel_dificultad>alta</nivel_dificultad>
+    <sala>3</sala>
+  </actividad>
+  <actividad id="2">
+    <nombre>Zumba</nombre>
+    <precio cuota="semanal" moneda="euro">10</precio>
+    <plazas>10</plazas>
+    <comienzo>20/04/2020</comienzo>
+    <fin>30/04/2020</fin>
+    <profesor>María Pérez</profesor>
+    <categoría>Cardio</categoría>
+    <nivel_dificultad>media</nivel_dificultad>
+    <sala>2</sala>
+  </actividad>
+  <actividad id="3">
+    <nombre>Pilates</nombre>
+    <precio cuota="mensual" moneda="euro">30</precio>
+    <plazas>8</plazas>
+    <comienzo>15/05/2020</comienzo>
+    <fin>15/06/2020</fin>
+    <profesor>David Ruiz</profesor>
+    <categoría>Flexibilidad</categoría>
+    <nivel_dificultad>baja</nivel_dificultad>
+    <sala>1</sala>
+  </actividad>
+</actividades>
