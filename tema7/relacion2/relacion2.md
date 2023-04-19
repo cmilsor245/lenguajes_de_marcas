@@ -117,9 +117,33 @@ return avg($actividades-mensuales/precio)
 <p><b>5. Mostrar la suma de los precios de las actividades de la sala 1.</b></p>
 
 ```xquery
-
+let $actividades-sala1:=/actividades/actividad[sala=1]
+return sum($actividades-sala1/precio)
 ```
 
 <img src="img/3.png">
 
-<p><b>6. Mostrar la suma de las plazas en total que oferta el profesor </b></p>
+<p><b>6. Mostrar la suma de las plazas en total que oferta el profesor David Ruiz.</b></p>
+
+```xquery
+let $actividades-DavidRuiz:=/actividades/actividad[profesor='David Ruiz']
+return sum($actividades-DavidRuiz/plazas)
+```
+
+<img src="img/4.png">
+
+<p><b>7. Mostrar las actividades que realizaría la profesora Laura (por ejemplo; no sabemos su apellido). ¿Qué instrucción debes usar?</b></p>
+
+```xquery
+/actividades/actividad[profesor[contains(., 'Laura')]]
+```
+
+<img src="img/5.png">
+
+<p><b>8. Mostrar el nombre de la actividad, su precio y el precio con un descuento del 15% para familias numerosas (incluir el elemento familia numerosa). Ordenar por el nombre de la actividad.</b></p>
+
+```xquery
+
+```
+
+<img src="img/6.png">
