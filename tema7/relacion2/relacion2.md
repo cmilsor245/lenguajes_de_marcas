@@ -31,11 +31,23 @@
 some $x in(1, 2, 3), $y in(2, 3, 4) satisfies $x+$y=4
 ```
 
+<p>Esta expresión devuelve casos que cumplen la condición.</p>
+
+<p>Algunos ejemplos pueden ser:</p>
+
+<li>1+3</li>
+
+<li>2+2</li>
+
 <p><b>2. ¿Qué hace esta expresión? ¿Qué devuelve?</b></p>
 
 ```xquery
 avg(for $x at $i in(1 to 1000) where $i mod 100=0 return $x)
 ```
+
+<p>La expresión calcula la media aritmética de los valores de una secuencia. En este caso, la secuencia consiste en los valores de la variable $x para los cuales la variable $i toma valores en el rango de 1 a 1000 y $i es divisible por 100.</p>
+
+<p>La expresión devuelve un valor numérico que es la media aritmética de los valores de la secuencia resultante.</p>
 
 <p><b>Dado el siguiente XML...</b></p>
 
@@ -52,6 +64,7 @@ avg(for $x at $i in(1 to 1000) where $i mod 100=0 return $x)
     <nivel_dificultad>alta</nivel_dificultad>
     <sala>3</sala>
   </actividad>
+
   <actividad id="2">
     <nombre>Zumba</nombre>
     <precio cuota="semanal" moneda="euro">10</precio>
@@ -63,6 +76,7 @@ avg(for $x at $i in(1 to 1000) where $i mod 100=0 return $x)
     <nivel_dificultad>media</nivel_dificultad>
     <sala>2</sala>
   </actividad>
+
   <actividad id="3">
     <nombre>Pilates</nombre>
     <precio cuota="mensual" moneda="euro">30</precio>
@@ -89,4 +103,23 @@ return
   </profesor>
 ```
 
-<p><b>4. </b></p>
+<img src="img/1.png">
+
+<p><b>4. Mostrar la media de los precios de todas las actividades cuando la cuota sea mensual.</b></p>
+
+```xquery
+let $actividades-mensuales:=/actividades/actividad[precio/@cuota='mensual']
+return avg($actividades-mensuales/precio)
+```
+
+<img src="img/2.png">
+
+<p><b>5. Mostrar la suma de los precios de las actividades de la sala 1.</b></p>
+
+```xquery
+
+```
+
+<img src="img/3.png">
+
+<p><b>6. Mostrar la suma de las plazas en total que oferta el profesor </b></p>
