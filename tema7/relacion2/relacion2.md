@@ -143,7 +143,19 @@ return sum($actividades-DavidRuiz/plazas)
 <p><b>8. Mostrar el nombre de la actividad, su precio y el precio con un descuento del 15% para familias numerosas (incluir el elemento familia numerosa). Ordenar por el nombre de la actividad.</b></p>
 
 ```xquery
-
+for $actividad in /actividades/actividad
+let $precio:=$actividad/precio
+let $descuento:=if($actividad/familia_numerosa) then 0.15 else 0
+let $precio_descuento:=xs:decimal($precio)*(1-$descuento)
+order by $actividad/nombre
+return
+  <actividad>
+    <nombre>{$actividad/nombre/text()}</nombre>
+    <precio>{$precio/text()}</precio>
+    <precio_descuento>{$precio_descuento}</precio_descuento>
+  </actividad>
 ```
 
 <img src="img/6.png">
+
+<p>*Este ejercicio no me sale correctamente</p>
