@@ -85,3 +85,11 @@ return $libro
 ```
 
 <img src="img/3.png">
+
+<p><b>c. Mostrar sólo el título de los libros cuyo precio sea menor o igual a 30.</b></p>
+
+```xquery
+
+```
+
+<img src="img/4.png">
