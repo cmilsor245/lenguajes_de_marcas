@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="file:/C:\Users\chris\Documents\DAW\lenguajes_de_marcas\tema8\ej1\style.css"?>
+<catalogo>
+  <cd>
+    <titulo>Nevermind</titulo>
+    <artista>Nirvana</artista>
+    <pais>Estados Unidos</pais>
+    <compania>DGC Records</compania>
+    <precio>10.99</precio>
+    <fecha_publicacion>1991-09-24</fecha_publicacion>
+    <genero>Grunge</genero>
+    <canciones>12</canciones>
+  </cd>
+
+  <cd>
+    <titulo>Thriller</titulo>
+    <artista>Michael Jackson</artista>
+    <pais>Estados Unidos</pais>
+    <compania>Epic Records</compania>
+    <precio>12.99</precio>
+    <fecha_publicacion>1982-11-30</fecha_publicacion>
+    <genero>Pop</genero>
+    <canciones>9</canciones>
+  </cd>
+
+  <cd>
+    <titulo>The Dark Side of the Moon</titulo>
+    <artista>Pink Floyd</artista>
+    <pais>Reino Unido</pais>
+    <compania>Harvest Records</compania>
+    <precio>14.99</precio>
+    <fecha_publicacion>1973-03-01</fecha_publicacion>
+    <genero>Rock Progresivo</genero>
+    <canciones>10</canciones>
+  </cd>
+
+  <cd>
+    <titulo>Appetite for Destruction</titulo>
+    <artista>Guns N' Roses</artista>
+    <pais>Estados Unidos</pais>
+    <compania>Geffen Records</compania>
+    <precio>9.99</precio>
+    <fecha_publicacion>1987-07-21</fecha_publicacion>
+    <genero>Hard Rock</genero>
+    <canciones>12</canciones>
+  </cd>
+</catalogo>
