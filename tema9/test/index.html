@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    document.write("Hola mundo<br>");
+    document.write("----------------------------------------------------------<br>");
+
+    /*****************************************/
+
+    let dato, resultado;
+
+    dato=window.prompt("Introduce tu nombre")
+    resultado=`Hola, ¿cómo estás ${dato}?`;
+    document.write(resultado, "<br>");
+    document.write("----------------------------------------------------------<br>");
+
+    /*****************************************/
+
+    let a=2, b=8;
+
+    resultadoMulti=a*b;
+
+    document.write(`La variable \"a\" contiene un ${a}<br>`);
+    document.write(`La variable \"a\" contiene un ${a}<br>`);
+    document.write(`El producto de \"a\"*\"b\" es ${resultadoMulti}<br>`);
+    document.write("----------------------------------------------------------<br>");
+
+    /*****************************************/
+
+    let dato2=window.prompt("Introduce un número ?", "0"), num=parseInt(dato2);// se muestra el primer prompt para el nombre de arriba y después el prompt para este número
+
+    num*=2;
+
+    document.write(`El doble de ${dato2} es ${num}<br>`);
+    document.write("----------------------------------------------------------<br>");
+  </script>
+</body>
+</html>
