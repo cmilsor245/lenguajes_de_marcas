@@ -33,11 +33,20 @@
 
     /*****************************************/
 
-    let dato2=window.prompt("Introduce un número ?", "0"), num=parseInt(dato2);// se muestra el primer prompt para el nombre de arriba y después el prompt para este número
+    let dato2=window.prompt("Introduce un número para saber su multiplicación por 2:", "0"), num=parseInt(dato2);// se muestra el primer prompt para el nombre de arriba y después el prompt para este número
 
     num*=2;
 
     document.write(`El doble de ${dato2} es ${num}<br>`);
+    document.write("----------------------------------------------------------<br>");
+
+    /*****************************************/
+
+    let dato3=window.prompt("Introduce el primer número a sumar:", "0"), dato4=window.prompt("Introduce el segundo número a sumar:", "0"), num2=parseInt(dato3), num3=parseInt(dato4);
+
+    let resultadoSuma=num2+num3;
+
+    document.write(`La suma da como resultado ${resultadoSuma}<br>`);
     document.write("----------------------------------------------------------<br>");
   </script>
 </body>
