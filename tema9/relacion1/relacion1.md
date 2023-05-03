@@ -188,8 +188,32 @@ document.write(`Ese mes tiene ${dias} días.`);
   <input type="button" id="saludo" onclick="saludo('Christian')" value="Pulsa aquí">
 ```
 
+<img src="img/17.png">
+
+<img src="img/18.png">
+
 <p><b>10. Tras pulsar el botón "Suma" la función utiliza la sentencia "return" para devolver un valor de suma de dos valores introducidos por teclado en un prompt. Se muestra el resultado de la suma.</b></p>
 
 ```js
+// head
+  let dato1=window.prompt("Introduce el primer número:", "0"), dato2=window.prompt("Introduce el segundo número:", "0");
 
+  let num1=parseInt(dato1), num2=parseInt(dato2);
+
+  function suma(num1, num2){
+    let resultado=num1+num2;
+
+    document.write(`El resultado de la suma de ${num1} y ${num2} es ${resultado}.`);
+  }
+
+// body
+<input type="button" id="saludo" onclick="suma(num1, num2)" value="Suma">
 ```
+
+<img src="img/19.png">
+
+<img src="img/20.png">
+
+<img src="img/21.png">
+
+<img src="img/22.png">
