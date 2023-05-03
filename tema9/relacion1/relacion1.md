@@ -122,5 +122,56 @@ if(num1>num2){
 <p><b>7. Programa que requiere la introducción de un número por prompt de forma ininterrumpida. Este número debe ser menor que 10 y debe mostrarse. En el caso de que sea mayor o igual que 10, se para el bucle y muestra un mensaje de que se ha terminado.</b></p>
 
 ```js
+let dato, num;
 
+function solicitarNumero(){
+  dato=window.prompt("Introduce un número menor que 10:", "0");
+  num=parseInt(dato);
+
+  document.write(`El número introducido es ${num}<br>`);
+
+  if(num<10){
+    setTimeout(solicitarNumero, 333);
+  }else{
+    document.write("Se ha introducido un número mayor o igual a 10.");
+  }
+}
+
+solicitarNumero();
 ```
+
+<img src="img/13.png">
+
+<p><b>8. Programa que requiere la introducción de un número que representa un mes del año y muestra el número de días que tiene.</b></p>
+
+```js
+let input=window.prompt("Introduce el identificador del mes:", "0");
+
+let mes=parseInt(input);
+
+let dias;
+
+switch(mes){
+  case 1, 3, 5, 7, 8, 10, 12:
+    dias=31;
+  break;
+
+  case 2:
+    dias=28;
+  break;
+
+  case 4, 6, 9, 11:
+    dias=31;
+  break;
+}
+
+document.write(`Ese mes tiene ${dias} días.`);
+```
+
+<img src="img/14.png">
+
+<img src="img/15.png">
+
+<p><b>9. Evento onclick. Realiza la siguiente pantalla:</b></p>
+
+<img src="img/16.png">
