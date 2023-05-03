@@ -119,4 +119,8 @@ if(num1>num2){
 
 <img src="img/12.png">
 
-<p><b>7. </b></p>
+<p><b>7. Programa que requiere la introducción de un número por prompt de forma ininterrumpida. Este número debe ser menor que 10 y debe mostrarse. En el caso de que sea mayor o igual que 10, se para el bucle y muestra un mensaje de que se ha terminado.</b></p>
+
+```js
+
+```
