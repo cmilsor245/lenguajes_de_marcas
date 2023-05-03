@@ -8,7 +8,15 @@
 </head>
 <body>
   <script>
-    
+    let dato, num;
+
+    do{
+      dato=window.prompt("Introduce un número menor que 10:", "0")
+
+      num=parseInt(dato);
+
+      document.write(`El número introducido es ${num}`);
+    }while(num<10);
   </script>
 </body>
 </html>
