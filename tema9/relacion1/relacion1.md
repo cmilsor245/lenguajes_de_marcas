@@ -175,3 +175,21 @@ document.write(`Ese mes tiene ${dias} días.`);
 <p><b>9. Evento onclick. Realiza la siguiente pantalla:</b></p>
 
 <img src="img/16.png">
+
+<p><b>Tras pulsar el botón "Pulsa aquí", se pone en marcha el evento onclick. Sale el mensaje "Hola <nombre >".</nombre></b></p>
+
+```js
+// head
+  function saludo(nombre){
+    document.write(`Hola ${nombre}.`);
+  };
+
+// body
+  <input type="button" id="saludo" onclick="saludo('Christian')" value="Pulsa aquí">
+```
+
+<p><b>10. Tras pulsar el botón "Suma" la función utiliza la sentencia "return" para devolver un valor de suma de dos valores introducidos por teclado en un prompt. Se muestra el resultado de la suma.</b></p>
+
+```js
+
+```
