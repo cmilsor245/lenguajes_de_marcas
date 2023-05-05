@@ -62,6 +62,10 @@
 </xsl:stylesheet>
 ```
 
+```xsl
+<?xml-stylesheet type="text/xsl" href="file:/C:/Users/chris/Documents/DAW/lenguajes_de_marcas/tema8/relacion1/extra/ejemplo1.xsl"?>
+```
+
 <img src="img/1.png">
 
 <p><b>2.</b></p>
@@ -75,6 +79,10 @@
     ESTE TEXTO SE MUESTRA.
   </xsl:template>
 </xsl:stylesheet>
+```
+
+```xsl
+<?xml-stylesheet type="text/xsl" href="file:/C:/Users/chris/Documents/DAW/lenguajes_de_marcas/tema8/relacion1/extra/ejemplo2.xsl"?>
 ```
 
 <img src="img/2.png">
@@ -94,10 +102,15 @@
     ¿ESTE TEXTO SE MUESTRA?
   </xsl:template>
 </xsl:stylesheet>
+```
 
+```xsl
+<?xml-stylesheet type="text/xsl" href="file:/C:/Users/chris/Documents/DAW/lenguajes_de_marcas/tema8/relacion1/extra/ejemplo3.xsl"?>
 ```
 
 <img src="img/3.png">
+
+<p>Este no me funciona.</p>
 
 <p><b>4.</b></p>
 
@@ -108,6 +121,10 @@
     <xsl:value-of select="autor"/>
   </xsl:template>
 </xsl:stylesheet>
+```
+
+```xsl
+<?xml-stylesheet type="text/xsl" href="file:/C:/Users/chris/Documents/DAW/lenguajes_de_marcas/tema8/relacion1/extra/ejemplo4.xsl"?>
 ```
 
 <img src="img/4.png">
@@ -125,6 +142,10 @@
 </xsl:stylesheet>
 ```
 
+```xsl
+<?xml-stylesheet type="text/xsl" href="file:/C:/Users/chris/Documents/DAW/lenguajes_de_marcas/tema8/relacion1/extra/ejemplo5.xsl"?>
+```
+
 <img src="img/5.png">
 
 <p><b>6.</b></p>
@@ -136,6 +157,10 @@
     <xsl:value-of select="@año"/>
   </xsl:template>
 </xsl:stylesheet>
+```
+
+```xsl
+<?xml-stylesheet type="text/xsl" href="file:/C:/Users/chris/Documents/DAW/lenguajes_de_marcas/tema8/relacion1/extra/ejemplo6.xsl"?>
 ```
 
 <img src="img/6.png">
@@ -153,6 +178,10 @@
 </xsl:stylesheet>
 ```
 
+```xsl
+<?xml-stylesheet type="text/xsl" href="file:/C:/Users/chris/Documents/DAW/lenguajes_de_marcas/tema8/relacion1/extra/ejemplo7.xsl"?>
+```
+
 <img src="img/7.png">
 
 <p><b>8.</b></p>
@@ -164,6 +193,10 @@
     <p><xsl:value-of select="autor"/> escribió "<xsl:value-of select="titulo"/>"</p>
   </xsl:template>
 </xsl:stylesheet>
+```
+
+```xsl
+<?xml-stylesheet type="text/xsl" href="file:/C:/Users/chris/Documents/DAW/lenguajes_de_marcas/tema8/relacion1/extra/ejemplo8.xsl"?>
 ```
 
 <img src="img/8.png">
@@ -185,6 +218,10 @@
     <p><xsl:value-of select="autor"/></p>
   </xsl:template>
 </xsl:stylesheet>
+```
+
+```xsl
+<?xml-stylesheet type="text/xsl" href="file:/C:/Users/chris/Documents/DAW/lenguajes_de_marcas/tema8/relacion1/extra/ejemplo9.xsl"?>
 ```
 
 <img src="img/9.png">
