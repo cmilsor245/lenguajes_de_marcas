@@ -44,7 +44,7 @@ function calcula(numero){
 
 <img src="img/2.png">
 
-<p><b>12. </b></p>
+<p><b>12. Ejemplo de clase ficha con dos propiedades, nombre y edad, y con dos métodos ("getNombre" y "getEdad"). Una función "programa()" que se invoca para mostrar los atributos del objeto.</b></p>
 
 ```html
 <input type="button" onclick="programa()" value="click">
