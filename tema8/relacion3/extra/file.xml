@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="file:/C:\Users\chris\Documents\DAW\lenguajes_de_marcas\tema8\relacion3\extra\ej3.xsl"?>
+<catalogo>
+  <cd id="1">
+    <titulo atributo="valor">Nevermind</titulo>
+    <artista origen="EEUU">Nirvana</artista>
+    <pais codigo="US">Estados Unidos</pais>
+    <compania>Anarchy Records</compania>
+    <precio moneda="USD">10.99</precio>
+    <fecha_publicacion formato="YYYY-MM-DD">1991-09-24</fecha_publicacion>
+    <genero>Rock Alternativo</genero>
+    <canciones total="12">12</canciones>
+  </cd>
+
+  <cd id="2">
+    <titulo atributo="valor">Thriller</titulo>
+    <artista origen="EEUU">Michael Jackson</artista>
+    <pais codigo="US">Estados Unidos</pais>
+    <compania>Epic Records</compania>
+    <precio moneda="USD">12.99</precio>
+    <fecha_publicacion formato="YYYY-MM-DD">1982-11-30</fecha_publicacion>
+    <genero>Pop</genero>
+    <canciones total="9">9</canciones>
+  </cd>
+
+  <cd id="3">
+    <titulo atributo="valor">The Dark Side of the Moon</titulo>
+    <artista origen="Reino Unido">Pink Floyd</artista>
+    <pais codigo="UK">Reino Unido</pais>
+    <compania>Harvest Records</compania>
+    <precio moneda="USD">14.99</precio>
+    <fecha_publicacion formato="YYYY-MM-DD">1973-03-01</fecha_publicacion>
+    <genero>Rock Progresivo</genero>
+    <canciones total="10">10</canciones>
+  </cd>
+
+  <cd id="4">
+    <titulo atributo="valor">Appetite for Destruction</titulo>
+    <artista origen="EEUU">Guns N' Roses</artista>
+    <pais codigo="US">Estados Unidos</pais>
+    <compania>Geffen Records</compania>
+    <precio moneda="USD">9.99</precio>
+    <fecha_publicacion formato="YYYY-MM-DD">1987-07-21</fecha_publicacion>
+    <genero>Hard Rock</genero>
+    <canciones total="12">12</canciones>
+  </cd>
+</catalogo>
