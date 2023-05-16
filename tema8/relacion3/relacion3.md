@@ -23,4 +23,10 @@
 
 <hr>
 
-<p><b>1. </b></p>
+<p><b>Partiendo del fichero XML de CDs realizado en la práctica de XML y CSS, realiza las siguientes actividades</b></p>
+
+<p><b>1. Consigue un documento HTML donde se visualice una lista de elementos ordenados y donde se seleccione información de elementos, pero donde también se haya filtrado por algún atributo de tu fichero XML (si no lo tienes, modifica el fichero XML para que lo tenga).</b></p>
+
+```xslt
+
+```
