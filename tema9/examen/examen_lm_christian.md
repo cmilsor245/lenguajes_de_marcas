@@ -337,15 +337,91 @@ return
 <p>Respuesta:</p>
 
 ```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Saludo</title>
+  <script>
+    var contadorClicks=0;
 
+    function saludar(){
+      var nombre=document.getElementById("nombre").value;
+
+      if(this.id==="botonInicial"){
+        document.write("Hola, buenos días "+nombre);
+      }else if(this.id==="botonFinal"){
+        contadorClicks++;
+        if(contadorClicks===2){
+          document.write("Hola, buenas noches "+nombre);
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <form>
+    Escribe tu nombre: <input type="text" id="nombre"/>
+
+    <input type="button" value="Pulsa aquí para saludo inicial" id="botonInicial" onclick="saludar.call(this)"/>
+    <input type="button" value="Pulsa aquí para saludo final" id="botonFinal" onclick="saludar.call(this)"/>
+  </form>
+</body>
+</html>
 ```
 
 <img src="img/13.png">
 
+<img src="img/14.png">
+
+<img src="img/15.png">
+
 <p><b>c. Inserta ahora una lista de selección con tres opciones: mañana, tarde y noche y cuando cambiemos de opción saldrá una alerta diciendo que has cambiado de franja horaria.</b></p>
 
 ```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Saludo</title>
+  <script>
+    var contadorClicks = 0;
 
+    function saludar() {
+      var nombre = document.getElementById("nombre").value;
+
+      if (this.id === "botonInicial") {
+        document.write("Hola, buenos días " + nombre);
+      } else if (this.id === "botonFinal") {
+        contadorClicks++;
+        if (contadorClicks === 2) {
+          document.write("Hola, buenas noches " + nombre);
+        }
+      }
+    }
+
+    function cambiarFranjaHoraria() {
+      var seleccion = document.getElementById("franjaHoraria");
+      var opcionSeleccionada = seleccion.options[seleccion.selectedIndex].value;
+      alert("Has cambiado a la franja horaria: " + opcionSeleccionada);
+    }
+  </script>
+</head>
+<body>
+  <form>
+    Escribe tu nombre: <input type="text" id="nombre" />
+
+    <input type="button" value="Pulsa aquí para saludo inicial" id="botonInicial" onclick="saludar.call(this)" />
+    <input type="button" value="Pulsa aquí para saludo final" id="botonFinal" onclick="saludar.call(this)" />
+
+    <br><br>
+    Seleccione la franja horaria:
+    <select id="franjaHoraria" onchange="cambiarFranjaHoraria()">
+      <option value="mañana">Mañana</option>
+      <option value="tarde">Tarde</option>
+      <option value="noche">Noche</option>
+    </select>
+  </form>
+</body>
+</html>
 ```
 
-<img src="img/14.png">
+<img src="img/16.png">

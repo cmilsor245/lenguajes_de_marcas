@@ -1,29 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Formulario Simple</title>
+  <title>Saludo</title>
   <script>
-    var pulsos = 0;
+    var contadorClicks=0;
 
-    function saludar(mensaje) {
-      var nombre = document.getElementById("nombre").value;
-      var mensajeFinal = mensaje + " " + nombre;
-      var mensajeElemento = document.getElementById("mensaje");
+    function saludar(){
+      var nombre=document.getElementById("nombre").value;
 
-      if (mensaje === 'Hola, buenas noches' && pulsos === 1) {
-        mensajeElemento.textContent = mensajeFinal;
-      } else {
-        pulsos++;
+      if (this.id==="botonInicial"){
+        document.write("Hola, buenos días "+nombre);
+      }else if (this.id==="botonFinal"){
+        contadorClicks++;
+        if(contadorClicks===2){
+          document.write("Hola, buenas noches "+nombre);
+        }
       }
+    }
+
+    function cambiarFranjaHoraria(){
+      var seleccion=document.getElementById("franjaHoraria");
+      var opcionSeleccionada=seleccion.options[seleccion.selectedIndex].value;
+      alert("Has cambiado a la franja horaria: "+opcionSeleccionada);
     }
   </script>
 </head>
 <body>
   <form>
-    Escribe tu nombre: <input type="text" id="nombre" />
-    <button type="button" onclick="saludar('Hola, buenos días')">Pulsa aquí para saludo inicial</button>
-    <button type="button" onclick="saludar('Hola, buenas noches'); pulsos = 0;">Pulsa aquí para saludo final</button>
+    Escribe tu nombre: <input type="text" id="nombre"/>
+
+    <input type="button" value="Pulsa aquí para saludo inicial" id="botonInicial" onclick="saludar.call(this)"/>
+    <input type="button" value="Pulsa aquí para saludo final" id="botonFinal" onclick="saludar.call(this)"/>
+
+    <br><br>
+    Seleccione la franja horaria:
+    <select id="franjaHoraria" onchange="cambiarFranjaHoraria()">
+      <option value="mañana">Mañana</option>
+      <option value="tarde">Tarde</option>
+      <option value="noche">Noche</option>
+    </select>
   </form>
-  <p id="mensaje"></p>
 </body>
 </html>
