@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Formulario Simple</title>
+  <script>
+    var pulsos = 0;
+
+    function saludar(mensaje) {
+      var nombre = document.getElementById("nombre").value;
+      var mensajeFinal = mensaje + " " + nombre;
+      var mensajeElemento = document.getElementById("mensaje");
+
+      if (mensaje === 'Hola, buenas noches' && pulsos === 1) {
+        mensajeElemento.textContent = mensajeFinal;
+      } else {
+        pulsos++;
+      }
+    }
+  </script>
+</head>
+<body>
+  <form>
+    Escribe tu nombre: <input type="text" id="nombre" />
+    <button type="button" onclick="saludar('Hola, buenos días')">Pulsa aquí para saludo inicial</button>
+    <button type="button" onclick="saludar('Hola, buenas noches'); pulsos = 0;">Pulsa aquí para saludo final</button>
+  </form>
+  <p id="mensaje"></p>
+</body>
+</html>

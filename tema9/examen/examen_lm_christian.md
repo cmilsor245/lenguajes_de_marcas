@@ -320,4 +320,32 @@ return
 
 <img src="img/8.png">
 
-<p><b>4. </b></p>
+<p><b>4. Ejercicio de JavaScript.</b></p>
+
+<p><b>Realiza un pequeño programa en JavaScript que inicialmente tenga este aspecto:</b></p>
+
+<img src="img/9.png">
+
+<p><b>a. Tras presionar con un click el botón, recibiremos el mensaje tal cual en la página web.</b></p>
+
+<img src="img/10.png">
+
+<p><b>b. Tras doble click en el botón, recibiremos el mensaje tal cual en la página web:</b></p>
+
+<img src="img/12.png">
+
+<p>Respuesta:</p>
+
+```html
+
+```
+
+<img src="img/13.png">
+
+<p><b>c. Inserta ahora una lista de selección con tres opciones: mañana, tarde y noche y cuando cambiemos de opción saldrá una alerta diciendo que has cambiado de franja horaria.</b></p>
+
+```html
+
+```
+
+<img src="img/14.png">
