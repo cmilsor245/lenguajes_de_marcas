@@ -209,3 +209,30 @@ return
 </xsl:template>
 </xsl:stylesheet>
 ```
+
+<p>Respuesta:</p>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<ciclos>
+  <ciclo grado="Superior" codigo="grado_sup1">
+    <nombre>Desarrollo de Aplicaciones Web</nombre>
+  </ciclo>
+
+  <ciclo grado="Superior" codigo="grado_sup2">
+    <nombre>Desarrollo de Aplicaciones Multiplataforma</nombre>
+  </ciclo>
+
+  <ciclo grado="Superior" codigo="grado_sup3">
+    <nombre>Administración de Sistemas Informáticos en Red</nombre>
+  </ciclo>
+
+  <ciclo grado="Medio" codigo="grado_med1">
+    <nombre>Sistemas Microinformáticos y Redes</nombre>
+  </ciclo>
+</ciclos>
+```
+
+<p><b>b. Tras realizar el proceso de transformación, explica y compón (con datos) lo que saldría tras el procedimiento de transformación con el fichero XSLT.</b></p>
+
+<p></p>
