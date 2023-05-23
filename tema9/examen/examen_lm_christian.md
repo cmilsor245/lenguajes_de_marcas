@@ -252,3 +252,72 @@ return
 
 <p><b>c. ¿Cuál es la transformación en el código XSLT si quisiéramos tener una tabla con el contenido del proceso de transformación? Realiza una pequeña modificación añadiendo, al menos, tres propiedades de CSS en las etiquetas que prefieras.</b></p>
 
+<p>Para transformar el código XSLT para que genere una tabla con el contenido del proceso de transformación, he cambiado el código de la siguiente manera:</p>
+
+```xslt
+<?xml version="1.0" encoding="UTF-8"?>
+<html>
+  <head>
+    <style>
+      table{
+        border-collapse: collapse;
+        width: 100%;
+        font-family: Arial, sans-serif;
+      }
+      th, td{
+        text-align: left;
+        padding: 10px;
+        border: 1px solid #ccc;
+      }
+      th{
+        background-color: #4CAF50;
+        color: white;
+        font-weight: bold;
+      }
+      tr:nth-child(even){
+        background-color: #f2f2f2;
+      }
+      tr:hover{
+        background-color: #ddd;
+      }
+      td{
+        border-bottom: 1px solid #ddd;
+      }
+      h1{
+        color: #333;
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+      .highlight{
+        background-color: yellow;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>GRADO SUPERIOR</h1>
+    <table>
+      <tr>
+        <th>Código</th>
+        <th>Nombre</th>
+      </tr>
+      <tr>
+        <td>grado_sup1</td>
+        <td class="highlight">Desarrollo de Aplicaciones Web</td>
+      </tr>
+      <tr>
+        <td>grado_sup2</td>
+        <td>Desarrollo de Aplicaciones Multiplataforma</td>
+      </tr>
+      <tr>
+        <td>grado_sup3</td>
+        <td>Administración de Sistemas Informáticos en Red</td>
+      </tr>
+    </table>
+  </body>
+</html>
+```
+
+<img src="img/8.png">
+
+<p><b>4. </b></p>
