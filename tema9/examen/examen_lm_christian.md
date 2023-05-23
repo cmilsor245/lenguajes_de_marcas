@@ -241,3 +241,12 @@ return
 
 <p>*El XSLT está copiado literalmente del examen.</p>
 
+<p>Mi XML contiene 4 grados: 3 superiores y 1 medio. El resultado es el esperado, ya que solo se muestran los grados que contienen un atributo con el valor "Superior".</p>
+
+<p>Debido a cómo está formado el XSLT, los datos "código" y "nombre" aparecen pegados, pero podría cambiarse el XSLT para que aparezcan mejor ordenados.</p>
+
+<p>Se muestra un título que dice "GRADO SUPERIOR" y una lista desordenada ("ul") que se amplía conforme encuentra un elemento que contiene el atributo mencionado anteriormente.</p>
+
+<p>Se excluyen los elementos con atributos que tengan otro valor ("Medio", por ejemplo) o no tengan atributo "codigo".</p>
+
+<p><b></b></p>
