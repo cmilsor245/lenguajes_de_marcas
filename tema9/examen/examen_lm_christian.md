@@ -237,4 +237,7 @@ return
 
 <img src="img/7.png">
 
-<p>Para empezar, </p>
+<p>Para empezar, debido a cómo está escrito el XSLT, el resultado de cada elemento de la lista aparece mal, ya que salen los códigos y los nombres de los grados pegados.</p>
+
+<p>*El XSLT está copiado literalmente del examen.</p>
+
