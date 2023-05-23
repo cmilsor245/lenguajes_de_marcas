@@ -235,4 +235,6 @@ return
 
 <p><b>b. Tras realizar el proceso de transformación, explica y compón (con datos) lo que saldría tras el procedimiento de transformación con el fichero XSLT.</b></p>
 
-<p></p>
+<img src="img/7.png">
+
+<p>Para empezar, </p>
