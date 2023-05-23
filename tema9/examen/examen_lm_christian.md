@@ -203,6 +203,7 @@ return
             </strong>
           </li>
         </xsl:if>
+        </xsl:for-each>
       </ul>
     </body>
   </html>
@@ -249,4 +250,5 @@ return
 
 <p>Se excluyen los elementos con atributos que tengan otro valor ("Medio", por ejemplo) o no tengan atributo "codigo".</p>
 
-<p><b></b></p>
+<p><b>c. ¿Cuál es la transformación en el código XSLT si quisiéramos tener una tabla con el contenido del proceso de transformación? Realiza una pequeña modificación añadiendo, al menos, tres propiedades de CSS en las etiquetas que prefieras.</b></p>
+
